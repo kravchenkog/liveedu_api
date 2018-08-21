@@ -95,3 +95,4 @@ class APIHelper:
         resp_log['user']['token'] = resp_log['token']
         app.user_parse.parse_user_properties(resp_dict=resp_log['user'], app=app)
         return app
+

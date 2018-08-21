@@ -7,7 +7,7 @@ class UserData:
         self.password2 = password2
         self.userrole = userrole
         self.slug = slug
-
+#test
 class RealUserData:
     def __init__(self, email=None, username=None, user_role=None, slug=None, url=None,
                  avatar = None, is_premium = None, count_followers=None, site_url=None,
@@ -43,3 +43,6 @@ class UserParseFactory:
                 setattr(app.real_user_data, field, resp_dict[field])
 
         return app
+
+    def test(self):
+        pass

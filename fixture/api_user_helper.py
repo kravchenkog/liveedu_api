@@ -8,7 +8,7 @@ class APIHelper:
     def general_get(self, app, route):
         url = str(app.env.base_url) + str(route)
 
-        response = requests.request("GET", url, headers=app.env.headers, params=app.env.params)
+        response = requests.request("GET", url, headers=app.env.headers, params=app.env.params, cookies = app.env.cookies)
         try:
             responce_j = json.loads(response.text)
             responce_j['status_code'] = response.status_code
@@ -25,7 +25,7 @@ class APIHelper:
         if len(app.env.headers) > 1:
             data = json.dumps(data)
 
-        responce = requests.request("POST", url, data=data, headers=app.env.headers)
+        responce = requests.request("POST", url, data=data, headers=app.env.headers, cookies = app.env.cookies)
         try:
             responce_j = json.loads(responce.text)
             responce_j['status_code'] = responce.status_code

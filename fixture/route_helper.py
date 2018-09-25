@@ -14,6 +14,9 @@ class Route:
         self.languages = '/api/v3/languages/'
         self.languages_iso = '/api/v3/languages/'
         self.topic_hierarchy = '/api/v3/topics-hierarchy/'
+        self.projects = '/api/v3/projects/' #GET/POST
+
+
 
 
 

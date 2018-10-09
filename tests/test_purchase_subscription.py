@@ -167,5 +167,5 @@ class TestTRansactionAfterPurchase():
         sleep(1.5)
         last_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)['data'].pop()
         print(app.user_data.__dict__)
-##
+###
         assert last_transaction['amount'] == my_plan['price_ledu']

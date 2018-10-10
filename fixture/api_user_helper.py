@@ -141,4 +141,5 @@ class APIHelper:
 
         puerchasing = app.api_helper.purchase_package(
             app, plan=my_plan['id'], no_topics=my_plan['topic_qty'])
+        assert (puerchasing.status_code, 200)
         return my_plan

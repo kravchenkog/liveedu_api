@@ -169,11 +169,13 @@ class TestTRansactionAfterPurchase():
         assert purchase['status_code'] == 201
         assert last_transaction['amount'] == my_plan['price_ledu']
 
-
     def test_WHEN_subsc6_is_purchased_EXPECTED_ledu_balance_is_proper(self, app):
         my_plan, purchase = app.api_helper.register_user_and_purchaqse_subs(app=app, plan_name='lprot3')
         #sleep(1.5)
         last_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)['data'].pop()
+        # just extra check if rate changed
+        my_plan_after = app.api_helper.get_plan(app=app, plan='lprot3')
         print(app.user_data.__dict__)
         assert purchase['status_code'] == 201
-        assert last_transaction['amount'] == my_plan['price_ledu']
+        assert last_transaction['amount'] == my_plan['price_ledu'] or\
+               last_transaction['amount'] == my_plan_after['price_ledu']

@@ -131,6 +131,7 @@ class TestTopicsHieracly:
         random_name = random.choice(resp1['results'])['name']
         app.env.params = {'search': random_name}
         resp12 = app.api_helper.general_get(app, route=app.route.topic_hierarchy)
+        assert resp12['results']
         received_name = resp12['results'][0]['name']
         assert received_name == random_name
 

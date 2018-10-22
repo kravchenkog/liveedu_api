@@ -30,6 +30,7 @@ class APIHelper:
 
         responce = requests.request("POST", url, data=data, headers=app.env.headers, cookies = app.env.cookies)
         try:
+            print(responce.status_code)
             responce_j = json.loads(responce.text)
             responce_j['status_code'] = responce.status_code
 
@@ -111,6 +112,7 @@ class APIHelper:
                 'username': app.user_data.username,
                 'password': app.user_data.password1
                   })
+        print(response_login)
         return response_login
 
     def login_perform_and_parse_fields(self, app):
@@ -125,6 +127,16 @@ class APIHelper:
                 'service': 'stripe',
                 'token': 'tok_visa',
                 'topics': topics}
+        return self.general_post(app=app, route=app.route.subscription, data=data)
+
+
+    def purchase_package_ledu(self, app, plan, no_topics):
+        topics = self.get_num_slug_topic(app=app, num=no_topics)
+        data = {'plan': plan,
+                'service': 'ledu',
+                'token': 'tok_visa',
+                'topics': topics}
+
         return self.general_post(app=app, route=app.route.subscription, data=data)
 
     def get_list_of_plans(self, app):

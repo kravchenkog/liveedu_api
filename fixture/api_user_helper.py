@@ -112,7 +112,7 @@ class APIHelper:
                 'username': app.user_data.username,
                 'password': app.user_data.password1
                   })
-        print(response_login)
+
         return response_login
 
     def login_perform_and_parse_fields(self, app):

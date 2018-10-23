@@ -39,6 +39,42 @@ class APIHelper:
             print("_____________________________ERROR_JSON_LOADS_______________________________")
             print(responce.text)
 
+    def general_put(self, app, route, data):
+        url = str(app.env.base_url) + str(route)
+        if data is None:
+            data = {}
+        if len(app.env.headers) > 1:
+            data = json.dumps(data)
+
+        responce = requests.request("PUT", url, data=data, headers=app.env.headers, cookies = app.env.cookies)
+        try:
+            print(responce.status_code)
+            responce_j = json.loads(responce.text)
+            responce_j['status_code'] = responce.status_code
+
+            return responce_j
+        except:
+            print("_____________________________ERROR_JSON_LOADS_______________________________")
+            print(responce.text)
+
+    def general_delete(self, app, route, data):
+        url = str(app.env.base_url) + str(route)
+        if data is None:
+            data = {}
+        if len(app.env.headers) > 1:
+            data = json.dumps(data)
+
+        responce = requests.request("DELETE", url, headers=app.env.headers, cookies = app.env.cookies)
+        try:
+            print(responce.status_code)
+            responce_j = json.loads(responce.text)
+            responce_j['status_code'] = responce.status_code
+
+            return responce_j
+        except:
+            print("_____________________________ERROR_JSON_LOADS_______________________________")
+            print(responce.text)
+
     def get_all_slug_topics(self, app, route):
         topics = self.general_get(app, route)
         slugs = []
@@ -75,10 +111,15 @@ class APIHelper:
             list_of_all.remove(x)
         return list_slugs
 
-    def get_registered_user(self, app):
+    def get_registered_user(self, app, user_data=None):
+        if user_data == None:
+            app.user_data.email = app.string_generator.get_random_email()
+            app.user_data.username = app.string_generator.get_random_username()
+        else:
+            app.user_data.email = user_data.email
+            app.user_data.username = user_data.username
+            del app.env.headers['Authorization']
         app.user_data.password1, app.user_data.password2 = app.string_generator.get_random_two_passwords()
-        app.user_data.email = app.string_generator.get_random_email()
-        app.user_data.username = app.string_generator.get_random_username()
         app.user_data.userrole = 'streamer'
         app.user_data.slug = app.api_helper.get_random_list_of_slugs(app)
         data = {'email': app.user_data.email,

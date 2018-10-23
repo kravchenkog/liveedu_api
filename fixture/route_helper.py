@@ -10,6 +10,7 @@ class Route:
         self.email_confirmation = '/api/v3/auth/registration/verify-email/'
         self.login = '/api/v3/auth/login/'
         self.me = '/api/v3/me/'
+        self.me_balanses = "/api/v3/me/balances/"
         self.categories = '/api/v3/categories/'
         self.languages = '/api/v3/languages/'
         self.languages_iso = '/api/v3/languages/'

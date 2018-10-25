@@ -25,7 +25,7 @@ class APIHelper:
         url = str(app.env.base_url) + str(route)
         if data is None:
             data = {}
-        if len(app.env.headers) > 1:
+        if app.env.headers:
             data = json.dumps(data)
 
         responce = requests.request("POST", url, data=data, headers=app.env.headers, cookies = app.env.cookies)

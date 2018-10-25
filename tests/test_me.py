@@ -390,7 +390,7 @@ class TestMePaymentMethods:
             'service': service,
         }
         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['data'][0]['servise'] == service
+        assert resp['service'] == service
 
     def test_WHEN_post_me_payment_methods_AND_servise_stipe_token_EXPECTED_is_savedTC__(self, app):
         service = "ledu"
@@ -399,7 +399,7 @@ class TestMePaymentMethods:
             'service': service,
         }
         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['data'][0]['servise'] == service
+        assert resp['service'] == service
 
 
 

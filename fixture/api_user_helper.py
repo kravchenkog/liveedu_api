@@ -131,6 +131,7 @@ class APIHelper:
                 'skype': '123',
                 'hangouts': 'sdfsdf'}
         response_reg = app.api_helper.general_post(app=app, route=app.route.register, data=data)
+        app.user_data.response_reg = response_reg
         return app.user_data
 
     def get_registered_and_logged_user(self, app):

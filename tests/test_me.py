@@ -142,7 +142,7 @@ from random import choice
 #         app.user_data = app.api_helper.get_registered_and_logged_user(app)
 #         app.api_helper.general_delete(app=app, route=app.route.me, data=None)
 #         resp = app.api_helper.get_registered_user(app, app.user_data)
-#         assert resp['status_code'] == 400
+#         assert app.user_data.response_reg['status_code'] == 400
 #
 # class TestCheckMeBalanses:
 #     def test_WHEN_me_balanses_EXPECTED_response_code_is_200TC90311(self, app):
@@ -284,7 +284,7 @@ from random import choice
 #             "broadcaster": broadcaster
 #         }
 #         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
-#         assert resp['response_code'] == 400
+#         assert resp['status_code'] == 400
 #
 #     def test_WHEN_post_notifsubscr_AND_project_EXPECTED_value_is_saved_TC90330(self, app):
 #         project = choice(app.api_helper.general_get(app, app.route.projects)['results'])['slug']
@@ -302,7 +302,7 @@ from random import choice
 #             "project": project
 #         }
 #         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
-#         assert resp['response_code'] == 400
+#         assert resp['status_code'] == 400
 #
 #     def test_WHEN_post_notifsubscr_AND_topics_EXPECTED_value_is_saved_TC90332(self, app):
 #         topics = choice(app.api_helper.general_get(app, app.route.topics)['results'])['slug']
@@ -368,38 +368,203 @@ from random import choice
 #         }
 #         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
 #         assert resp['category'] == category
+#
+#     #TODO /api/v3/me/notification/subscriptions/{id}/ GET PUT DELETE
+#
+#
+# class TestMePaymentMethods:
+#     def test_WHEN_get_me_payment_methods_EXPECTED_response_code_is_200TC90340(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         resp = app.api_helper.general_get(app, app.route.me_payment_methods)
+#         assert resp['status_code'] == 200
+#
+#     def test_WHEN_get_me_payment_methods_after_registration_EXPECTED_list_is_emptyTC90341(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         resp = app.api_helper.general_get(app, app.route.me_payment_methods)
+#         assert resp['data'] == []
+#
+#     def test_WHEN_post_me_payment_methods_AND_servise_ledu_EXPECTED_is_savedTC90342(self, app):
+#         service = "ledu"
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         data = {
+#             'service': service,
+#         }
+#         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
+#         assert resp['service'] == service
+#
+#     def test_WHEN_post_me_payment_methods_AND_servise_stipe_token_EXPECTED_is_savedTC90343(self, app):
+#         service = "stripe"
+#         token = 'tok_visa'
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         data = {
+#             'service': service,
+#             "token": token
+#         }
+#         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
+#         assert resp['service'] == service
+#
+#
+#     def test_WHEN_post_me_payment_method_AND_currency_EXPECTED_is_savedTC__(self, app):
+#         service = "stripe"
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         email = app.user_data.email
+#         data = {
+#             'service': service,
+#             "email": email,
+#             'token': 'tok_visa',
+#         }
+#         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
+#         assert resp['service'] == service
+#
+# class TestMeChangePassword:
+#     def test_WHEN_post_me_AND_password_positive_EXPECTED_response_200TC90350(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         resp = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert resp['status_code'] == 200
+#
+#     def test_WHEN_post_me_AND_password_change_EXPECTED_login_using_newTC90351(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         app.user_data.password1 = choice(newpass)
+#         login = app.api_helper.login_perform(app)
+#         assert login['status_code'] == 200
+#
+#     def test_WHEN_post_me_AND_password_change_EXPECTED_login_using_oldTC90352(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         login = app.api_helper.login_perform(app)
+#         assert login['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_not_the_same_passwordschange_EXPECTED_400TC90353(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': "123"
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_numeric_passwordschange_EXPECTED_400TC90354(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_numeric()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': "123"
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_short_passwordschange_EXPECTED_400TC90355(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_short()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': "123"
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_upperlowercase_passwordschange_EXPECTED_400TC90356(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_uppercase_lowercase_the_same()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_incorrectold_password_EXPECTED_400TC90357(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_uppercase_lowercase_the_same()
+#         data = {"email": app.user_data.email,
+#                 'old_password': "123",
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_emptyold_password_EXPECTED_400TC90358(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_uppercase_lowercase_the_same()
+#         data = {"email": app.user_data.email,
+#                 'new_password': newpass[0],
+#                 'confirmed_password': newpass[1]
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_emptynew_password_EXPECTED_400TC90359(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_uppercase_lowercase_the_same()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'confirmed_password': newpass[1]
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
+#
+#     def test_WHEN_post_me_AND_emptyconf_password_EXPECTED_400TC90360(self, app):
+#         app.user_data = app.api_helper.get_registered_and_logged_user(app)
+#         newpass = app.string_generator.get_random_two_passwords_uppercase_lowercase_the_same()
+#         data = {"email": app.user_data.email,
+#                 'old_password': app.user_data.password1,
+#                 'new_password': newpass[1]
+#                 }
+#         me = app.api_helper.general_put(app=app, route=app.route.me, data=data)
+#         assert me['status_code'] == 400
 
-    #TODO /api/v3/me/notification/subscriptions/{id}/ GET PUT DELETE
-
-
-class TestMePaymentMethods:
-    # def test_WHEN_get_me_payment_methods_EXPECTED_response_code_is_200TC__(self, app):
-    #     app.user_data = app.api_helper.get_registered_and_logged_user(app)
-    #     resp = app.api_helper.general_get(app, app.route.me_payment_methods)
-    #     assert resp['status_code'] == 200
-    #
-    # def test_WHEN_get_me_payment_methods_after_registration_EXPECTED_list_is_emptyTC__(self, app):
-    #     app.user_data = app.api_helper.get_registered_and_logged_user(app)
-    #     resp = app.api_helper.general_get(app, app.route.me_payment_methods)
-    #     assert resp['data'] == []
-
-    def test_WHEN_post_me_payment_methods_AND_servise_ledu_EXPECTED_is_savedTC__(self, app):
-        service = "ledu"
+class TestMeProjectsSocialStreaming:
+    def test_WHEN_get_me_projects_EXPECTED_response_code_is_200TC__(self, app):
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
-        data = {
-            'service': service,
-        }
-        resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['service'] == service
+        me_project = app.api_helper.general_get(app, route=app.route.me_projects)
+        assert me_project['status_code'] == 200
 
-    def test_WHEN_post_me_payment_methods_AND_servise_stipe_token_EXPECTED_is_savedTC__(self, app):
-        service = "ledu"
+    def test_WHEN_get_me_social_acc_EXPECTED_response_code_is_200TC__(self, app):
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
-        data = {
-            'service': service,
-        }
-        resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['service'] == service
+        social = app.api_helper.general_get(app, route=app.route.me_social_accounts)
+        assert social['status_code'] == 200
+
+    def test_WHEN_get_streaming_creadantials_EXPECTED_response_code_is_200TC__(self, app):
+        app.user_data = app.api_helper.get_registered_and_logged_user(app)
+        me_stream_cred = app.api_helper.general_get(app, route=app.route.me_streaming_credentials)
+        assert me_stream_cred['status_code'] == 200
+
+    def test_WHEN_get_streaming_creadantials_EXPECTED_key_and_link_is_not_emptyTC__(self, app):
+        app.user_data = app.api_helper.get_registered_and_logged_user(app)
+        me_stream_cred = app.api_helper.general_get(app, route=app.route.me_streaming_credentials)
+        assert me_stream_cred['url'] != '' and me_stream_cred['token'] != ''
+
+    def test_WHEN_put_streaming_creadantials_EXPECTED_token_is_changedTC__(self, app):
+        app.user_data = app.api_helper.get_registered_and_logged_user(app)
+        me_stream_cred = app.api_helper.general_get(app, route=app.route.me_streaming_credentials)
+        token = me_stream_cred['token']
+        me_stream_cred = app.api_helper.general_put(app, route=app.route.me_streaming_credentials, data={})
+        assert me_stream_cred['token'] != token
 
 
 

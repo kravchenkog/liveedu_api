@@ -20,6 +20,9 @@ class Route:
         self.me_preferences = "/api/v3/me/notification/preferences/"
         self.me_subscr_notif = "/api/v3/me/notification/subscriptions/"
         self.me_payment_methods = "/api/v3/me/payment-methods/"
+        self.me_projects = "/api/v3/me/projects/"
+        self.me_social_accounts = "/api/v3/me/social/accounts/"
+        self.me_streaming_credentials = "/api/v3/me/streaming/credentials/"
         self.categories = '/api/v3/categories/'
         self.languages = '/api/v3/languages/'
         self.languages_iso = '/api/v3/languages/'

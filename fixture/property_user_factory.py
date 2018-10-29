@@ -1,5 +1,6 @@
 class UserData:
-    def __init__(self, email=None, password=None, username=None, password1=None, password2=None, userrole=None, slug=None):
+    def __init__(self, email=None, password=None, username=None, password1=None, password2=None,
+                 userrole=None, slug=None, response_reg = None):
         self.email = email
         self.password = password
         self.username = username
@@ -7,6 +8,7 @@ class UserData:
         self.password2 = password2
         self.userrole = userrole
         self.slug = slug
+        self.response_reg = response_reg
 #test
 class RealUserData:
     def __init__(self, email=None, username=None, user_role=None, slug=None, url=None,
@@ -28,6 +30,7 @@ class RealUserData:
         self.profile = profile
         self.plan = plan
         self.token = token
+
 
 class UserParseFactory:
 

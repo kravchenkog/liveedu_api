@@ -8,14 +8,14 @@ class TestCheckMePositive:
         resp = app.api_helper.general_get(app=app, route=app.route.me)
         assert resp['status_code'] == 200
 
-    def test_WHEN_put_not_all_fields_EXPECTED_status_code_is_400TC90301(self, app):
+    def test_WHEN_put_new_topics_EXPECTED_status_code_is_200TC90301(self, app):
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         topics = app.api_helper.get_random_slug_topic(app)
         data = {
             'topics': [topics]
         }
         resp = app.api_helper.general_put(app=app, route=app.route.me, data=data)
-        assert resp['status_code'] == 400
+        assert resp['topics'][0] == topics
 
     def test_WHEN_put_newtopic_EXPECTED_status_code_is_200TC90302(self, app):
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
@@ -164,7 +164,9 @@ class TestCheckMeBalanses:
         app.api_helper.purchase_package(app, plan, 3)
         plan = app.api_helper.get_plan(app, plan)
         resp = app.api_helper.general_get(app, app.route.me_balanses)
-        assert float(plan['balance_ledu']) == float(resp['data'][0]['amount'])
+        value1 = round(float(plan['balance_ledu']), 0)
+        value2 = round(float(resp['data'][0]['amount']), 0)
+        assert value1 == value2
 
 class TestCheckMeBillingHistory:
     def test_WHEN_me_billing_EXPECTED_response_code_is_200TC90314(self, app):

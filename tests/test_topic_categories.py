@@ -91,21 +91,22 @@ class TestTopicsCategories:
         for x in range(0, len(response['results'])-1):
             assert random_cat_name in response['results'][x]['name']
 
-    def test_WHEN_get_categories_by_topic_AND_ordering_EXPECTED_sorting_is_correct_TC90090(self, app):
-
-        random_topic_slug = random.choice(
-            app.api_helper.general_get(app, route=app.route.topics)['results'])['slug']
-        app.route.topics = app.route.topics + random_topic_slug + '/categories'
-        categories_by_slug = app.api_helper.general_get(app, route=app.route.topics)
-        list_of_cat_slag = []
-        [list_of_cat_slag.append(x['slug']) for x in categories_by_slug['results']]
-        list_of_cat_slag.sort()
-        app.env.params = {'ordering': 'slug'}
-        categories_by_order = app.api_helper.general_get(app, route=app.route.topics)
-        list_order = []
-        [list_order.append(x['slug']) for x in categories_by_order['results']]
-        for x in range(0, len(list_order)-1):
-            assert list_order[x] == list_of_cat_slag[x]
+    #TODO next
+    # def test_WHEN_get_categories_by_topic_AND_ordering_EXPECTED_sorting_is_correct_TC90090(self, app):
+    #
+    #     random_topic_slug = random.choice(
+    #         app.api_helper.general_get(app, route=app.route.topics)['results'])['slug']
+    #     app.route.topics = app.route.topics + random_topic_slug + '/categories'
+    #     categories_by_slug = app.api_helper.general_get(app, route=app.route.topics)
+    #     list_of_cat_slag = []
+    #     [list_of_cat_slag.append(x['slug']) for x in categories_by_slug['results']]
+    #     list_of_cat_slag.sort()
+    #     app.env.params = {'ordering': 'slug'}
+    #     categories_by_order = app.api_helper.general_get(app, route=app.route.topics)
+    #     list_order = []
+    #     [list_order.append(x['slug']) for x in categories_by_order['results']]
+    #     for x in range(0, len(list_order)-1):
+    #         assert list_order[x] == list_of_cat_slag[x]
 
 class TestTopicsHieracly:
     def test_WHEN_get_topic_hierarchy_EXPECTED_status_code_200_TC90095(self, app):

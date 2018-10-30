@@ -342,7 +342,7 @@ class TestMePreferences:
         }
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         assert resp['category'] == category
-
+        #
     def test_WHEN_post_notifsubscr_AND_incorrect_category_EXPECTED_value_isnot_saved_TC90336(self, app):
         category = "qwert"
         app.user_data = app.api_helper.get_registered_and_logged_user(app)

@@ -1,6 +1,7 @@
 stages:
-  - build
-  - test
+  #- build
+  #- test
+  - test_without_build
 
 build:
   stage: build
@@ -24,6 +25,19 @@ test:
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
   before_script: []
   script:
+    - pytest
+  dependencies: []
+  tags:
+    - docker
+  except:
+    - /^wip[\/_-].+$/
+
+test_without_build:
+  stage: test_without_build
+  image: python3.6
+  before_script: []
+  script:
+    - pip install -r requirements.txt
     - pytest
   dependencies: []
   tags:

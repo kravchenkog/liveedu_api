@@ -11,7 +11,7 @@ more-itertools==4.3.0
 namedlist==1.7
 pluggy==0.7.1
 py==1.5.4
-PyICU
+PyICU==2.2
 pytest==3.7.0
 pytest-allure-adaptor==1.7.10
 pytest-cov==2.6.0

@@ -4,4 +4,4 @@ services:
 test_job:
   script:
     - pip install -r requirements.txt
-    - pytest sh -c "pytest --html=report.html --self-contained-html" 
+    - sh -c "pytest --html=report.html --self-contained-html" 

@@ -37,7 +37,7 @@ test:
 
 test_without_build:
   stage: test_without_build
-  image: python3.6
+  image: python:3.6
   before_script: []
   script:
     - pip install -r requirements.txt

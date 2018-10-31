@@ -3,6 +3,6 @@ services:
   - rethinkdb:latest
 test_job:
   script:
-    - pip install --upgrade pip
+
     - pip install -r requirements.txt
     - py.test --cov=tests tests/  

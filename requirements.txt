@@ -9,7 +9,6 @@ idna==2.7
 lxml==4.2.4
 more-itertools==4.3.0
 namedlist==1.7
-
 pluggy==0.7.1
 py==1.5.4
 PyICU==2.0.6

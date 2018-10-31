@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 30-Oct-2018 at 14:32:56 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 31-Oct-2018 at 14:26:00 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,8 +251,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>Summary</h2>
-    <p>153 tests ran in 886.88 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">148 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">5 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>153 tests ran in 1367.00 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">146 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">7 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -266,12 +266,12 @@ function filter_table(elem) {
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newtopic_EXPECTED_status_code_is_200TC90302</td>
-          <td class="col-duration">33.53</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_timezone_EXPECTED_value_is_savedTC90305</td>
+          <td class="col-duration">35.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_me.TestCheckMePositive object at 0x7f772cdac588&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772cdacc88&gt;<br/><br/>    def test_WHEN_put_newtopic_EXPECTED_status_code_is_200TC90302(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:21: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7f772cdac198&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772cdacc88&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+            <div class="log">self = &lt;test_me.TestCheckMePositive object at 0x7fc195621c88&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc195621e10&gt;<br/><br/>    def test_WHEN_put_timezone_EXPECTED_value_is_savedTC90305(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:71: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc195621828&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc195621e10&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
 400
 502
 _____________________________ERROR_JSON_LOADS_______________________________
@@ -308,7 +308,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
               
               &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
               &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
-              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 471dd413e9b48abc &amp;bull; 2018-10-30 12:19:38 UTC&lt;/small&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 4725fe719ed28243 &amp;bull; 2018-10-31 12:06:41 UTC&lt;/small&gt;
             &lt;/h1&gt;
             &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
         &lt;/div&gt;&lt;!-- /.error-overview --&gt;
@@ -369,9 +369,253 @@ _____________________________ERROR_JSON_LOADS_______________________________
 
         &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
   &lt;p&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;471dd413e9b48abc&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;4725fe719ed28243&lt;/strong&gt;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 185.143.147.203&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
+    
+  &lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.error-footer --&gt;
+
+
+    &lt;/div&gt;&lt;!-- /#cf-error-details --&gt;
+&lt;/div&gt;&lt;!-- /#cf-wrapper --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_activity_not_EXPECTED_value_saved_TC90321</td>
+          <td class="col-duration">37.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7fc194c5cc50&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c5c358&gt;<br/><br/>    def test_WHEN_put_pref_activity_not_EXPECTED_value_saved_TC90321(self, app):<br/>        activity_notify = False<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:216: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc194c5c240&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c5c358&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+502
+_____________________________ERROR_JSON_LOADS_______________________________
+&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js ie6 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js ie7 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js ie8 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en-US&quot;&gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+
+
+&lt;title&gt;dev.liveedu.tv | 502: Bad gateway&lt;/title&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; id=&quot;cf_styles-css&quot; href=&quot;/cdn-cgi/styles/cf.errors.css&quot; type=&quot;text/css&quot; media=&quot;screen,projection&quot; /&gt;
+&lt;!--[if lt IE 9]&gt;&lt;link rel=&quot;stylesheet&quot; id=&#x27;cf_styles-ie-css&#x27; href=&quot;/cdn-cgi/styles/cf.errors.ie.css&quot; type=&quot;text/css&quot; media=&quot;screen,projection&quot; /&gt;&lt;![endif]--&gt;
+&lt;style type=&quot;text/css&quot;&gt;body{margin:0;padding:0}&lt;/style&gt;
+
+
+
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;cf-wrapper&quot;&gt;
+
+    
+
+    &lt;div id=&quot;cf-error-details&quot; class=&quot;cf-error-details-wrapper&quot;&gt;
+        &lt;div class=&quot;cf-wrapper cf-error-overview&quot;&gt;
+            &lt;h1&gt;
+              
+              &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
+              &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 472603675efd8418 &amp;bull; 2018-10-31 12:10:04 UTC&lt;/small&gt;
+            &lt;/h1&gt;
+            &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
+        &lt;/div&gt;&lt;!-- /.error-overview --&gt;
+        
+        &lt;div class=&quot;cf-section cf-highlight cf-status-display&quot;&gt;
+            &lt;div class=&quot;cf-wrapper&quot;&gt;
+                &lt;div class=&quot;cf-columns cols-3&quot;&gt;
+                  
+&lt;div id=&quot;cf-browser-status&quot; class=&quot;cf-column cf-status-item cf-browser-status &quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-browser&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-ok&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;You&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Browser&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;cf-cloudflare-status&quot; class=&quot;cf-column cf-status-item cf-cloudflare-status &quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-cloud&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-ok&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;Kiev&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Cloudflare&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;cf-host-status&quot; class=&quot;cf-column cf-status-item cf-host-status cf-error-source&quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-server&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-error&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;dev.liveedu.tv&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Host&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Error&lt;/span&gt;
+&lt;/div&gt;
+
+                &lt;/div&gt;
+              
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.status-display --&gt;
+
+        &lt;div class=&quot;cf-section cf-wrapper&quot;&gt;
+            &lt;div class=&quot;cf-columns two&quot;&gt;
+                &lt;div class=&quot;cf-column&quot;&gt;
+                    &lt;h2&gt;What happened?&lt;/h2&gt;
+                    &lt;p&gt;The web server reported a bad gateway error.&lt;/p&gt;
+                &lt;/div&gt;
+              
+                &lt;div class=&quot;cf-column&quot;&gt;
+                    &lt;h2&gt;What can I do?&lt;/h2&gt;
+                    &lt;p&gt;Please try again in a few minutes.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+              
+        &lt;/div&gt;&lt;!-- /.section --&gt;
+
+        &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
+  &lt;p&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;472603675efd8418&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
+    
+  &lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.error-footer --&gt;
+
+
+    &lt;/div&gt;&lt;!-- /#cf-error-details --&gt;
+&lt;/div&gt;&lt;!-- /#cf-wrapper --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_get_prefsubscr_EXPECTED_response_code_is_200TC90327</td>
+          <td class="col-duration">36.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7fc194c63710&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c63160&gt;<br/><br/>    def test_WHEN_get_prefsubscr_EXPECTED_response_code_is_200TC90327(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:269: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc194c63208&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c63160&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+502
+_____________________________ERROR_JSON_LOADS_______________________________
+&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js ie6 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js ie7 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js ie8 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en-US&quot;&gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+
+
+&lt;title&gt;dev.liveedu.tv | 502: Bad gateway&lt;/title&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot; /&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; id=&quot;cf_styles-css&quot; href=&quot;/cdn-cgi/styles/cf.errors.css&quot; type=&quot;text/css&quot; media=&quot;screen,projection&quot; /&gt;
+&lt;!--[if lt IE 9]&gt;&lt;link rel=&quot;stylesheet&quot; id=&#x27;cf_styles-ie-css&#x27; href=&quot;/cdn-cgi/styles/cf.errors.ie.css&quot; type=&quot;text/css&quot; media=&quot;screen,projection&quot; /&gt;&lt;![endif]--&gt;
+&lt;style type=&quot;text/css&quot;&gt;body{margin:0;padding:0}&lt;/style&gt;
+
+
+
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;cf-wrapper&quot;&gt;
+
+    
+
+    &lt;div id=&quot;cf-error-details&quot; class=&quot;cf-error-details-wrapper&quot;&gt;
+        &lt;div class=&quot;cf-wrapper cf-error-overview&quot;&gt;
+            &lt;h1&gt;
+              
+              &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
+              &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 472605290e7b843c &amp;bull; 2018-10-31 12:11:15 UTC&lt;/small&gt;
+            &lt;/h1&gt;
+            &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
+        &lt;/div&gt;&lt;!-- /.error-overview --&gt;
+        
+        &lt;div class=&quot;cf-section cf-highlight cf-status-display&quot;&gt;
+            &lt;div class=&quot;cf-wrapper&quot;&gt;
+                &lt;div class=&quot;cf-columns cols-3&quot;&gt;
+                  
+&lt;div id=&quot;cf-browser-status&quot; class=&quot;cf-column cf-status-item cf-browser-status &quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-browser&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-ok&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;You&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Browser&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;cf-cloudflare-status&quot; class=&quot;cf-column cf-status-item cf-cloudflare-status &quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-cloud&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-ok&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;Kiev&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Cloudflare&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;cf-host-status&quot; class=&quot;cf-column cf-status-item cf-host-status cf-error-source&quot;&gt;
+  &lt;div class=&quot;cf-icon-error-container&quot;&gt;
+    &lt;i class=&quot;cf-icon cf-icon-server&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;cf-icon-status cf-icon-error&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;cf-status-desc&quot;&gt;dev.liveedu.tv&lt;/span&gt;
+  &lt;h3 class=&quot;cf-status-name&quot;&gt;Host&lt;/h3&gt;
+  &lt;span class=&quot;cf-status-label&quot;&gt;Error&lt;/span&gt;
+&lt;/div&gt;
+
+                &lt;/div&gt;
+              
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.status-display --&gt;
+
+        &lt;div class=&quot;cf-section cf-wrapper&quot;&gt;
+            &lt;div class=&quot;cf-columns two&quot;&gt;
+                &lt;div class=&quot;cf-column&quot;&gt;
+                    &lt;h2&gt;What happened?&lt;/h2&gt;
+                    &lt;p&gt;The web server reported a bad gateway error.&lt;/p&gt;
+                &lt;/div&gt;
+              
+                &lt;div class=&quot;cf-column&quot;&gt;
+                    &lt;h2&gt;What can I do?&lt;/h2&gt;
+                    &lt;p&gt;Please try again in a few minutes.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+              
+        &lt;/div&gt;&lt;!-- /.section --&gt;
+
+        &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
+  &lt;p&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;472605290e7b843c&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
     
@@ -389,11 +633,11 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_project_EXPECTED_value_isnot_saved_TC90331</td>
-          <td class="col-duration">4.97</td>
+          <td class="col-duration">6.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7f772cda80b8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772cda8898&gt;<br/><br/>    def test_WHEN_post_notifsubscr_AND_incorrect_project_EXPECTED_value_isnot_saved_TC90331(self, app):<br/>        project = &quot;1&quot;<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;project&quot;: project<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;status_code&#x27;] == 400<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>tests/test_me.py:307: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7fc194b7bf60&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194b7b6a0&gt;<br/><br/>    def test_WHEN_post_notifsubscr_AND_incorrect_project_EXPECTED_value_isnot_saved_TC90331(self, app):<br/>        project = &quot;1&quot;<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;project&quot;: project<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;status_code&#x27;] == 400<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>tests/test_me.py:307: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
 500
@@ -407,7 +651,7 @@ Django Version: 1.11.16
 Python Executable: /usr/local/bin/python
 Python Version: 3.6.7
 Python Path: [&#x27;/srv/web&#x27;, &#x27;/usr/local/bin&#x27;, &#x27;/usr/local/lib/python3.6/site-packages/newrelic/bootstrap&#x27;, &#x27;/srv/web&#x27;, &#x27;/usr/src&#x27;, &#x27;/usr/local/lib/python36.zip&#x27;, &#x27;/usr/local/lib/python3.6&#x27;, &#x27;/usr/local/lib/python3.6/lib-dynload&#x27;, &#x27;/usr/local/lib/python3.6/site-packages&#x27;, &#x27;/usr/src/sorl-thumbnail&#x27;, &#x27;/srv/web&#x27;]
-Server time: Tue, 30 Oct 2018 08:22:21 -0400
+Server time: Wed, 31 Oct 2018 08:11:55 -0400
 Installed Applications:
 [&#x27;django.contrib.admin&#x27;,
  &#x27;django.contrib.auth&#x27;,
@@ -546,7 +790,7 @@ File &quot;/usr/local/lib/python3.6/site-packages/django/db/models/query.py&quot
 Exception Type: MultipleObjectsReturned at /api/v3/me/notification/subscriptions/
 Exception Value: get() returned more than one Project -- it returned 4!
 Request information:
-USER: nbqtuaqsrhfqglzykhma
+USER: apymcahyspxgpja
 
 GET: No GET data
 
@@ -562,16 +806,16 @@ CONTENT_LENGTH = &#x27;16&#x27;
 CONTENT_TYPE = &#x27;application/json&#x27;
 HTTP_ACCEPT = &#x27;*/*&#x27;
 HTTP_ACCEPT_ENCODING = &#x27;gzip&#x27;
-HTTP_AUTHORIZATION = &#x27;JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoyNTI5OTIsInVzZXJuYW1lIjoibmJxdHVhcXNyaGZxZ2x6eWtobWEiLCJleHAiOjE1NDIxMTE3NDAsImVtYWlsIjoidGVzdGxpdmVlZHVfYnRkanBtdWh6ZHl2bmpodWVpaWlAYmhpZ2UueXAiLCJvcmlnX2lhdCI6MTU0MDkwMjE0MH0.gziZjDApN4bcN1butIwQXa_dVX62PkhqPBo6fveLLCjIlzjCAZwgHCaotxVMmBQbXZM-55eDRg3q1ShzFYjdll3WqzQ11Nbyd4YTAkWJx1lQnrdFvRZDCUZjb6APEpR6BFSy2pXk4_cEj4wig_7qcxtA8qAbzDUklc2U-K3ynBJxTzuLXadLBpdoFuSXHLJ1jV65VTqjCPaySgtp5D_zK8hkSgLgPZ_X6B1SUpS8VCki2RD5JaCePm5yPac6-xCl8kwM9NZUplrlVzYe20IGs0IgsDxOtAziS-tD7nkzujYadHPXDSGdvZg3HAkvvziQaFe6BNVTVGXnPlbxWDBxcA&#x27;
-HTTP_CF_CONNECTING_IP = &#x27;185.143.147.203&#x27;
+HTTP_AUTHORIZATION = &#x27;JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoyNTMyNDUsInVzZXJuYW1lIjoiYXB5bWNhaHlzcHhncGphIiwiZXhwIjoxNTQyMTk3NTE0LCJlbWFpbCI6InRlc3RsaXZlZWR1X2JlbXlndXBjeWx2aHV3cm94aXV0QG5uYnN3LnZ4Iiwib3JpZ19pYXQiOjE1NDA5ODc5MTR9.KcUqmlTm8jFwnjWABfvD7WGaePxTsFaLZmD365tLbCKoOdKxPyIDBbcpsC9xA3w1XLc7DZ-fT4EedAhqCuWphPSiovhjZwDW4dUEe6p9q-xglUVR33-0Q-srombLrtu9YL0bSVUHZZk_ydDIAfYyxrskqZTDwLmyuceuuI_nlttgJmFWhgcQpWGtQ0_Sa0ol9ykuSjqrMoXqV5A0SwMw-cZVW6GbKStkH4JyhInrLQa7iRTniQ5gymkpMWJa9PAC2Ir51YGM-PlRY_zS45I1O7x5hRBknrTWn9KzrGnONw4Yh8Yhj6Fgzx1RhHRocr0zT6rCteciJIFy08vFcZsyEw&#x27;
+HTTP_CF_CONNECTING_IP = &#x27;94.232.215.76&#x27;
 HTTP_CF_IPCOUNTRY = &#x27;UA&#x27;
-HTTP_CF_RAY = &#x27;471dd8d10ace8267-KBP&#x27;
+HTTP_CF_RAY = &#x27;472606e4eed4844e-KBP&#x27;
 HTTP_CF_VISITOR = &#x27;{&quot;scheme&quot;:&quot;https&quot;}&#x27;
 HTTP_CONNECTION = &#x27;close&#x27;
 HTTP_COOKIE = &#x27;nginx_auth=23942c07f8f8dc87baf2a2afa32e2af4&#x27;
 HTTP_HOST = &#x27;dev.liveedu.tv&#x27;
 HTTP_USER_AGENT = &#x27;python-requests/2.19.1&#x27;
-HTTP_X_FORWARDED_FOR = &#x27;185.143.147.203, 172.68.238.205, 172.18.0.1&#x27;
+HTTP_X_FORWARDED_FOR = &#x27;94.232.215.76, 172.68.238.241, 172.18.0.1&#x27;
 HTTP_X_FORWARDED_HOST = &#x27;dev.liveedu.tv&#x27;
 HTTP_X_FORWARDED_PORT = &#x27;443&#x27;
 HTTP_X_FORWARDED_PROTO = &#x27;https&#x27;
@@ -580,18 +824,18 @@ HTTP_X_REAL_IP = &#x27;172.18.0.1&#x27;
 PATH_INFO = &#x27;/api/v3/me/notification/subscriptions/&#x27;
 QUERY_STRING = &#x27;&#x27;
 RAW_URI = &#x27;/api/v3/me/notification/subscriptions/&#x27;
-REMOTE_ADDR = &#x27;185.143.147.203&#x27;
-REMOTE_PORT = &#x27;53070&#x27;
+REMOTE_ADDR = &#x27;94.232.215.76&#x27;
+REMOTE_PORT = &#x27;43478&#x27;
 REQUEST_METHOD = &#x27;POST&#x27;
 SCRIPT_NAME = &#x27;&#x27;
 SERVER_NAME = &#x27;0.0.0.0&#x27;
 SERVER_PORT = &#x27;8000&#x27;
 SERVER_PROTOCOL = &#x27;HTTP/1.0&#x27;
 SERVER_SOFTWARE = &#x27;gunicorn/19.7.1&#x27;
-gunicorn.socket = &lt;socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=(&#x27;172.18.0.24&#x27;, 8000), raddr=(&#x27;172.18.0.15&#x27;, 53070)&gt;
-wsgi.errors = &lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7f80634f7c50&gt;
+gunicorn.socket = &lt;socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=(&#x27;172.18.0.24&#x27;, 8000), raddr=(&#x27;172.18.0.15&#x27;, 43478)&gt;
+wsgi.errors = &lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7f55dff78710&gt;
 wsgi.file_wrapper = &#x27;&#x27;
-wsgi.input = &lt;newrelic.api.web_transaction._WSGIInputWrapper object at 0x7f80635e6898&gt;
+wsgi.input = &lt;newrelic.api.web_transaction._WSGIInputWrapper object at 0x7f55dff78dd8&gt;
 wsgi.multiprocess = False
 wsgi.multithread = False
 wsgi.run_once = False
@@ -736,7 +980,7 @@ LIVEEDU_MEDIA_PLATFORM = {&#x27;current-gen&#x27;: 2, &#x27;domain&#x27;: &#x27;
 LIVESTREAM_BROADCASTER_NOTIFY_TIME = 1440
 LIVESTREAM_VIEWERS_NOTIFY_TIME = 60
 LOCALE_PATHS = []
-LOGGING = {&#x27;version&#x27;: 1, &#x27;disable_existing_loggers&#x27;: False, &#x27;filters&#x27;: {&#x27;require_debug_false&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugFalse&#x27;}, &#x27;require_debug_true&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugTrue&#x27;}}, &#x27;formatters&#x27;: {&#x27;plain&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f806f6619b0&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f806f653bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f806f64c780&gt;]}, &#x27;colored&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f806f661a20&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f806f653bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f806f64c780&gt;]}}, &#x27;handlers&#x27;: {&#x27;default&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;class&#x27;: &#x27;logging.StreamHandler&#x27;, &#x27;formatter&#x27;: &#x27;plain&#x27;}, &#x27;sentry&#x27;: {&#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;class&#x27;: &#x27;raven.contrib.django.raven_compat.handlers.SentryHandler&#x27;}}, &#x27;loggers&#x27;: {&#x27;django&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;}, &#x27;django.server&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;hawkrest&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;mohawk&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;elasticsearch&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;celery&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: True}, &#x27;&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: False}, &#x27;raven&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;propagate&#x27;: False}}}
+LOGGING = {&#x27;version&#x27;: 1, &#x27;disable_existing_loggers&#x27;: False, &#x27;filters&#x27;: {&#x27;require_debug_false&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugFalse&#x27;}, &#x27;require_debug_true&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugTrue&#x27;}}, &#x27;formatters&#x27;: {&#x27;plain&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f55ec112978&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f55ec104bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f55ec0fdf28&gt;]}, &#x27;colored&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f55ec1129e8&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f55ec104bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f55ec0fdf28&gt;]}}, &#x27;handlers&#x27;: {&#x27;default&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;class&#x27;: &#x27;logging.StreamHandler&#x27;, &#x27;formatter&#x27;: &#x27;plain&#x27;}, &#x27;sentry&#x27;: {&#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;class&#x27;: &#x27;raven.contrib.django.raven_compat.handlers.SentryHandler&#x27;}}, &#x27;loggers&#x27;: {&#x27;django&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;}, &#x27;django.server&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;hawkrest&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;mohawk&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;elasticsearch&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;celery&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: True}, &#x27;&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: False}, &#x27;raven&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;propagate&#x27;: False}}}
 LOGGING_CONFIG = &#x27;logging.config.dictConfig&#x27;
 LOGIN_REDIRECT_URL = &#x27;/accounts/profile/&#x27;
 LOGIN_URL = &#x27;/accounts/login/&#x27;
@@ -782,7 +1026,7 @@ PRIVATE_KEY = &#x27;********************&#x27;
 PROJECTS_USER_SLUG = &#x27;liveedu_projects&#x27;
 PROJECT_IS_UPCOMING_SCHEDULED_SECONDS = 86400
 PUBLIC_KEY = &#x27;********************&#x27;
-RAVEN_CONFIG = {&#x27;dsn&#x27;: &#x27;https://24ed3e71345b485fb3caea8eb93312a3:ec705ec132b342e8afd0157576159cb8@sentry.liveedu.tv/9&#x27;, &#x27;release&#x27;: &#x27;2017.1.6-776-g4287d40&#x27;, &#x27;environment&#x27;: &#x27;develop&#x27;, &#x27;include_paths&#x27;: [&#x27;core&#x27;, &#x27;schedule&#x27;, &#x27;api&#x27;, &#x27;vote&#x27;, &#x27;feedback&#x27;]}
+RAVEN_CONFIG = {&#x27;dsn&#x27;: &#x27;https://24ed3e71345b485fb3caea8eb93312a3:ec705ec132b342e8afd0157576159cb8@sentry.liveedu.tv/9&#x27;, &#x27;release&#x27;: &#x27;2017.1.6-777-g6e3c799&#x27;, &#x27;environment&#x27;: &#x27;develop&#x27;, &#x27;include_paths&#x27;: [&#x27;core&#x27;, &#x27;schedule&#x27;, &#x27;api&#x27;, &#x27;vote&#x27;, &#x27;feedback&#x27;]}
 REDIS = {&#x27;host&#x27;: &#x27;redis&#x27;, &#x27;port&#x27;: 6379, &#x27;password&#x27;: &#x27;********************&#x27;, &#x27;db&#x27;: 0}
 REDIS_DSN = &#x27;redis://redis:6379/0&#x27;
 REDIS_LIVE_NS_PREFIX = &#x27;live:&#x27;
@@ -899,12 +1143,12 @@ display a standard page generated by the handler for this status code.
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lprotall_EXPECTED_price_is_the_same_TC90251</td>
-          <td class="col-duration">33.57</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_change_EXPECTED_login_using_newTC90351</td>
+          <td class="col-duration">36.28</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_purchase_subscription_ledu.TestCheckPlan_vs_Subscription object at 0x7f772c47bdd8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772ce1cf98&gt;<br/><br/>    def test_WHEN_subscriptionLEDU_AND_get_plan_lprotall_EXPECTED_price_is_the_same_TC90251(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_purchase_subscription_ledu.py:15: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7f772ce1c6a0&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772ce1cf98&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+            <div class="log">self = &lt;test_me.TestMeChangePassword object at 0x7fc194c6d128&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c6d3c8&gt;<br/><br/>    def test_WHEN_post_me_AND_password_change_EXPECTED_login_using_newTC90351(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:434: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc194c6d2e8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c6d3c8&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
 400
 502
 _____________________________ERROR_JSON_LOADS_______________________________
@@ -941,7 +1185,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
               
               &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
               &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
-              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 471ddf234efe8249 &amp;bull; 2018-10-30 12:27:11 UTC&lt;/small&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 472609adca0e8b04 &amp;bull; 2018-10-31 12:14:20 UTC&lt;/small&gt;
             &lt;/h1&gt;
             &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
         &lt;/div&gt;&lt;!-- /.error-overview --&gt;
@@ -1002,9 +1246,9 @@ _____________________________ERROR_JSON_LOADS_______________________________
 
         &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
   &lt;p&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;471ddf234efe8249&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;472609adca0e8b04&lt;/strong&gt;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 185.143.147.203&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
     
@@ -1021,12 +1265,12 @@ _____________________________ERROR_JSON_LOADS_______________________________
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_not_is_failing_TC90202</td>
-          <td class="col-duration">33.88</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_not_the_same_passwordschange_EXPECTED_400TC90353</td>
+          <td class="col-duration">34.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_purchase_subscription_stripe.TestPostSubscription object at 0x7f772c520ba8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772c5200b8&gt;<br/><br/>    def test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_not_is_failing_TC90202(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_purchase_subscription_stripe.py:23: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7f772c520048&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772c5200b8&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+            <div class="log">self = &lt;test_me.TestMeChangePassword object at 0x7fc195541550&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c7fa58&gt;<br/><br/>    def test_WHEN_post_me_AND_not_the_same_passwordschange_EXPECTED_400TC90353(self, app):<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_me.py:459: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc194c7fc18&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194c7fa58&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
 400
 502
 _____________________________ERROR_JSON_LOADS_______________________________
@@ -1063,7 +1307,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
               
               &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
               &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
-              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 471de1008a348261 &amp;bull; 2018-10-30 12:28:27 UTC&lt;/small&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 47260ae078c38ab6 &amp;bull; 2018-10-31 12:15:08 UTC&lt;/small&gt;
             &lt;/h1&gt;
             &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
         &lt;/div&gt;&lt;!-- /.error-overview --&gt;
@@ -1124,9 +1368,9 @@ _____________________________ERROR_JSON_LOADS_______________________________
 
         &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
   &lt;p&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;471de1008a348261&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;47260ae078c38ab6&lt;/strong&gt;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 185.143.147.203&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
     
@@ -1143,12 +1387,12 @@ _____________________________ERROR_JSON_LOADS_______________________________
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr1_AND_topics_more_than_possible_EXPECTED_is_not_TC90203</td>
-          <td class="col-duration">36.65</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_3_is_purchased_EXPECTED_me_package_id_is_properTC90225</td>
+          <td class="col-duration">38.40</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_purchase_subscription_stripe.TestPostSubscription object at 0x7f772ce21668&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772ce211d0&gt;<br/><br/>    def test_WHEN_post_subscr1_AND_topics_more_than_possible_EXPECTED_is_not_TC90203(self, app):<br/>    <br/>        my_plan = app.api_helper.get_plan(app, &quot;lpro&quot;)<br/>        range_from= my_plan[&#x27;topic_qty&#x27;]+1<br/>&gt;       app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/><br/>tests/test_purchase_subscription_stripe.py:36: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7f772ce1c160&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f772ce211d0&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+            <div class="log">self = &lt;test_purchase_subscription_stripe.TestMeAfterPurchase object at 0x7fc194bb8ba8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194bb8780&gt;<br/><br/>    def test_WHEN_subscription_3_is_purchased_EXPECTED_me_package_id_is_properTC90225(self, app):<br/>&gt;       my_plan, purchase = app.api_helper.register_user_and_purchaqse_subs(app=app, plan_name=&#x27;lpro12&#x27;)<br/><br/>tests/test_purchase_subscription_stripe.py:98: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>fixture/api_user_helper.py:194: in register_user_and_purchaqse_subs<br/>    app.user_data = self.get_registered_and_logged_user(app)<br/>fixture/api_user_helper.py:140: in get_registered_and_logged_user<br/>    self.login_perform_and_parse_fields(app)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;fixture.api_user_helper.APIHelper object at 0x7fc194bb60f0&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7fc194bb8780&gt;<br/><br/>    def login_perform_and_parse_fields(self, app):<br/>        resp_log = self.login_perform(app=app)<br/>&gt;       resp_log[&#x27;user&#x27;][&#x27;token&#x27;] = resp_log[&#x27;token&#x27;]<br/><span class="error">E       TypeError: &#x27;NoneType&#x27; object is not subscriptable</span><br/><br/>fixture/api_user_helper.py:162: TypeError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
 400
 502
 _____________________________ERROR_JSON_LOADS_______________________________
@@ -1185,7 +1429,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
               
               &lt;span class=&quot;cf-error-type&quot;&gt;Error&lt;/span&gt;
               &lt;span class=&quot;cf-error-code&quot;&gt;502&lt;/span&gt;
-              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 471de1e6d9c38261 &amp;bull; 2018-10-30 12:29:04 UTC&lt;/small&gt;
+              &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: 472615de7cb68ad4 &amp;bull; 2018-10-31 12:22:38 UTC&lt;/small&gt;
             &lt;/h1&gt;
             &lt;h2 class=&quot;cf-subheadline&quot;&gt;Bad gateway&lt;/h2&gt;
         &lt;/div&gt;&lt;!-- /.error-overview --&gt;
@@ -1246,9 +1490,9 @@ _____________________________ERROR_JSON_LOADS_______________________________
 
         &lt;div class=&quot;cf-error-footer cf-wrapper&quot;&gt;
   &lt;p&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;471de1e6d9c38261&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;Cloudflare Ray ID: &lt;strong&gt;472615de7cb68ad4&lt;/strong&gt;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
-    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 185.143.147.203&lt;/span&gt;
+    &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Your IP&lt;/span&gt;: 94.232.215.76&lt;/span&gt;
     &lt;span class=&quot;cf-footer-separator&quot;&gt;&amp;bull;&lt;/span&gt;
     &lt;span class=&quot;cf-footer-item&quot;&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href=&quot;https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer&quot; id=&quot;brand_link&quot; target=&quot;_blank&quot;&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
     
@@ -1266,7 +1510,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_correct_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.75</td>
+          <td class="col-duration">0.90</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1276,7 +1520,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_correct_EXPECTED_status_code_is_200</td>
-          <td class="col-duration">0.70</td>
+          <td class="col-duration">0.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1286,7 +1530,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect1_EXPECTED_status_code_is_400</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1296,7 +1540,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect1_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1306,7 +1550,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect2_EXPECTED_status_code_is_400</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-duration">0.31</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1326,7 +1570,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect4_EXPECTED_status_code_is_400</td>
-          <td class="col-duration">0.25</td>
+          <td class="col-duration">2.14</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1336,7 +1580,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_empty_EXPECTED_status_code_is_400</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1346,7 +1590,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_empty_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.28</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1356,7 +1600,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_correct_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">2.35</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1366,7 +1610,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_correct_EXPECTED_response_code_is_200</td>
-          <td class="col-duration">0.25</td>
+          <td class="col-duration">0.28</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1376,7 +1620,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_not_the_same_EXPECTED_response_code_is_400</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1386,7 +1630,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_not_the_same_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.66</td>
+          <td class="col-duration">2.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1396,66 +1640,6 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_numeric_EXPECTED_response_code_is_400</td>
-          <td class="col-duration">0.20</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_short_EXPECTED_response_code_is_400</td>
-          <td class="col-duration">0.20</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_AND_passwords_are_thesame_but_lowandupcase_EXPECTED_response_code_is_400</td>
-          <td class="col-duration">0.66</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">0.72</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_code_200</td>
-          <td class="col-duration">0.27</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_short_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.24</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_long_EXPECTED_response_code_400</td>
           <td class="col-duration">0.26</td>
           <td class="col-links"></td></tr>
         <tr>
@@ -1465,8 +1649,68 @@ _____________________________ERROR_JSON_LOADS_______________________________
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_short_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_AND_passwords_are_thesame_but_lowandupcase_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">2.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_code_200</td>
+          <td class="col-duration">1.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_short_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_long_EXPECTED_response_code_400</td>
+          <td class="col-duration">2.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_empty_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.22</td>
+          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1476,7 +1720,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_EXPECTED_status_code_200_TC90070</td>
-          <td class="col-duration">0.61</td>
+          <td class="col-duration">0.55</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1485,7 +1729,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071</td>
-          <td class="col-duration">0.69</td>
+          <td class="col-duration">33.53</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1494,7 +1738,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_offset_is_added_EXPECTED_counter_of_el_proper_TC90072</td>
-          <td class="col-duration">0.76</td>
+          <td class="col-duration">2.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1512,7 +1756,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_order_is_added_EXPECTED_received_sorting_proper_TC90074</td>
-          <td class="col-duration">1.71</td>
+          <td class="col-duration">4.16</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1521,7 +1765,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_request_iso639_1_is_correct_EXPECTED_response_is_proper_TC90079</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">3.79</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1530,7 +1774,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_pass_is_incorrect_EXPECTED_status_code_400_TC90051</td>
-          <td class="col-duration">3.62</td>
+          <td class="col-duration">4.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1542,7 +1786,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_pass_is_incorrect_EXPECTED_response_text_is_ok_TC9052</td>
-          <td class="col-duration">3.10</td>
+          <td class="col-duration">34.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1554,7 +1798,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_username_is_incorrect_EXPECTED_response_code_400_TC9053</td>
-          <td class="col-duration">3.12</td>
+          <td class="col-duration">4.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1566,7 +1810,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_email_is_not_confirmed_EXPECTED_response_code_400_TC9054</td>
-          <td class="col-duration">2.81</td>
+          <td class="col-duration">3.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1577,7 +1821,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_email_is_not_confirmed_EXPECTED_response_code_400_TC9055</td>
-          <td class="col-duration">3.05</td>
+          <td class="col-duration">4.40</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1588,7 +1832,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_login_is_perform_EXPECTED_token_is_received_TC90056</td>
-          <td class="col-duration">4.49</td>
+          <td class="col-duration">5.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1600,7 +1844,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_email_is_proper_TC90057</td>
-          <td class="col-duration">4.39</td>
+          <td class="col-duration">6.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1612,7 +1856,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_username_is_proper_TC90058</td>
-          <td class="col-duration">4.29</td>
+          <td class="col-duration">3.69</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1624,7 +1868,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_userrole_is_proper_TC90059</td>
-          <td class="col-duration">4.59</td>
+          <td class="col-duration">6.39</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1636,7 +1880,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_token_is_added_AND_me_EXPECTED_status_code_is_200_TC90300</td>
-          <td class="col-duration">4.22</td>
+          <td class="col-duration">6.54</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1648,7 +1892,20 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_new_topics_EXPECTED_status_code_is_200TC90301</td>
-          <td class="col-duration">4.78</td>
+          <td class="col-duration">6.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newtopic_EXPECTED_status_code_is_200TC90302</td>
+          <td class="col-duration">6.69</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1661,7 +1918,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newSeveraltopics_EXPECTED_list_of_topics_is_properTC90303</td>
-          <td class="col-duration">12.07</td>
+          <td class="col-duration">8.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1674,20 +1931,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newtopic_AND_category_EXPECTED_list_of_cat_is_properTC90304</td>
-          <td class="col-duration">5.81</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
-200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_timezone_EXPECTED_value_is_savedTC90305</td>
-          <td class="col-duration">5.96</td>
+          <td class="col-duration">7.66</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1700,7 +1944,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_day_EXPECTED_value_is_savedTC90306</td>
-          <td class="col-duration">4.43</td>
+          <td class="col-duration">20.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1713,7 +1957,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_month_EXPECTED_value_is_savedTC90307</td>
-          <td class="col-duration">4.55</td>
+          <td class="col-duration">9.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1726,7 +1970,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_year_EXPECTED_value_is_savedTC90308</td>
-          <td class="col-duration">4.87</td>
+          <td class="col-duration">6.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1739,7 +1983,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeDelete::()::test_WHEN_delete_EXPECTED_login_is_notTC90309</td>
-          <td class="col-duration">5.09</td>
+          <td class="col-duration">7.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1753,7 +1997,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeDelete::()::test_WHEN_delete_EXPECTED_signup_is_notTC90310</td>
-          <td class="col-duration">5.63</td>
+          <td class="col-duration">7.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1767,7 +2011,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_me_balanses_EXPECTED_response_code_is_200TC90311</td>
-          <td class="col-duration">4.52</td>
+          <td class="col-duration">9.79</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1779,7 +2023,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_user_is_registered_AND_me_balances_EXPECTED_balances_is_0TC90312</td>
-          <td class="col-duration">4.60</td>
+          <td class="col-duration">6.62</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1791,7 +2035,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_buy_subscr_AND_me_balances_EXPECTED_balances_is_properTC90313</td>
-          <td class="col-duration">10.86</td>
+          <td class="col-duration">45.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1804,7 +2048,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_me_billing_EXPECTED_response_code_is_200TC90314</td>
-          <td class="col-duration">4.40</td>
+          <td class="col-duration">6.61</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1816,7 +2060,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_user_is_registered_AND_me_billing_EXPECTED_list_is_emptyTC90315</td>
-          <td class="col-duration">4.79</td>
+          <td class="col-duration">6.47</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1828,7 +2072,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316</td>
-          <td class="col-duration">9.59</td>
+          <td class="col-duration">13.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1841,7 +2085,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeChatCred::()::test_WHEN_chat_cred_EXPECTED_response_code_is_200TC90317</td>
-          <td class="col-duration">4.17</td>
+          <td class="col-duration">6.65</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1853,7 +2097,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followers_EXPECTED_response_code_is_200TC90318</td>
-          <td class="col-duration">4.79</td>
+          <td class="col-duration">6.41</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1865,7 +2109,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followimg_EXPECTED_response_code_is_200TC90319</td>
-          <td class="col-duration">4.18</td>
+          <td class="col-duration">6.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1877,32 +2121,19 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_get_pref_EXPECTED_response_code_is_200TC90320</td>
-          <td class="col-duration">4.59</td>
+          <td class="col-duration">6.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
-200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_activity_not_EXPECTED_value_saved_TC90321</td>
-          <td class="col-duration">4.45</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
 200
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_email_not_update_EXPECTED_value_saved_TC90322</td>
-          <td class="col-duration">4.49</td>
+          <td class="col-duration">9.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1915,7 +2146,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_topic_notif_EXPECTED_value_saved_TC90323</td>
-          <td class="col-duration">5.06</td>
+          <td class="col-duration">5.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1928,7 +2159,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_category_notif_EXPECTED_value_saved_TC90324</td>
-          <td class="col-duration">4.68</td>
+          <td class="col-duration">6.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1941,7 +2172,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_folow_project_notif_EXPECTED_value_saved_TC90325</td>
-          <td class="col-duration">4.53</td>
+          <td class="col-duration">6.76</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1954,32 +2185,20 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_notify_type_EXPECTED_value_saved_TC90326</td>
-          <td class="col-duration">9.40</td>
+          <td class="col-duration">6.48</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
-200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_get_prefsubscr_EXPECTED_response_code_is_200TC90327</td>
-          <td class="col-duration">4.24</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
 200
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_prefsubscr_broadcaster_EXPECTED_value_saved_TC90328</td>
-          <td class="col-duration">5.11</td>
+          <td class="col-duration">14.76</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1993,7 +2212,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrectbroadcaster_EXPECTED_value_not_saved_TC90329</td>
-          <td class="col-duration">4.68</td>
+          <td class="col-duration">5.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2006,7 +2225,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_project_EXPECTED_value_is_saved_TC90330</td>
-          <td class="col-duration">4.91</td>
+          <td class="col-duration">7.88</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2019,7 +2238,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_topics_EXPECTED_value_is_saved_TC90332</td>
-          <td class="col-duration">10.56</td>
+          <td class="col-duration">4.79</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2032,7 +2251,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_topics_EXPECTED_value_is_notsaved_TC90333</td>
-          <td class="col-duration">4.57</td>
+          <td class="col-duration">6.31</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2045,7 +2264,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_topics_is_already_EXPECTED_value_isnot_saved_TC90334</td>
-          <td class="col-duration">16.42</td>
+          <td class="col-duration">7.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2059,7 +2278,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_category_EXPECTED_value_is_saved_TC90335</td>
-          <td class="col-duration">6.09</td>
+          <td class="col-duration">10.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2072,7 +2291,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_category_EXPECTED_value_isnot_saved_TC90336</td>
-          <td class="col-duration">4.76</td>
+          <td class="col-duration">6.46</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2085,7 +2304,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_category_is_already_EXPECTED_value_isnot_saved_TC90337</td>
-          <td class="col-duration">6.14</td>
+          <td class="col-duration">10.90</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2099,7 +2318,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_difficulty_EXPECTED_value_is_saved_TC90338</td>
-          <td class="col-duration">5.89</td>
+          <td class="col-duration">16.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2112,7 +2331,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_get_me_payment_methods_EXPECTED_response_code_is_200TC90340</td>
-          <td class="col-duration">4.42</td>
+          <td class="col-duration">8.58</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2124,7 +2343,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_get_me_payment_methods_after_registration_EXPECTED_list_is_emptyTC90341</td>
-          <td class="col-duration">4.88</td>
+          <td class="col-duration">6.51</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2136,7 +2355,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_methods_AND_servise_ledu_EXPECTED_is_savedTC90342</td>
-          <td class="col-duration">4.91</td>
+          <td class="col-duration">6.75</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2149,7 +2368,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_methods_AND_servise_stipe_token_EXPECTED_is_savedTC90343</td>
-          <td class="col-duration">5.16</td>
+          <td class="col-duration">7.88</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2162,7 +2381,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_method_AND_currency_EXPECTED_is_savedTC__</td>
-          <td class="col-duration">10.96</td>
+          <td class="col-duration">7.35</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2175,26 +2394,12 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_positive_EXPECTED_response_200TC90350</td>
-          <td class="col-duration">7.28</td>
+          <td class="col-duration">8.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
-200
-200
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_change_EXPECTED_login_using_newTC90351</td>
-          <td class="col-duration">7.04</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
 200
 200
 </div></td></tr></tbody>
@@ -2202,26 +2407,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_change_EXPECTED_login_using_oldTC90352</td>
-          <td class="col-duration">6.82</td>
+          <td class="col-duration">14.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
-200
-400
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_not_the_same_passwordschange_EXPECTED_400TC90353</td>
-          <td class="col-duration">4.76</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
 200
 400
 </div></td></tr></tbody>
@@ -2229,7 +2421,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_numeric_passwordschange_EXPECTED_400TC90354</td>
-          <td class="col-duration">4.54</td>
+          <td class="col-duration">9.74</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2242,7 +2434,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_short_passwordschange_EXPECTED_400TC90355</td>
-          <td class="col-duration">4.88</td>
+          <td class="col-duration">29.86</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2255,7 +2447,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_upperlowercase_passwordschange_EXPECTED_400TC90356</td>
-          <td class="col-duration">30.48</td>
+          <td class="col-duration">4.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2268,7 +2460,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_incorrectold_password_EXPECTED_400TC90357</td>
-          <td class="col-duration">4.51</td>
+          <td class="col-duration">8.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2281,7 +2473,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptyold_password_EXPECTED_400TC90358</td>
-          <td class="col-duration">4.73</td>
+          <td class="col-duration">6.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2294,7 +2486,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptynew_password_EXPECTED_400TC90359</td>
-          <td class="col-duration">4.76</td>
+          <td class="col-duration">4.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2307,7 +2499,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptyconf_password_EXPECTED_400TC90360</td>
-          <td class="col-duration">4.77</td>
+          <td class="col-duration">4.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2320,7 +2512,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_me_projects_EXPECTED_response_code_is_200TC__</td>
-          <td class="col-duration">6.32</td>
+          <td class="col-duration">7.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2332,7 +2524,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_me_social_acc_EXPECTED_response_code_is_200TC__</td>
-          <td class="col-duration">4.70</td>
+          <td class="col-duration">5.41</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2344,7 +2536,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_streaming_creadantials_EXPECTED_response_code_is_200TC__</td>
-          <td class="col-duration">27.52</td>
+          <td class="col-duration">7.36</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2356,7 +2548,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_streaming_creadantials_EXPECTED_key_and_link_is_not_emptyTC__</td>
-          <td class="col-duration">33.30</td>
+          <td class="col-duration">6.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2368,7 +2560,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_put_streaming_creadantials_EXPECTED_token_is_changedTC__</td>
-          <td class="col-duration">4.99</td>
+          <td class="col-duration">4.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2381,7 +2573,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_EXPECTED_response_code_is_200_TC90110</td>
-          <td class="col-duration">0.66</td>
+          <td class="col-duration">2.53</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2390,7 +2582,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_AND_limit_EXPECTED_number_of_projects_are_correct_TC90111</td>
-          <td class="col-duration">1.04</td>
+          <td class="col-duration">2.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2399,7 +2591,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_AND_offset_EXPECTED_number_of_projects_are_correct_TC90112</td>
-          <td class="col-duration">1.55</td>
+          <td class="col-duration">4.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2408,7 +2600,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lprot3_EXPECTED_price_is_the_same_TC90250</td>
-          <td class="col-duration">5.76</td>
+          <td class="col-duration">8.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2416,13 +2608,27 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-6061.95
+5996.4
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lprotall_EXPECTED_price_is_the_same_TC90251</td>
+          <td class="col-duration">9.33</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+7495.500000000001
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12talll_EXPECTED_price_is_the_same_TC90252</td>
-          <td class="col-duration">10.08</td>
+          <td class="col-duration">12.79</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2430,13 +2636,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-26670.3
+26387.2
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro_EXPECTED_price_is_the_same_TC90253</td>
-          <td class="col-duration">5.90</td>
+          <td class="col-duration">44.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2444,13 +2650,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-4545.75
+4497.3
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12_EXPECTED_price_is_the_same_TC90254</td>
-          <td class="col-duration">5.84</td>
+          <td class="col-duration">20.53</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2458,13 +2664,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-15998.0
+15827.95
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12t3_EXPECTED_price_is_the_same_TC902550</td>
-          <td class="col-duration">6.39</td>
+          <td class="col-duration">7.66</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2472,13 +2678,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-21334.149999999998
+21108.05
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_subscr_isnt_purchased_AND_get_subscr_EXPECTED_response_code_is_404_TC90200</td>
-          <td class="col-duration">5.15</td>
+          <td class="col-duration">44.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2490,7 +2696,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_response_code_is_201_TC90201</td>
-          <td class="col-duration">9.34</td>
+          <td class="col-duration">11.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2498,13 +2704,39 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_wicmdzcjcxhefkciqvkw@wastm.jnu&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;qrkqqslkivrkxgaakn&#x27;, &#x27;password1&#x27;: &#x27;ddtvnbicnvq&#x27;, &#x27;password2&#x27;: &#x27;ddtvnbicnvq&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;, &#x27;cybersecurity&#x27;, &#x27;vr-and-ar&#x27;, &#x27;cryptocurrency&#x27;, &#x27;programming&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_ytioyshlijmotmujlruq@rtwre.cl&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;btaxduorriqonm&#x27;, &#x27;password1&#x27;: &#x27;fbeztfkhgtcz&#x27;, &#x27;password2&#x27;: &#x27;fbeztfkhgtcz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_not_is_failing_TC90202</td>
+          <td class="col-duration">10.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr1_AND_topics_more_than_possible_EXPECTED_is_not_TC90203</td>
+          <td class="col-duration">39.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr2_AND_topics_more_than_possible_EXPECTED_is_not_TC90204</td>
-          <td class="col-duration">9.08</td>
+          <td class="col-duration">6.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2517,7 +2749,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr5_AND_topics_more_than_possible_EXPECTED_is_not_TC90206</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">11.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2530,7 +2762,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr6_AND_topics_more_than_possible_EXPECTED_is_not_TC90205</td>
-          <td class="col-duration">5.13</td>
+          <td class="col-duration">11.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2543,7 +2775,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_user_is_registered_AND_me_EXPECTED_package_is_free_TC90220</td>
-          <td class="col-duration">6.12</td>
+          <td class="col-duration">8.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2555,7 +2787,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_package_is_free_AND_me_EXPECTED_is_premium_is_false_TC90221</td>
-          <td class="col-duration">4.34</td>
+          <td class="col-duration">6.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2567,7 +2799,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_0_is_purchased_EXPECTED_me_package_id_is_properTC90222</td>
-          <td class="col-duration">9.74</td>
+          <td class="col-duration">15.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2580,7 +2812,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_1_is_purchased_EXPECTED_me_package_id_is_properTC90223</td>
-          <td class="col-duration">9.35</td>
+          <td class="col-duration">15.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2593,20 +2825,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_2_is_purchased_EXPECTED_me_package_id_is_properTC90224</td>
-          <td class="col-duration">9.78</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
-201
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_3_is_purchased_EXPECTED_me_package_id_is_properTC90225</td>
-          <td class="col-duration">10.68</td>
+          <td class="col-duration">14.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2619,7 +2838,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_4_is_purchased_EXPECTED_me_package_id_is_properTC90226</td>
-          <td class="col-duration">11.41</td>
+          <td class="col-duration">46.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2632,7 +2851,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscription_5_is_purchased_EXPECTED_me_package_id_is_properTC90227</td>
-          <td class="col-duration">9.70</td>
+          <td class="col-duration">15.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2645,7 +2864,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_properTC90240</td>
-          <td class="col-duration">10.97</td>
+          <td class="col-duration">18.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2653,13 +2872,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_huzofsobbrdwsimawxbi@bbxfb.jo&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ghxlcclintwi&#x27;, &#x27;password1&#x27;: &#x27;meiehwlzzkotnwcplbd&#x27;, &#x27;password2&#x27;: &#x27;meiehwlzzkotnwcplbd&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;game-development&#x27;, &#x27;design&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_wymqfoapgvdcqsuzenki@zqvze.pa&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;lbyjgjrztfrxvw&#x27;, &#x27;password1&#x27;: &#x27;vlyixerizfxvcurcvgyq&#x27;, &#x27;password2&#x27;: &#x27;vlyixerizfxvcurcvgyq&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_usd_balance_is_properTC90241</td>
-          <td class="col-duration">35.16</td>
+          <td class="col-duration">17.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2667,13 +2886,14 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_dwphvqfiqwgqtnhtugkn@iobai.ic&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;iqhcywgfelsqmu&#x27;, &#x27;password1&#x27;: &#x27;uwsvvixslrkcoser&#x27;, &#x27;password2&#x27;: &#x27;uwsvvixslrkcoser&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;programming&#x27;, &#x27;cryptocurrency&#x27;, &#x27;data-science&#x27;, &#x27;design&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_gwwsmyaydbilwxgolpjm@qcgzm.wyj&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;kumecmuxrarlukghl&#x27;, &#x27;password1&#x27;: &#x27;vwgbatehairyz&#x27;, &#x27;password2&#x27;: &#x27;vwgbatehairyz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;id&#x27;: &#x27;lpro12t3&#x27;, &#x27;description&#x27;: &#x27;Pro account (yearly) 3 topics&#x27;, &#x27;period&#x27;: &#x27;year&#x27;, &#x27;period_qty&#x27;: 1, &#x27;topic_qty&#x27;: 3, &#x27;limitation_description&#x27;: &#x27;Triple&#x27;, &#x27;price&#x27;: &#x27;211.09 USD&#x27;, &#x27;price_ledu&#x27;: &#x27;22219.000000000000000000&#x27;, &#x27;subscription_ledu_percent&#x27;: &#x27;60.00&#x27;, &#x27;extra_ledu_percent&#x27;: &#x27;100.00&#x27;, &#x27;subscription_ledu&#x27;: &#x27;13319.00&#x27;, &#x27;balance_ledu&#x27;: &#x27;8900.00&#x27;, &#x27;processing_fees&#x27;: {&#x27;paypal&#x27;: 1.0, &#x27;stripe&#x27;: 0, &#x27;paymentwall&#x27;: 10.55}, &#x27;minimal_period_crypto&#x27;: 1, &#x27;ledu_payment_discount_percent&#x27;: 5}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc2_is_purchased_EXPECTED_ledu_balance_is_properTC90242</td>
-          <td class="col-duration">11.43</td>
+          <td class="col-duration">19.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2681,13 +2901,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_evgbvmyxxwhfdynsusdv@jnrjk.mli&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;xllgagnbxogtvsvdekve&#x27;, &#x27;password1&#x27;: &#x27;mzprjtjofnyfcredpgoc&#x27;, &#x27;password2&#x27;: &#x27;mzprjtjofnyfcredpgoc&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;design&#x27;, &#x27;data-science&#x27;, &#x27;programming&#x27;, &#x27;cybersecurity&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_umwxduqnyqkrblbdxukc@cmgsk.npi&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;xqmexibaalekijbce&#x27;, &#x27;password1&#x27;: &#x27;ectpwpfji&#x27;, &#x27;password2&#x27;: &#x27;ectpwpfji&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc3_is_purchased_EXPECTED_ledu_balance_is_properTC90243</td>
-          <td class="col-duration">12.11</td>
+          <td class="col-duration">14.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2695,13 +2915,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_qltodxiryoyhtencczwr@obsqh.chy&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;errubkpcdctohkqrow&#x27;, &#x27;password1&#x27;: &#x27;hsbnhmockyveelhjcr&#x27;, &#x27;password2&#x27;: &#x27;hsbnhmockyveelhjcr&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;cryptocurrency&#x27;, &#x27;programming&#x27;, &#x27;cybersecurity&#x27;, &#x27;vr-and-ar&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_xrheasuydgetlusrnqtt@hksdg.js&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;cwayvwuinkqmbdopodc&#x27;, &#x27;password1&#x27;: &#x27;mhsdrmwxkwhmz&#x27;, &#x27;password2&#x27;: &#x27;mhsdrmwxkwhmz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc4_is_purchased_EXPECTED_ledu_balance_is_properTC90244</td>
-          <td class="col-duration">11.60</td>
+          <td class="col-duration">10.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2709,13 +2929,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_cuwddtckmckuwvkiyxfz@wxrtl.ltu&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;mxerwwphmabqdftvye&#x27;, &#x27;password1&#x27;: &#x27;ygbouwnrmb&#x27;, &#x27;password2&#x27;: &#x27;ygbouwnrmb&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;, &#x27;cybersecurity&#x27;, &#x27;design&#x27;, &#x27;vr-and-ar&#x27;, &#x27;cryptocurrency&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_uphdwnlrdfrlqqzgtglp@pvpto.ax&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;qsfxkaihqzv&#x27;, &#x27;password1&#x27;: &#x27;tzujmborxtjeqa&#x27;, &#x27;password2&#x27;: &#x27;tzujmborxtjeqa&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc5_is_purchased_EXPECTED_ledu_balance_is_properTC90245</td>
-          <td class="col-duration">10.87</td>
+          <td class="col-duration">12.51</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2723,13 +2943,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_tsnwubkoddnsbgfwqsid@chqtq.ftr&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;bxtuemcfwp&#x27;, &#x27;password1&#x27;: &#x27;flbiydagos&#x27;, &#x27;password2&#x27;: &#x27;flbiydagos&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_zixwmzmqsnrzugkklyyp@cugxd.qb&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;lplmewxpbbsq&#x27;, &#x27;password1&#x27;: &#x27;gnayeygpfvcawjdbgq&#x27;, &#x27;password2&#x27;: &#x27;gnayeygpfvcawjdbgq&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;, &#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;game-development&#x27;, &#x27;artificial-intelligence&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc6_is_purchased_EXPECTED_ledu_balance_is_properTC90246</td>
-          <td class="col-duration">11.44</td>
+          <td class="col-duration">11.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2737,13 +2957,13 @@ _____________________________ERROR_JSON_LOADS_______________________________
 400
 200
 201
-{&#x27;email&#x27;: &#x27;testliveedu_reahwxmlhbfzrhawcruf@mvnvz.rqz&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ebbyfwxnaulhuibgf&#x27;, &#x27;password1&#x27;: &#x27;xvcjgojmlcukhkhttxyp&#x27;, &#x27;password2&#x27;: &#x27;xvcjgojmlcukhkhttxyp&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;, &#x27;vr-and-ar&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;email&#x27;: &#x27;testliveedu_utupkarameivirboulwk@mejex.yo&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;klvxhlotrvvaj&#x27;, &#x27;password1&#x27;: &#x27;dkqobbyda&#x27;, &#x27;password2&#x27;: &#x27;dkqobbyda&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;cybersecurity&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_all_values_ok_EXPECTED_response_text_is_correct</td>
-          <td class="col-duration">2.29</td>
+          <td class="col-duration">2.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2753,7 +2973,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_all_values_ok_EXPECTED_response_code_201</td>
-          <td class="col-duration">2.22</td>
+          <td class="col-duration">2.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2763,7 +2983,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_passwords_notthesame_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.25</td>
+          <td class="col-duration">0.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2773,7 +2993,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_email_incorrect_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2783,7 +3003,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_username_incorrect_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2793,7 +3013,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_userrole_incorrect_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2803,7 +3023,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_slug_EXPECTED_response_code_201</td>
-          <td class="col-duration">2.53</td>
+          <td class="col-duration">2.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2813,7 +3033,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_incorrect_slug_EXPECTED_response_code_400</td>
-          <td class="col-duration">0.97</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2823,7 +3043,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_skype_hangouts_EXPECTED_response_code_201</td>
-          <td class="col-duration">2.66</td>
+          <td class="col-duration">2.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2833,7 +3053,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_completed_AND_email_is_confirmed_EXPECTED_login_is_preformaed</td>
-          <td class="col-duration">4.52</td>
+          <td class="col-duration">3.66</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2845,7 +3065,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_EXPECTED_response_code_is_200_TC90080</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.36</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2854,7 +3074,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_limit_is_add_EXPECTED_number_of_el_proper_TC90081</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-duration">0.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2863,7 +3083,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_offset_is_added_EXPECTED_number_of_el_proper_TC90082</td>
-          <td class="col-duration">0.53</td>
+          <td class="col-duration">0.50</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2881,7 +3101,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_ordering_is_added_EXPECTED_sorting_is_proper_TC90084</td>
-          <td class="col-duration">0.52</td>
+          <td class="col-duration">0.49</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2890,7 +3110,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_slug_is_added_EXPECTED_response_is_correct_TC90085</td>
-          <td class="col-duration">0.74</td>
+          <td class="col-duration">0.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2899,7 +3119,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_EXPECTED_status_code_is_200_TC90086</td>
-          <td class="col-duration">0.81</td>
+          <td class="col-duration">0.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2908,7 +3128,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_EXPECTED_all_categories_from_topic_TC90087</td>
-          <td class="col-duration">0.66</td>
+          <td class="col-duration">0.75</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2917,7 +3137,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_AND_limit_EXPECTED_count_is_correct_TC90088</td>
-          <td class="col-duration">0.80</td>
+          <td class="col-duration">0.91</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2926,7 +3146,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_AND_search_EXPECTED_search_res_is_correct_TC90089</td>
-          <td class="col-duration">1.11</td>
+          <td class="col-duration">1.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2935,7 +3155,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_EXPECTED_status_code_200_TC90095</td>
-          <td class="col-duration">2.76</td>
+          <td class="col-duration">2.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2944,7 +3164,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_limit_EXPECTED_status_code_200_TC90096</td>
-          <td class="col-duration">0.93</td>
+          <td class="col-duration">0.94</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2953,7 +3173,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_random_offser_EXPECTED_results_are_correct_TC90097</td>
-          <td class="col-duration">3.23</td>
+          <td class="col-duration">3.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2962,7 +3182,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_random_search_EXPECTED_search_res_are_correct_TC90098</td>
-          <td class="col-duration">3.02</td>
+          <td class="col-duration">2.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2971,7 +3191,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_ordering_by_name_EXPECTED_sorting_is_correct_TC90099</td>
-          <td class="col-duration">4.21</td>
+          <td class="col-duration">4.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -2980,7 +3200,7 @@ _____________________________ERROR_JSON_LOADS_______________________________
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hieracly_by_slug_EXPECTED_received_topic_is_correct_TC90100</td>
-          <td class="col-duration">0.66</td>
+          <td class="col-duration">0.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

@@ -136,6 +136,7 @@ class TestTRansactionAfterPurchase():
         print(app.user_data.__dict__)
         assert purchase['status_code'] == 201
         assert last_transaction['amount_usd'] + " USD" == my_plan['price']
+        AssertionError(print(my_plan))
 
     def test_WHEN_subsc2_is_purchased_EXPECTED_ledu_balance_is_properTC90242(self, app):
         my_plan, purchase = app.api_helper.register_user_and_purchaqse_subs(app=app, plan_name='lprotall')

@@ -77,7 +77,7 @@ class TestTopicsCategories:
         app.route.topics = app.route.topics + random_topic_slug + '/categories'
         app.env.params = {'limit': limit}
         resp_lim = app.api_helper.general_get(app, route=app.route.topics)
-        assert len(resp_lim['results']) == limit
+        assert len(resp_lim['results']) <= limit
 
     def test_WHEN_get_categories_by_topic_AND_search_EXPECTED_search_res_is_correct_TC90089(self, app):
         random_topic_slug = random.choice(

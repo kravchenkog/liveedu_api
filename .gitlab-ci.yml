@@ -1,7 +1,8 @@
 stages:
-  #- build
-  #- test
   - test_without_build
+#- build
+#- test
+
 
 build:
   stage: build

@@ -1,7 +1,7 @@
 stages:
   - test_without_build
-#- build
-#- test
+  - build
+  - test
 
 
 build:
@@ -20,6 +20,7 @@ build:
     - docker-builder
   except:
     - /^wip[\/_-].+$/
+  when: manual
 
 test:
   stage: test
@@ -32,6 +33,7 @@ test:
     - docker
   except:
     - /^wip[\/_-].+$/
+  when: manual
 
 test_without_build:
   stage: test_without_build

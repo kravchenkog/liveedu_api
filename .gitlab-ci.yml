@@ -1,6 +1,32 @@
-test_job:
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  image: docker:git
   script:
-    - apt-get update -qy
-    - apt-get install -y python-dev python-pip
-    - pip install -r requirements.txt
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - >-
+      docker build --pull
+      --build-arg PROJECT_GIT_VERSION=$(git describe --tags --always)
+      -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG} .
+    - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}
+  tags:
+    - docker-builder
+  except:
+    - /^wip[\/_-].+$/
+
+test:
+  stage: test
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  before_script: []
+  script:
     - pytest
+  dependencies: []
+  tags:
+    - docker
+  except:
+    - /^wip[\/_-].+$/

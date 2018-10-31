@@ -4,4 +4,4 @@ services:
 test_job:
   script:
     - pip install -r requirements.txt
-    - pytest  
+    - py.test --cov=tests tests/  

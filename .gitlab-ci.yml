@@ -17,4 +17,5 @@ test:
     expire_in: 7 days
     paths:
       - report.html
+      - /assets
     when: always

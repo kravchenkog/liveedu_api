@@ -13,3 +13,7 @@ test:
     - docker
   except:
     - /^wip[\/_-].+$/
+artifacts:
+   expire_in: 7 days
+   paths:
+     - report.html

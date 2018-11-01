@@ -13,6 +13,11 @@ test:
     - docker
   except:
     - /^wip[\/_-].+$/
+  after:
+  - publish artifacts
+  - set errorlevel
+  - set allow_failure
+
   artifacts:
     expire_in: 7 days
     paths:

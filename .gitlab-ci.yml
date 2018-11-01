@@ -13,7 +13,7 @@ test:
     - docker
   except:
     - /^wip[\/_-].+$/
-  after:
+after:
   - publish artifacts
   - set errorlevel
   - set allow_failure

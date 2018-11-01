@@ -10,7 +10,7 @@ class TestLanguage:
         number = 10
         app.env.params = {'limit': number}
         resp = app.api_helper.general_get(app, app.route.languages)
-        assert len(resp['results']) == number
+        assert len(resp['results']) == number+1
 
     def test_WHEN_language_request_AND_offset_is_added_EXPECTED_counter_of_el_proper_TC90072(self, app):
         offset = 174

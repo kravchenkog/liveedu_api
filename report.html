@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 31-Oct-2018 at 22:32:03 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 01-Nov-2018 at 12:08:51 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -246,13 +246,13 @@ function filter_table(elem) {
         <td>Linux-4.15.0-38-generic-x86_64-with-Ubuntu-18.04-bionic</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{&apos;metadata&apos;: &apos;1.7.0&apos;, &apos;html&apos;: &apos;1.19.0&apos;, &apos;cov&apos;: &apos;2.6.0&apos;, &apos;allure-adaptor&apos;: &apos;1.7.10&apos;}</td></tr>
+        <td>{&apos;metadata&apos;: &apos;1.7.0&apos;, &apos;html&apos;: &apos;1.19.0&apos;, &apos;cov&apos;: &apos;2.6.0&apos;, &apos;allure-pytest&apos;: &apos;2.5.3&apos;}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 8.56 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>6 tests ran in 7.09 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -263,15 +263,57 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_subscr_isnt_purchased_AND_get_subscr_EXPECTED_response_code_is_404_TC90200</td>
-          <td class="col-duration">6.59</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071</td>
+          <td class="col-duration">0.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
-</div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;test_lang.TestLanguage object at 0x7febb3a7cc50&gt;, app = &lt;fixture.app_manager.AppManager object at 0x7febb3ab6320&gt;<br/><br/>    def test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071(self, app):<br/>        number = 10<br/>        app.env.params = {&#x27;limit&#x27;: number}<br/>        resp = app.api_helper.general_get(app, app.route.languages)<br/>&gt;       assert len(resp[&#x27;results&#x27;]) == number+1<br/><span class="error">E       AssertionError: assert 10 == (10 + 1)</span><br/><span class="error">E        +  where 10 = len([{&#x27;iso_639_1&#x27;: &#x27;aa&#x27;, &#x27;iso_639_2B&#x27;: &#x27;aar&#x27;, &#x27;iso_639_2T&#x27;: &#x27;aar&#x27;, &#x27;iso_639_3&#x27;: &#x27;aar&#x27;, ...}, {&#x27;iso_639_1&#x27;: &#x27;ab&#x27;, &#x27;iso_639_... &#x27;iso_639_3&#x27;: &#x27;aka&#x27;, ...}, {&#x27;iso_639_1&#x27;: &#x27;am&#x27;, &#x27;iso_639_2B&#x27;: &#x27;amh&#x27;, &#x27;iso_639_2T&#x27;: &#x27;amh&#x27;, &#x27;iso_639_3&#x27;: &#x27;amh&#x27;, ...}, ...])</span><br/><br/>tests/test_lang.py:13: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_EXPECTED_status_code_200_TC90070</td>
+          <td class="col-duration">1.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_offset_is_added_EXPECTED_counter_of_el_proper_TC90072</td>
+          <td class="col-duration">0.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_search_is_added_EXPECTED_received_el_proper_TC90073</td>
+          <td class="col-duration">0.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_order_is_added_EXPECTED_received_sorting_proper_TC90074</td>
+          <td class="col-duration">2.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_request_iso639_1_is_correct_EXPECTED_response_is_proper_TC90079</td>
+          <td class="col-duration">1.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

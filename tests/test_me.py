@@ -366,7 +366,7 @@ class TestMePreferences:
         app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         assert resp['status_code'] == 400
-
+#
     def test_WHEN_post_notifsubscr_AND_difficulty_EXPECTED_value_is_saved_TC90338(self, app):
         category = choice(app.api_helper.general_get(app, app.route.categories)['results'])['slug']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)

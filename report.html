@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 01-Nov-2018 at 12:08:51 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 06-Nov-2018 at 15:19:08 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,8 +251,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>Summary</h2>
-    <p>6 tests ran in 7.09 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>162 tests ran in 784.30 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">155 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">7 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -266,17 +266,918 @@ function filter_table(elem) {
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071</td>
-          <td class="col-duration">0.73</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_timezone_EXPECTED_value_is_savedTC90305</td>
+          <td class="col-duration">4.38</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_lang.TestLanguage object at 0x7febb3a7cc50&gt;, app = &lt;fixture.app_manager.AppManager object at 0x7febb3ab6320&gt;<br/><br/>    def test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071(self, app):<br/>        number = 10<br/>        app.env.params = {&#x27;limit&#x27;: number}<br/>        resp = app.api_helper.general_get(app, app.route.languages)<br/>&gt;       assert len(resp[&#x27;results&#x27;]) == number+1<br/><span class="error">E       AssertionError: assert 10 == (10 + 1)</span><br/><span class="error">E        +  where 10 = len([{&#x27;iso_639_1&#x27;: &#x27;aa&#x27;, &#x27;iso_639_2B&#x27;: &#x27;aar&#x27;, &#x27;iso_639_2T&#x27;: &#x27;aar&#x27;, &#x27;iso_639_3&#x27;: &#x27;aar&#x27;, ...}, {&#x27;iso_639_1&#x27;: &#x27;ab&#x27;, &#x27;iso_639_... &#x27;iso_639_3&#x27;: &#x27;aka&#x27;, ...}, {&#x27;iso_639_1&#x27;: &#x27;am&#x27;, &#x27;iso_639_2B&#x27;: &#x27;amh&#x27;, &#x27;iso_639_2T&#x27;: &#x27;amh&#x27;, &#x27;iso_639_3&#x27;: &#x27;amh&#x27;, ...}, ...])</span><br/><br/>tests/test_lang.py:13: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">self = &lt;test_me.TestCheckMePositive object at 0x7f7d1a8068d0&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d1a806518&gt;<br/><br/>    def test_WHEN_put_timezone_EXPECTED_value_is_savedTC90305(self, app):<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        timezone = &quot;Africa/Freetown&quot;<br/>        data = {<br/>            &quot;email&quot;: app.user_data.email,<br/>            &quot;topics&quot;: [],<br/>            &quot;categories&quot;: [],<br/>            &quot;birthday_day&quot;: None,<br/>            &quot;birthday_month&quot;: None,<br/>            &quot;birthday_year&quot;: None,<br/>            &quot;avatar&quot;: None,<br/>            &quot;timezone&quot;: timezone<br/>                }<br/>        resp = app.api_helper.general_put(app=app, route=app.route.me, data=data)<br/>&gt;       assert resp[&quot;timezone&quot;] == timezone<br/><span class="error">E       AssertionError: assert &#x27;UTC&#x27; == &#x27;Africa/Freetown&#x27;</span><br/><span class="error">E         - UTC</span><br/><span class="error">E         + Africa/Freetown</span><br/><br/>tests/test_me.py:86: AssertionError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316</td>
+          <td class="col-duration">9.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestCheckMeBillingHistory object at 0x7f7d19df0a90&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d19df5390&gt;<br/><br/>    def test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316(self, app):<br/>        plan = &#x27;lprot3&#x27;<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        app.api_helper.purchase_package(app, plan, 3)<br/>        plan_resp = app.api_helper.get_plan(app, plan)<br/>        resp = app.api_helper.general_get(app, app.route.me_billing_history)<br/>&gt;       assert plan_resp[&#x27;price&#x27;] == resp[&#x27;data&#x27;][-1][&#x27;amount&#x27;]<br/><span class="error">E       IndexError: list index out of range</span><br/><br/>tests/test_me.py:192: IndexError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_prefsubscr_broadcaster_EXPECTED_value_saved_TC90328</td>
+          <td class="col-duration">4.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7f7d19cf0fd0&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d19e2a198&gt;<br/>app_streamer = &lt;fixture.app_manager.AppManager object at 0x7f7d19e2aac8&gt;<br/><br/>    def test_WHEN_post_prefsubscr_broadcaster_EXPECTED_value_saved_TC90328(self, app, app_streamer):<br/>        broadcaster = app_streamer.user_data.username<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;broadcaster&quot;: broadcaster<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;broadcaster&#x27;] == broadcaster<br/><span class="error">E       KeyError: &#x27;broadcaster&#x27;</span><br/><br/>tests/test_me.py:284: KeyError<br/>---------------------------- Captured stdout setup -----------------------------<br/>201
+400
+200
+----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_topics_EXPECTED_value_is_saved_TC90332</td>
+          <td class="col-duration">4.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7f7d19e03908&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d19e036a0&gt;<br/><br/>    def test_WHEN_post_notifsubscr_AND_topics_EXPECTED_value_is_saved_TC90332(self, app):<br/>        topics = choice(app.api_helper.general_get(app, app.route.topics)[&#x27;results&#x27;])[&#x27;slug&#x27;]<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;topic&quot;: topics<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;topic&#x27;] == topics<br/><span class="error">E       KeyError: &#x27;topic&#x27;</span><br/><br/>tests/test_me.py:320: KeyError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_category_EXPECTED_value_is_saved_TC90335</td>
+          <td class="col-duration">5.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7f7d19ccc2e8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d19e034a8&gt;<br/><br/>    def test_WHEN_post_notifsubscr_AND_category_EXPECTED_value_is_saved_TC90335(self, app):<br/>        category = choice(app.api_helper.general_get(app, app.route.categories)[&#x27;results&#x27;])[&#x27;slug&#x27;]<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;category&quot;: category<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;category&#x27;] == category<br/><span class="error">E       KeyError: &#x27;category&#x27;</span><br/><br/>tests/test_me.py:348: KeyError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_difficulty_EXPECTED_value_is_saved_TC90338</td>
+          <td class="col-duration">5.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_me.TestMePreferences object at 0x7f7d1a71d3c8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f7d1a71d4a8&gt;<br/><br/>    def test_WHEN_post_notifsubscr_AND_difficulty_EXPECTED_value_is_saved_TC90338(self, app):<br/>        category = choice(app.api_helper.general_get(app, app.route.categories)[&#x27;results&#x27;])[&#x27;slug&#x27;]<br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        data = {<br/>            &quot;category&quot;: category<br/>        }<br/>        resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)<br/>&gt;       assert resp[&#x27;category&#x27;] == category<br/><span class="error">E       KeyError: &#x27;category&#x27;</span><br/><br/>tests/test_me.py:376: KeyError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_projects.py::TestCreateProject::()::test_WHEN_post_projects_AND_all_required_filled_EXPECTED_response_code_is_200</td>
+          <td class="col-duration">1.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_projects.TestCreateProject object at 0x7f7d19cd40b8&gt;<br/><br/>    def test_WHEN_post_projects_AND_all_required_filled_EXPECTED_response_code_is_200(self):<br/>        app = self.app_streamer<br/>        data = {<br/>            &#x27;title&#x27;: app.string_generator.get_random_string(random.randint(30, 100)),<br/>            &#x27;category&#x27;: app.api_helper.get_random_category_url(app=app),<br/>            &#x27;difficulty&#x27;: random.choice([1, 2, 3]),<br/>            &#x27;language&#x27;: app.api_helper.get_random_language_url(app)<br/>        }<br/>        resp = app.api_helper.general_post(app, app.route.projects, data)<br/>    <br/>&gt;       assert resp[&#x27;status_code&#x27;] == 200, &quot;test failed&quot;<br/><span class="error">E       TypeError: &#x27;Response&#x27; object is not subscriptable</span><br/><br/>tests/test_projects.py:39: TypeError<br/>---------------------------- Captured stdout setup -----------------------------<br/>201
+400
+200
+----------------------------- Captured stdout call -----------------------------<br/>500
+_____________________________ERROR_JSON_LOADS_______________________________
+AttributeError at /api/v3/projects/
+&#x27;NoneType&#x27; object has no attribute &#x27;pk&#x27;
+
+Request Method: POST
+Request URL: https://dev.liveedu.tv/api/v3/projects/
+Django Version: 1.11.16
+Python Executable: /usr/local/bin/python
+Python Version: 3.6.7
+Python Path: [&#x27;/srv/web&#x27;, &#x27;/usr/local/bin&#x27;, &#x27;/usr/local/lib/python3.6/site-packages/newrelic/bootstrap&#x27;, &#x27;/srv/web&#x27;, &#x27;/usr/src&#x27;, &#x27;/usr/local/lib/python36.zip&#x27;, &#x27;/usr/local/lib/python3.6&#x27;, &#x27;/usr/local/lib/python3.6/lib-dynload&#x27;, &#x27;/usr/local/lib/python3.6/site-packages&#x27;, &#x27;/usr/src/sorl-thumbnail&#x27;, &#x27;/srv/web&#x27;]
+Server time: Tue, 6 Nov 2018 08:13:11 -0500
+Installed Applications:
+[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;whitenoise.runserver_nostatic&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;django.contrib.sites&#x27;,
+ &#x27;django.contrib.postgres&#x27;,
+ &#x27;django_nose&#x27;,
+ &#x27;corsheaders&#x27;,
+ &#x27;debug_toolbar&#x27;,
+ &#x27;webpack_loader&#x27;,
+ &#x27;django_js_reverse&#x27;,
+ &#x27;languages_plus&#x27;,
+ &#x27;countries_plus&#x27;,
+ &#x27;sorl.thumbnail&#x27;,
+ &#x27;oauth2_provider&#x27;,
+ &#x27;hawkrest&#x27;,
+ &#x27;rest_framework&#x27;,
+ &#x27;django_elasticsearch_dsl&#x27;,
+ &#x27;tagging&#x27;,
+ &#x27;django_filters&#x27;,
+ &#x27;rest_auth&#x27;,
+ &#x27;allauth&#x27;,
+ &#x27;allauth.account&#x27;,
+ &#x27;allauth.socialaccount&#x27;,
+ &#x27;allauth.socialaccount.providers.google&#x27;,
+ &#x27;allauth.socialaccount.providers.facebook&#x27;,
+ &#x27;allauth.socialaccount.providers.vk&#x27;,
+ &#x27;allauth.socialaccount.providers.twitch&#x27;,
+ &#x27;allauth.socialaccount.providers.github&#x27;,
+ &#x27;allauth.socialaccount.providers.linkedin&#x27;,
+ &#x27;allauth.socialaccount.providers.linkedin_oauth2&#x27;,
+ &#x27;allauth.socialaccount.providers.openid&#x27;,
+ &#x27;allauth.socialaccount.providers.windowslive&#x27;,
+ &#x27;allauth.socialaccount.providers.twitter&#x27;,
+ &#x27;allauth.socialaccount.providers.yahoo&#x27;,
+ &#x27;api.v3.auth.social.providers.google_v3&#x27;,
+ &#x27;core.apps.CoreConfig&#x27;,
+ &#x27;schedule.apps.ScheduleConfig&#x27;,
+ &#x27;api.apps.ApiConfig&#x27;,
+ &#x27;api.internal.apps.ApiConfig&#x27;,
+ &#x27;api.v2.apps.ApiConfig&#x27;,
+ &#x27;api.v3.apps.ApiConfig&#x27;,
+ &#x27;api.v3.auth.apps.ApiConfig&#x27;,
+ &#x27;vote&#x27;,
+ &#x27;feedback&#x27;,
+ &#x27;raven.contrib.django.raven_compat&#x27;]
+Installed Middleware:
+[&#x27;raven.contrib.django.middleware.DjangoRestFrameworkCompatMiddleware&#x27;,
+ &#x27;raven.contrib.django.middleware.SentryMiddleware&#x27;,
+ &#x27;core.middleware.CloudFlareIPMiddleware&#x27;,
+ &#x27;corsheaders.middleware.CorsMiddleware&#x27;,
+ &#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;whitenoise.middleware.WhiteNoiseMiddleware&#x27;,
+ &#x27;debug_toolbar.middleware.DebugToolbarMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;core.middleware.XFrameOptionsMiddleware&#x27;,
+ &#x27;core.middleware.HawkResponseMiddleware&#x27;,
+ &#x27;core.middleware.GeoIPMiddleware&#x27;,
+ &#x27;core.middleware.TimezoneMiddleware&#x27;,
+ &#x27;api.v3.auth.middleware.RefreshTokenMiddleware&#x27;,
+ &#x27;core.middleware.DailyLoginMiddleware&#x27;,
+ &#x27;api.v3.auth.middleware.PlanInfoMiddleware&#x27;,
+ &#x27;core.middleware.APIErrorFormatMiddleware&#x27;]
+
+
+Traceback:  
+
+File &quot;/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py&quot; in inner
+  41.             response = get_response(request)
+
+File &quot;/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py&quot; in _get_response
+  187.                 response = self.process_exception_by_middleware(e, request)
+
+File &quot;/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py&quot; in _get_response
+  185.                 response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/newrelic/hooks/framework_django.py&quot; in wrapper
+  544.                 return wrapped(*args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py&quot; in wrapped_view
+  58.         return view_func(*args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/viewsets.py&quot; in view
+  90.             return self.dispatch(request, *args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/newrelic/hooks/component_djangorestframework.py&quot; in _nr_wrapper_APIView_dispatch_
+  46.         return wrapped(*args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/views.py&quot; in dispatch
+  489.             response = self.handle_exception(exc)
+
+File &quot;/usr/local/lib/python3.6/site-packages/newrelic/hooks/component_djangorestframework.py&quot; in _handle_exception_wrapper
+  53.         return wrapped(*args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/views.py&quot; in handle_exception
+  449.             self.raise_uncaught_exception(exc)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/views.py&quot; in dispatch
+  486.             response = handler(request, *args, **kwargs)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/mixins.py&quot; in create
+  22.         headers = self.get_success_headers(serializer.data)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py&quot; in data
+  534.         ret = super(Serializer, self).data
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py&quot; in data
+  263.                 self._data = self.to_representation(self.instance)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py&quot; in to_representation
+  501.                 ret[field.field_name] = field.to_representation(attribute)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py&quot; in to_representation
+  501.                 ret[field.field_name] = field.to_representation(attribute)
+
+File &quot;/usr/local/lib/python3.6/site-packages/rest_framework/fields.py&quot; in to_representation
+  1755.         return method(value)
+
+File &quot;/srv/web/api/v3/helpers.py&quot; in get_viewing_urls
+  101.                                         only=only)
+
+File &quot;/srv/web/core/models/streaming.py&quot; in get_viewing_urls
+  391.         self.is_valid_viewer(user, raise_exception=True)
+
+File &quot;/srv/web/core/models/streaming.py&quot; in is_valid_viewer
+  346.         if user and not user.is_allowed_topic(self.project.coding_category.topic) \
+
+File &quot;/srv/web/core/models/user.py&quot; in is_allowed_topic
+  410.         return topic.pk in self.allowed_topics_pks()
+
+File &quot;/srv/web/core/models/user.py&quot; in allowed_topics_pks
+  402.             pks = {topic.pk for topic in self.allowed_topics()}
+
+File &quot;/srv/web/core/models/user.py&quot; in &lt;setcomp&gt;
+  402.             pks = {topic.pk for topic in self.allowed_topics()}
+
+Exception Type: AttributeError at /api/v3/projects/
+Exception Value: &#x27;NoneType&#x27; object has no attribute &#x27;pk&#x27;
+Request information:
+USER: umjuobfnujzivr
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+nginx_auth = &#x27;23942c07f8f8dc87baf2a2afa32e2af4&#x27;
+
+META:
+CONTENT_LENGTH = &#x27;236&#x27;
+CONTENT_TYPE = &#x27;application/json&#x27;
+HTTP_ACCEPT = &#x27;*/*&#x27;
+HTTP_ACCEPT_ENCODING = &#x27;gzip&#x27;
+HTTP_AUTHORIZATION = &#x27;JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoyNTYyOTUsInVzZXJuYW1lIjoidW1qdW9iZm51anppdnIiLCJleHAiOjE1NDI3MTk1ODksImVtYWlsIjoidGVzdGxpdmVlZHVfY2JueWJueXVucXZ5eWxwZXpqeHFAeGpuaWwuYXYiLCJvcmlnX2lhdCI6MTU0MTUwOTk4OX0.QMeBPky9UamQ79ilzM2sA0TDJfqq0UHesSKFvlwnhdE4cOGzJp18K9NOGRoINiNowFo7QsId6_25tBCSyhoceZDypbezOFI7l7ysSWGUS95-A7mG4g6O5uKijGolTkYRJXrLBEiylKqsWihUTUMmccrDXPYOzVtnjVLiPmytKvGPS4RUE6Cux9WpmIDFWD0_yhXt6FbWw-h1EMXavzFwMYL9N2BdUqBvzTL-qmpKoVSsfqcl729RdjIeUECkGDfVqbSjqoBXDGkrC4EZsQ1PyQSY_02mWf8Gumkwe_W3RA_CxpK8-gdYgmXvucRubabVcreKG8Qx6Kj2ifquboszIA&#x27;
+HTTP_CF_CONNECTING_IP = &#x27;185.143.147.203&#x27;
+HTTP_CF_IPCOUNTRY = &#x27;UA&#x27;
+HTTP_CF_RAY = &#x27;4757d0e83d8e8418-KBP&#x27;
+HTTP_CF_VISITOR = &#x27;{&quot;scheme&quot;:&quot;https&quot;}&#x27;
+HTTP_CONNECTION = &#x27;close&#x27;
+HTTP_COOKIE = &#x27;nginx_auth=23942c07f8f8dc87baf2a2afa32e2af4&#x27;
+HTTP_HOST = &#x27;dev.liveedu.tv&#x27;
+HTTP_USER_AGENT = &#x27;python-requests/2.19.1&#x27;
+HTTP_X_FORWARDED_FOR = &#x27;185.143.147.203, 172.68.238.205, 172.18.0.1&#x27;
+HTTP_X_FORWARDED_HOST = &#x27;dev.liveedu.tv&#x27;
+HTTP_X_FORWARDED_PORT = &#x27;443&#x27;
+HTTP_X_FORWARDED_PROTO = &#x27;https&#x27;
+HTTP_X_FORWARDED_SERVER = &#x27;webcore03&#x27;
+HTTP_X_REAL_IP = &#x27;172.18.0.1&#x27;
+PATH_INFO = &#x27;/api/v3/projects/&#x27;
+QUERY_STRING = &#x27;&#x27;
+RAW_URI = &#x27;/api/v3/projects/&#x27;
+REMOTE_ADDR = &#x27;185.143.147.203&#x27;
+REMOTE_PORT = &#x27;51642&#x27;
+REQUEST_METHOD = &#x27;POST&#x27;
+SCRIPT_NAME = &#x27;&#x27;
+SERVER_NAME = &#x27;0.0.0.0&#x27;
+SERVER_PORT = &#x27;8000&#x27;
+SERVER_PROTOCOL = &#x27;HTTP/1.0&#x27;
+SERVER_SOFTWARE = &#x27;gunicorn/19.7.1&#x27;
+gunicorn.socket = &lt;socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=(&#x27;172.18.0.24&#x27;, 8000), raddr=(&#x27;172.18.0.20&#x27;, 51642)&gt;
+wsgi.errors = &lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7f8469ee3e10&gt;
+wsgi.file_wrapper = &#x27;&#x27;
+wsgi.input = &lt;newrelic.api.web_transaction._WSGIInputWrapper object at 0x7f8469ee3780&gt;
+wsgi.multiprocess = False
+wsgi.multithread = False
+wsgi.run_once = False
+wsgi.url_scheme = &#x27;http&#x27;
+wsgi.version = &#x27;(1, 0)&#x27;
+
+Settings:
+Using settings module liveedu.settings
+ABSOLUTE_URL_OVERRIDES = {}
+ACCOUNT_AUTHENTICATION_METHOD = &#x27;username_email&#x27;
+ACCOUNT_AUTO_CONFIRM_EMAIL_SOCIAL_SIGNUP = True
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_CONFIRMATION_HMAC = False
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_SUBJECT_PREFIX = &#x27;&#x27;
+ACCOUNT_EMAIL_VERIFICATION = &#x27;mandatory&#x27;
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_BLACKLIST = [&#x27;admin&#x27;, &#x27;sysadmin&#x27;, &#x27;chatadmin&#x27;, &#x27;chat-admin&#x27;, &#x27;edna&#x27;, &#x27;duedorf&#x27;, &#x27;support&#x27;, &#x27;customersupport&#x27;, &#x27;subscription&#x27;, &#x27;accounts&#x27;, &#x27;autocomplete&#x27;, &#x27;pay&#x27;, &#x27;chat&#x27;, &#x27;video&#x27;, &#x27;messages&#x27;, &#x27;static&#x27;, &#x27;tour&#x27;, &#x27;beta-login&#x27;, &#x27;streamerprogram&#x27;, &#x27;about&#x27;, &#x27;contact&#x27;, &#x27;terms&#x27;, &#x27;privacy&#x27;, &#x27;streamingguide&#x27;, &#x27;streamingguideadvanced&#x27;, &#x27;howitworks&#x27;, &#x27;welcome&#x27;, &#x27;obsguide&#x27;, &#x27;yourchannel&#x27;, &#x27;featurespage&#x27;, &#x27;features&#x27;, &#x27;gettingstarted&#x27;, &#x27;browsepage&#x27;, &#x27;userdashboard&#x27;, &#x27;streamingtips&#x27;, &#x27;waitinglist&#x27;, &#x27;livestreams&#x27;, &#x27;videos&#x27;, &#x27;api&#x27;, &#x27;media&#x27;, &#x27;account&#x27;, &#x27;help&#x27;, &#x27;login&#x27;, &#x27;signup&#x27;, &#x27;username&#x27;, &#x27;user&#x27;, &#x27;example&#x27;, &#x27;projects&#x27;, &#x27;streaming&#x27;, &#x27;schedule&#x27;, &#x27;obsguidemac&#x27;, &#x27;apps&#x27;, &#x27;games&#x27;, &#x27;websites&#x27;, &#x27;codetalk&#x27;, &#x27;news&#x27;, &#x27;app&#x27;, &#x27;game&#x27;, &#x27;website&#x27;, &#x27;code-talk&#x27;, &#x27;others&#x27;, &#x27;other&#x27;, &#x27;leaderboard&#x27;, &#x27;goodies&#x27;, &#x27;press&#x27;, &#x27;language&#x27;, &#x27;contacts&#x27;, &#x27;answerbase&#x27;, &#x27;playlists&#x27;, &#x27;playlist&#x27;, &#x27;pastebin&#x27;, &#x27;builtonlivecodingtv&#x27;, &#x27;debug&#x27;, &#x27;me&#x27;, &#x27;paypal&#x27;, &#x27;stripe&#x27;, &#x27;chargebee&#x27;, &#x27;payments&#x27;, &#x27;apps&#x27;, &#x27;games&#x27;, &#x27;websites&#x27;, &#x27;codetalk&#x27;, &#x27;website&#x27;, &#x27;code-talk&#x27;, &#x27;game&#x27;, &#x27;app&#x27;, &#x27;others&#x27;, &#x27;4l3c&#x27;, &#x27;adragon052&#x27;, &#x27;aeonflux&#x27;, &#x27;ajollymore&#x27;, &#x27;alexbrothman&#x27;, &#x27;amrap1243&#x27;, &#x27;andresgrams&#x27;, &#x27;arjun_02001&#x27;, &#x27;arpitdalmia&#x27;, &#x27;arthurcarlsson&#x27;, &#x27;assertchris&#x27;, &#x27;ayates&#x27;, &#x27;barakmich&#x27;, &#x27;bathle&#x27;, &#x27;bdogger&#x27;, &#x27;belgort&#x27;, &#x27;bellaci&#x27;, &#x27;bestcellar&#x27;, &#x27;bgentry&#x27;, &#x27;bperucchi&#x27;, &#x27;brahim66&#x27;, &#x27;brandong&#x27;, &#x27;brucepackard&#x27;, &#x27;cdyer400&#x27;, &#x27;charliedrage&#x27;, &#x27;chrisakakay&#x27;, &#x27;cm100&#x27;, &#x27;cokernel&#x27;, &#x27;coldshaker14&#x27;, &#x27;cparen&#x27;, &#x27;ctannerweb&#x27;, &#x27;dahflipper&#x27;, &#x27;damgdude&#x27;, &#x27;danafc&#x27;, &#x27;daniell&#x27;, &#x27;danielw&#x27;, &#x27;databyss&#x27;, &#x27;defazn&#x27;, &#x27;denis91&#x27;, &#x27;derrica&#x27;, &#x27;devlinzed&#x27;, &#x27;dfortier&#x27;, &#x27;dido&#x27;, &#x27;djjaron&#x27;, &#x27;dogeared&#x27;, &#x27;dprescott&#x27;, &#x27;drov&#x27;, &#x27;dscoder33&#x27;, &#x27;dsimowitz&#x27;, &#x27;dunphyben&#x27;, &#x27;dxd_em&#x27;, &#x27;ebintus&#x27;, &#x27;eleijonmarck&#x27;, &#x27;ell&#x27;, &#x27;epochblue&#x27;, &#x27;ericdykstra&#x27;, &#x27;esteapp&#x27;, &#x27;fahre&#x27;, &#x27;fdhadzh&#x27;, &#x27;febvigrail&#x27;, &#x27;feimosi&#x27;, &#x27;fesposito&#x27;, &#x27;fgg&#x27;, &#x27;frocco&#x27;, &#x27;ghost64&#x27;, &#x27;gkbrk&#x27;, &#x27;halciber&#x27;, &#x27;harshad217&#x27;, &#x27;hey_arne&#x27;, &#x27;hunterleaman&#x27;, &#x27;inursha&#x27;, &#x27;izero91&#x27;, &#x27;jeanoliveira&#x27;, &#x27;jeyoung&#x27;, &#x27;jfreitasdutra&#x27;, &#x27;jlillyreed&#x27;, &#x27;johanatan&#x27;, &#x27;johnmaguire&#x27;, &#x27;jon3k&#x27;, &#x27;jonpedlow&#x27;, &#x27;jordster&#x27;, &#x27;joshualonghurst&#x27;, &#x27;jryans&#x27;, &#x27;jtwebman&#x27;, &#x27;julienitard&#x27;, &#x27;jurcz91&#x27;, &#x27;justin22f&#x27;, &#x27;justlasse&#x27;, &#x27;jwild&#x27;, &#x27;k0den&#x27;, &#x27;kevineaton&#x27;, &#x27;keyan&#x27;, &#x27;khaledkhalil94&#x27;, &#x27;kiasaki&#x27;, &#x27;lando2319&#x27;, &#x27;langolf&#x27;, &#x27;laszlokorte&#x27;, &#x27;lemster&#x27;, &#x27;leocaseiro&#x27;, &#x27;lf4&#x27;, &#x27;lilchen&#x27;, &#x27;littletitans&#x27;, &#x27;lordtribual&#x27;, &#x27;luizmaster&#x27;, &#x27;lukewhitehouse&#x27;, &#x27;marcky&#x27;, &#x27;matthewddennis&#x27;, &#x27;matthucke&#x27;, &#x27;mattkrea&#x27;, &#x27;mattperrin&#x27;, &#x27;mconley&#x27;, &#x27;melissarios94&#x27;, &#x27;michaelhealy&#x27;, &#x27;mickawesomesque&#x27;, &#x27;micke&#x27;, &#x27;mike-zarandona&#x27;, &#x27;mikea15&#x27;, &#x27;mindhavock&#x27;, &#x27;mrtn&#x27;, &#x27;mrurlwin&#x27;, &#x27;mzaweb&#x27;, &#x27;neverused&#x27;, &#x27;nickk&#x27;, &#x27;nymlynx&#x27;, &#x27;peterelliott90&#x27;, &#x27;phambatho&#x27;, &#x27;prabhakar&#x27;, &#x27;probablyjosh&#x27;, &#x27;prochaser&#x27;, &#x27;programwithme&#x27;, &#x27;pzurita&#x27;, &#x27;quilgarsh&#x27;, &#x27;rafaeluzzi&#x27;, &#x27;rdbi&#x27;, &#x27;relja001&#x27;, &#x27;rjv&#x27;, &#x27;robdel12&#x27;, &#x27;robinsonsimon1&#x27;, &#x27;robotcaleb&#x27;, &#x27;robotfoot&#x27;, &#x27;royal&#x27;, &#x27;roytomeij&#x27;, &#x27;rpk&#x27;, &#x27;rsmn&#x27;, &#x27;s15&#x27;, &#x27;samsgalaxy&#x27;, &#x27;santigaite&#x27;, &#x27;sbruchmann&#x27;, &#x27;scorpiono&#x27;, &#x27;scyono&#x27;, &#x27;sebastiansandqvist&#x27;, &#x27;sergioroja&#x27;, &#x27;shabib&#x27;, &#x27;sixtythr33&#x27;, &#x27;skaarup&#x27;, &#x27;sloxu&#x27;, &#x27;snake117&#x27;, &#x27;sogomn&#x27;, &#x27;spacemanspiff&#x27;, &#x27;sparxiky&#x27;, &#x27;ssstarain&#x27;, &#x27;stevehemond&#x27;, &#x27;stumps&#x27;, &#x27;sugarpirate&#x27;, &#x27;tapanpandita&#x27;, &#x27;tapbeat&#x27;, &#x27;tatopx&#x27;, &#x27;testaccountdeletion&#x27;, &#x27;theandrew&#x27;, &#x27;thementhor&#x27;, &#x27;theraysa&#x27;, &#x27;thesamelabel&#x27;, &#x27;thesbros&#x27;, &#x27;toto2&#x27;, &#x27;trahn&#x27;, &#x27;tristanlabbe&#x27;, &#x27;troy&#x27;, &#x27;urubuz&#x27;, &#x27;vypr&#x27;, &#x27;wildsoftware&#x27;, &#x27;willurd&#x27;, &#x27;wmoxam&#x27;, &#x27;wolverana&#x27;, &#x27;xk0der&#x27;, &#x27;xobsidian&#x27;, &#x27;zenius&#x27;, &#x27;zev&#x27;, &#x27;zoeho&#x27;, &#x27;zogot&#x27;, &#x27;zolomon&#x27;, &#x27;lazer&#x27;, &#x27;adelciotto&#x27;, &#x27;allesator&#x27;, &#x27;anonymos10&#x27;, &#x27;bronlund&#x27;, &#x27;deguchi&#x27;, &#x27;derodaorel&#x27;, &#x27;flachen&#x27;, &#x27;kik01&#x27;, &#x27;kujisoft&#x27;, &#x27;latinvitv&#x27;, &#x27;lennylux&#x27;, &#x27;raspbeguy&#x27;, &#x27;rdarasy&#x27;, &#x27;rmdstudio&#x27;, &#x27;scimon&#x27;, &#x27;vgrafe&#x27;, &#x27;victorbjelkholm&#x27;, &#x27;ffmpeg&#x27;, &#x27;1080&#x27;, &#x27;720&#x27;, &#x27;480&#x27;, &#x27;analyzeduration&#x27;, &#x27;live&#x27;, &#x27;liveedu&#x27;, &#x27;liveedutv&#x27;, &#x27;livecoding&#x27;, &#x27;livecodingtv&#x27;, &#x27;abr&#x27;, &#x27;rtmp&#x27;, &#x27;probesize&#x27;, &#x27;rtmp_buffer&#x27;, &#x27;rtmp_live&#x27;, &#x27;1000&#x27;, &#x27;async&#x27;, &#x27;vsync&#x27;, &#x27;copy&#x27;, &#x27;flv&#x27;, &#x27;media&#x27;, &#x27;libx264&#x27;, &#x27;aac&#x27;, &#x27;strict&#x27;, &#x27;scale&#x27;, &#x27;1500&#x27;, &#x27;1200&#x27;, &#x27;2000&#x27;, &#x27;trunc&#x27;, &#x27;tune&#x27;, &#x27;zerolatency&#x27;, &#x27;preset&#x27;, &#x27;veryfast&#x27;, &#x27;ultrafast&#x27;, &#x27;superfast&#x27;, &#x27;crf&#x27;, &#x27;fast&#x27;, &#x27;medium&#x27;, &#x27;slow&#x27;, &#x27;veryslow&#x27;, &#x27;opt&#x27;, &#x27;bin&#x27;, &#x27;512&#x27;, &#x27;96k&#x27;, &#x27;64k&#x27;, &#x27;32k&#x27;, &#x27;854&#x27;, &#x27;1280&#x27;, &#x27;1024&#x27;, &#x27;1920&#x27;]
+ACCOUNT_USERNAME_REQUIRED = True
+ADMINS = []
+ALLOWED_HOSTS = [&#x27;dev.livecoding.tv&#x27;, &#x27;dev.liveedu.tv&#x27;]
+APPEND_SLASH = True
+AUTHENTICATION_BACKENDS = &quot;(&#x27;django.contrib.auth.backends.ModelBackend&#x27;, &#x27;allauth.account.auth_backends.AuthenticationBackend&#x27;)&quot;
+AUTH_PASSWORD_VALIDATORS = &#x27;********************&#x27;
+AUTH_USER_MODEL = &#x27;core.User&#x27;
+BASE_VIEWS_LIVE = 50
+BASE_VIEWS_LIVE_INTERVAL = 60
+BASE_VIEWS_LIVE_START = 8
+BASE_VIEWS_LIVE_STEP = 5
+BOOST_LOCAL_LANGUAGE = False
+CACHES = {&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django_redis.cache.RedisCache&#x27;, &#x27;LOCATION&#x27;: &#x27;redis://redis&#x27;}}
+CACHE_MIDDLEWARE_ALIAS = &#x27;default&#x27;
+CACHE_MIDDLEWARE_KEY_PREFIX = &#x27;********************&#x27;
+CACHE_MIDDLEWARE_SECONDS = 600
+CELERY_ACCEPT_CONTENT = [&#x27;json&#x27;]
+CELERY_BEAT_SCHEDULE = {}
+CELERY_BROKER_TRANSPORT_OPTIONS = {&#x27;fanout_prefix&#x27;: True, &#x27;fanout_patterns&#x27;: True}
+CELERY_BROKER_URL = &#x27;redis://redis:6379&#x27;
+CELERY_RESULT_SERIALIZER = &#x27;json&#x27;
+CELERY_TASK_ALWAYS_EAGER = False
+CELERY_TASK_DEFAULT_EXCHANGE = &#x27;celery&#x27;
+CELERY_TASK_DEFAULT_QUEUE = &#x27;celery&#x27;
+CELERY_TASK_SERIALIZER = &#x27;json&#x27;
+CELERY_TIMEZONE = &#x27;UTC&#x27;
+CHECKING = False
+CHINA_EMAIL_CONFIG = {&#x27;EMAIL_FILE_PATH&#x27;: &#x27;&#x27;, &#x27;EMAIL_HOST_USER&#x27;: None, &#x27;EMAIL_HOST_PASSWORD&#x27;: &#x27;********************&#x27;, &#x27;EMAIL_HOST&#x27;: None, &#x27;EMAIL_PORT&#x27;: None, &#x27;EMAIL_BACKEND&#x27;: &#x27;django.core.mail.backends.console.EmailBackend&#x27;}
+CHINA_EMAIL_FILTERS = [&#x27;.*@.*\\.cn&#x27;, &#x27;.*@qq\\.com&#x27;, &#x27;.*@163\\.com&#x27;]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = &quot;(&#x27;liveedu.tv&#x27;, &#x27;*.liveedu.tv&#x27;, &#x27;livecoding.tv&#x27;, &#x27;*.livecoding.tv&#x27;, &#x27;localhost:8000&#x27;, &#x27;127.0.0.1:8000&#x27;, &#x27;localhost:3000&#x27;, &#x27;127.0.0.1:3000&#x27;, &#x27;education-ecosystem.com&#x27;, &#x27;*.education-ecosystem.com&#x27;, &#x27;stagingmedia.liveedu.tv&#x27;, &#x27;*.stagingmedia.liveedu.tv&#x27;)&quot;
+CORS_URLS_REGEX = &#x27;^/api/.*$&#x27;
+CSRF_COOKIE_AGE = 31449600
+CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_NAME = &#x27;csrftoken&#x27;
+CSRF_COOKIE_PATH = &#x27;/&#x27;
+CSRF_COOKIE_SECURE = False
+CSRF_FAILURE_VIEW = &#x27;django.views.csrf.csrf_failure&#x27;
+CSRF_HEADER_NAME = &#x27;HTTP_X_CSRFTOKEN&#x27;
+CSRF_TRUSTED_ORIGINS = []
+CSRF_USE_SESSIONS = False
+CYCLE_LIMITS = True
+DAILY_LOGIN_COOKIE_NAME = &#x27;daily_login&#x27;
+DATABASES = {&#x27;default&#x27;: {&#x27;NAME&#x27;: &#x27;livecodingtv&#x27;, &#x27;USER&#x27;: &#x27;postgres&#x27;, &#x27;PASSWORD&#x27;: &#x27;********************&#x27;, &#x27;HOST&#x27;: &#x27;db&#x27;, &#x27;PORT&#x27;: &#x27;&#x27;, &#x27;ENGINE&#x27;: &#x27;django.db.backends.postgresql_psycopg2&#x27;, &#x27;ATOMIC_REQUESTS&#x27;: False, &#x27;AUTOCOMMIT&#x27;: True, &#x27;CONN_MAX_AGE&#x27;: 0, &#x27;OPTIONS&#x27;: {}, &#x27;TIME_ZONE&#x27;: None, &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None, &#x27;COLLATION&#x27;: None, &#x27;NAME&#x27;: None, &#x27;MIRROR&#x27;: None}}}
+DATABASE_ROUTERS = []
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 1000
+DATETIME_FORMAT = &#x27;N j, Y, P&#x27;
+DATETIME_INPUT_FORMATS = [&#x27;%Y-%m-%d %H:%M:%S&#x27;, &#x27;%Y-%m-%d %H:%M:%S.%f&#x27;, &#x27;%Y-%m-%d %H:%M&#x27;, &#x27;%Y-%m-%d&#x27;, &#x27;%m/%d/%Y %H:%M:%S&#x27;, &#x27;%m/%d/%Y %H:%M:%S.%f&#x27;, &#x27;%m/%d/%Y %H:%M&#x27;, &#x27;%m/%d/%Y&#x27;, &#x27;%m/%d/%y %H:%M:%S&#x27;, &#x27;%m/%d/%y %H:%M:%S.%f&#x27;, &#x27;%m/%d/%y %H:%M&#x27;, &#x27;%m/%d/%y&#x27;]
+DATE_FORMAT = &#x27;N j, Y&#x27;
+DATE_INPUT_FORMATS = [&#x27;%Y-%m-%d&#x27;, &#x27;%m/%d/%Y&#x27;, &#x27;%m/%d/%y&#x27;, &#x27;%b %d %Y&#x27;, &#x27;%b %d, %Y&#x27;, &#x27;%d %b %Y&#x27;, &#x27;%d %b, %Y&#x27;, &#x27;%B %d %Y&#x27;, &#x27;%B %d, %Y&#x27;, &#x27;%d %B %Y&#x27;, &#x27;%d %B, %Y&#x27;]
+DEBUG = True
+DEBUG_PROPAGATE_EXCEPTIONS = False
+DECIMAL_SEPARATOR = &#x27;.&#x27;
+DEFAULT_CHARSET = &#x27;utf-8&#x27;
+DEFAULT_CONTENT_TYPE = &#x27;text/html&#x27;
+DEFAULT_EXCEPTION_REPORTER_FILTER = &#x27;django.views.debug.SafeExceptionReporterFilter&#x27;
+DEFAULT_FILE_STORAGE = &#x27;django_webdav_storage.storage.WebDavStorage&#x27;
+DEFAULT_FROM_EMAIL = &#x27;Support - LiveEdu.tv &lt;support@liveedu.tv&gt;&#x27;
+DEFAULT_INDEX_TABLESPACE = &#x27;&#x27;
+DEFAULT_TABLESPACE = &#x27;&#x27;
+DISALLOWED_USER_AGENTS = []
+ELASTICEMAIL_API_KEY = &#x27;********************&#x27;
+ELASTICEMAIL_STREAM_NOTIFY_TEMPLATE_ID = &#x27;1320&#x27;
+ELASTICSEARCH_DSL = {&#x27;default&#x27;: {&#x27;hosts&#x27;: &#x27;elasticsearch5&#x27;}}
+ELASTICSEARCH_DSL_AUTOSYNC = True
+EMAIL_BACKEND = &#x27;core.email_backends.SelectiveEmailBackend&#x27;
+EMAIL_CONFIG = {&#x27;EMAIL_FILE_PATH&#x27;: &#x27;&#x27;, &#x27;EMAIL_HOST_USER&#x27;: &#x27;sixact&#x27;, &#x27;EMAIL_HOST_PASSWORD&#x27;: &#x27;********************&#x27;, &#x27;EMAIL_HOST&#x27;: &#x27;smtp.webfaction.com&#x27;, &#x27;EMAIL_PORT&#x27;: None, &#x27;EMAIL_BACKEND&#x27;: &#x27;django.core.mail.backends.smtp.EmailBackend&#x27;, &#x27;EMAIL_USE_TLS&#x27;: True}
+EMAIL_CONFIRMATION_STATIC_KEY = &#x27;********************&#x27;
+EMAIL_FILE_PATH = &#x27;&#x27;
+EMAIL_HOST = &#x27;smtp.webfaction.com&#x27;
+EMAIL_HOST_PASSWORD = &#x27;********************&#x27;
+EMAIL_HOST_USER = &#x27;sixact&#x27;
+EMAIL_PORT = None
+EMAIL_SSL_CERTFILE = None
+EMAIL_SSL_KEYFILE = &#x27;********************&#x27;
+EMAIL_SUBJECT_PREFIX = &#x27;[Django] &#x27;
+EMAIL_TIMEOUT = None
+EMAIL_USE_LOCALTIME = False
+EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True
+FACEBOOK_STREAM_LIVE_APP_ID = &#x27;1636909959880874&#x27;
+FACEBOOK_STREAM_LIVE_TOKEN_SECRET = &#x27;********************&#x27;
+FALLBACK_TIME_ZONE = &#x27;America/New_York&#x27;
+FILE_CHARSET = &#x27;utf-8&#x27;
+FILE_UPLOAD_DIRECTORY_PERMISSIONS = None
+FILE_UPLOAD_HANDLERS = [&#x27;django.core.files.uploadhandler.MemoryFileUploadHandler&#x27;, &#x27;django.core.files.uploadhandler.TemporaryFileUploadHandler&#x27;]
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440
+FILE_UPLOAD_PERMISSIONS = None
+FILE_UPLOAD_TEMP_DIR = None
+FIRST_DAY_OF_WEEK = 0
+FIXTURE_DIRS = []
+FORCE_SCRIPT_NAME = None
+FORMAT_MODULE_PATH = None
+FORM_RENDERER = &#x27;django.forms.renderers.DjangoTemplates&#x27;
+FROM_EMAIL_NOTIFICATIONS = &#x27;&quot;Watch Livestream&quot; &lt;notifications@liveedu.tv&gt;&#x27;
+GCM_SENDER_ID = &#x27;830947238809&#x27;
+HASHID_FIELD_ALLOW_INT = False
+HASHID_FIELD_ALLOW_INT_LOOKUP = False
+HASHID_FIELD_LOOKUP_EXCEPTION = False
+HASHID_FIELD_SALT = &#x27;qGsuaL^0FZV^#G]t9R&amp;CmH*d)J{NS!b9r+%LM_sGu~aNKR$\\B]&#x27;
+HAWK_CREDENTIALS = {&#x27;developer&#x27;: {&#x27;id&#x27;: &#x27;developer&#x27;, &#x27;key&#x27;: &#x27;********************&#x27;, &#x27;algorithm&#x27;: &#x27;sha256&#x27;}}
+HAWK_USER_LOOKUP = &#x27;core.utils.hawk_user_lookup&#x27;
+IGNORABLE_404_URLS = []
+INSTALLED_APPS = [&#x27;django.contrib.admin&#x27;, &#x27;django.contrib.auth&#x27;, &#x27;django.contrib.contenttypes&#x27;, &#x27;django.contrib.sessions&#x27;, &#x27;django.contrib.messages&#x27;, &#x27;whitenoise.runserver_nostatic&#x27;, &#x27;django.contrib.staticfiles&#x27;, &#x27;django.contrib.sites&#x27;, &#x27;django.contrib.postgres&#x27;, &#x27;django_nose&#x27;, &#x27;corsheaders&#x27;, &#x27;debug_toolbar&#x27;, &#x27;webpack_loader&#x27;, &#x27;django_js_reverse&#x27;, &#x27;languages_plus&#x27;, &#x27;countries_plus&#x27;, &#x27;sorl.thumbnail&#x27;, &#x27;oauth2_provider&#x27;, &#x27;hawkrest&#x27;, &#x27;rest_framework&#x27;, &#x27;django_elasticsearch_dsl&#x27;, &#x27;tagging&#x27;, &#x27;django_filters&#x27;, &#x27;rest_auth&#x27;, &#x27;allauth&#x27;, &#x27;allauth.account&#x27;, &#x27;allauth.socialaccount&#x27;, &#x27;allauth.socialaccount.providers.google&#x27;, &#x27;allauth.socialaccount.providers.facebook&#x27;, &#x27;allauth.socialaccount.providers.vk&#x27;, &#x27;allauth.socialaccount.providers.twitch&#x27;, &#x27;allauth.socialaccount.providers.github&#x27;, &#x27;allauth.socialaccount.providers.linkedin&#x27;, &#x27;allauth.socialaccount.providers.linkedin_oauth2&#x27;, &#x27;allauth.socialaccount.providers.openid&#x27;, &#x27;allauth.socialaccount.providers.windowslive&#x27;, &#x27;allauth.socialaccount.providers.twitter&#x27;, &#x27;allauth.socialaccount.providers.yahoo&#x27;, &#x27;api.v3.auth.social.providers.google_v3&#x27;, &#x27;core.apps.CoreConfig&#x27;, &#x27;schedule.apps.ScheduleConfig&#x27;, &#x27;api.apps.ApiConfig&#x27;, &#x27;api.internal.apps.ApiConfig&#x27;, &#x27;api.v2.apps.ApiConfig&#x27;, &#x27;api.v3.apps.ApiConfig&#x27;, &#x27;api.v3.auth.apps.ApiConfig&#x27;, &#x27;vote&#x27;, &#x27;feedback&#x27;, &#x27;raven.contrib.django.raven_compat&#x27;]
+INTERNAL_IPS = &quot;(&#x27;127.0.0.1&#x27;, &#x27;172.17.0.1&#x27;, &#x27;172.18.0.1&#x27;, &#x27;172.19.0.1&#x27;)&quot;
+JS_REVERSE_EXCLUDE_NAMESPACES = [&#x27;admin&#x27;, &#x27;djdt&#x27;, &#x27;api&#x27;, &#x27;api-docs&#x27;, &#x27;api-internal&#x27;]
+JS_REVERSE_JS_GLOBAL_OBJECT_NAME = &#x27;window&#x27;
+JS_REVERSE_JS_MINIFY = False
+JS_REVERSE_JS_VAR_NAME = &#x27;DjangoURLs&#x27;
+JWT_AUTH = {&#x27;JWT_AUTH_COOKIE&#x27;: &#x27;access_token&#x27;, &#x27;JWT_ALGORITHM&#x27;: &#x27;RS256&#x27;, &#x27;JWT_PRIVATE_KEY&#x27;: &#x27;********************&#x27;, &#x27;JWT_PUBLIC_KEY&#x27;: &#x27;********************&#x27;, &#x27;JWT_ALLOW_REFRESH&#x27;: True, &#x27;JWT_EXPIRATION_DELTA&#x27;: datetime.timedelta(14), &#x27;JWT_REFRESH_EXPIRATION_DELTA&#x27;: datetime.timedelta(90), &#x27;JWT_LEEWAY&#x27;: datetime.timedelta(0, 3600)}
+LANGUAGES = [(&#x27;af&#x27;, &#x27;Afrikaans&#x27;), (&#x27;ar&#x27;, &#x27;Arabic&#x27;), (&#x27;ast&#x27;, &#x27;Asturian&#x27;), (&#x27;az&#x27;, &#x27;Azerbaijani&#x27;), (&#x27;bg&#x27;, &#x27;Bulgarian&#x27;), (&#x27;be&#x27;, &#x27;Belarusian&#x27;), (&#x27;bn&#x27;, &#x27;Bengali&#x27;), (&#x27;br&#x27;, &#x27;Breton&#x27;), (&#x27;bs&#x27;, &#x27;Bosnian&#x27;), (&#x27;ca&#x27;, &#x27;Catalan&#x27;), (&#x27;cs&#x27;, &#x27;Czech&#x27;), (&#x27;cy&#x27;, &#x27;Welsh&#x27;), (&#x27;da&#x27;, &#x27;Danish&#x27;), (&#x27;de&#x27;, &#x27;German&#x27;), (&#x27;dsb&#x27;, &#x27;Lower Sorbian&#x27;), (&#x27;el&#x27;, &#x27;Greek&#x27;), (&#x27;en&#x27;, &#x27;English&#x27;), (&#x27;en-au&#x27;, &#x27;Australian English&#x27;), (&#x27;en-gb&#x27;, &#x27;British English&#x27;), (&#x27;eo&#x27;, &#x27;Esperanto&#x27;), (&#x27;es&#x27;, &#x27;Spanish&#x27;), (&#x27;es-ar&#x27;, &#x27;Argentinian Spanish&#x27;), (&#x27;es-co&#x27;, &#x27;Colombian Spanish&#x27;), (&#x27;es-mx&#x27;, &#x27;Mexican Spanish&#x27;), (&#x27;es-ni&#x27;, &#x27;Nicaraguan Spanish&#x27;), (&#x27;es-ve&#x27;, &#x27;Venezuelan Spanish&#x27;), (&#x27;et&#x27;, &#x27;Estonian&#x27;), (&#x27;eu&#x27;, &#x27;Basque&#x27;), (&#x27;fa&#x27;, &#x27;Persian&#x27;), (&#x27;fi&#x27;, &#x27;Finnish&#x27;), (&#x27;fr&#x27;, &#x27;French&#x27;), (&#x27;fy&#x27;, &#x27;Frisian&#x27;), (&#x27;ga&#x27;, &#x27;Irish&#x27;), (&#x27;gd&#x27;, &#x27;Scottish Gaelic&#x27;), (&#x27;gl&#x27;, &#x27;Galician&#x27;), (&#x27;he&#x27;, &#x27;Hebrew&#x27;), (&#x27;hi&#x27;, &#x27;Hindi&#x27;), (&#x27;hr&#x27;, &#x27;Croatian&#x27;), (&#x27;hsb&#x27;, &#x27;Upper Sorbian&#x27;), (&#x27;hu&#x27;, &#x27;Hungarian&#x27;), (&#x27;ia&#x27;, &#x27;Interlingua&#x27;), (&#x27;id&#x27;, &#x27;Indonesian&#x27;), (&#x27;io&#x27;, &#x27;Ido&#x27;), (&#x27;is&#x27;, &#x27;Icelandic&#x27;), (&#x27;it&#x27;, &#x27;Italian&#x27;), (&#x27;ja&#x27;, &#x27;Japanese&#x27;), (&#x27;ka&#x27;, &#x27;Georgian&#x27;), (&#x27;kk&#x27;, &#x27;Kazakh&#x27;), (&#x27;km&#x27;, &#x27;Khmer&#x27;), (&#x27;kn&#x27;, &#x27;Kannada&#x27;), (&#x27;ko&#x27;, &#x27;Korean&#x27;), (&#x27;lb&#x27;, &#x27;Luxembourgish&#x27;), (&#x27;lt&#x27;, &#x27;Lithuanian&#x27;), (&#x27;lv&#x27;, &#x27;Latvian&#x27;), (&#x27;mk&#x27;, &#x27;Macedonian&#x27;), (&#x27;ml&#x27;, &#x27;Malayalam&#x27;), (&#x27;mn&#x27;, &#x27;Mongolian&#x27;), (&#x27;mr&#x27;, &#x27;Marathi&#x27;), (&#x27;my&#x27;, &#x27;Burmese&#x27;), (&#x27;nb&#x27;, &#x27;Norwegian BokmÃ¥l&#x27;), (&#x27;ne&#x27;, &#x27;Nepali&#x27;), (&#x27;nl&#x27;, &#x27;Dutch&#x27;), (&#x27;nn&#x27;, &#x27;Norwegian Nynorsk&#x27;), (&#x27;os&#x27;, &#x27;Ossetic&#x27;), (&#x27;pa&#x27;, &#x27;Punjabi&#x27;), (&#x27;pl&#x27;, &#x27;Polish&#x27;), (&#x27;pt&#x27;, &#x27;Portuguese&#x27;), (&#x27;pt-br&#x27;, &#x27;Brazilian Portuguese&#x27;), (&#x27;ro&#x27;, &#x27;Romanian&#x27;), (&#x27;ru&#x27;, &#x27;Russian&#x27;), (&#x27;sk&#x27;, &#x27;Slovak&#x27;), (&#x27;sl&#x27;, &#x27;Slovenian&#x27;), (&#x27;sq&#x27;, &#x27;Albanian&#x27;), (&#x27;sr&#x27;, &#x27;Serbian&#x27;), (&#x27;sr-latn&#x27;, &#x27;Serbian Latin&#x27;), (&#x27;sv&#x27;, &#x27;Swedish&#x27;), (&#x27;sw&#x27;, &#x27;Swahili&#x27;), (&#x27;ta&#x27;, &#x27;Tamil&#x27;), (&#x27;te&#x27;, &#x27;Telugu&#x27;), (&#x27;th&#x27;, &#x27;Thai&#x27;), (&#x27;tr&#x27;, &#x27;Turkish&#x27;), (&#x27;tt&#x27;, &#x27;Tatar&#x27;), (&#x27;udm&#x27;, &#x27;Udmurt&#x27;), (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;), (&#x27;ur&#x27;, &#x27;Urdu&#x27;), (&#x27;vi&#x27;, &#x27;Vietnamese&#x27;), (&#x27;zh-hans&#x27;, &#x27;Simplified Chinese&#x27;), (&#x27;zh-hant&#x27;, &#x27;Traditional Chinese&#x27;)]
+LANGUAGES_BIDI = [&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]
+LANGUAGE_CODE = &#x27;en-us&#x27;
+LANGUAGE_COOKIE_AGE = None
+LANGUAGE_COOKIE_DOMAIN = None
+LANGUAGE_COOKIE_NAME = &#x27;django_language&#x27;
+LANGUAGE_COOKIE_PATH = &#x27;/&#x27;
+LIMIT_STORAGE_URI = &#x27;redis://redis:6379/0&#x27;
+LISTED_LANGUAGES = &quot;(&#x27;en&#x27;, &#x27;de&#x27;, &#x27;ru&#x27;, &#x27;zh&#x27;, &#x27;pt&#x27;)&quot;
+LIVEEDU_MEDIA_PLATFORM = {&#x27;current-gen&#x27;: 2, &#x27;domain&#x27;: &#x27;liveedu.tv&#x27;, &#x27;limits&#x27;: {&#x27;livestream&#x27;: {&#x27;anonymous&#x27;: (2, 0, 3600), &#x27;registered&#x27;: (None, 0, 3600), &#x27;trial&#x27;: (5, 5, 86400), &#x27;premium&#x27;: (None, None, 3600)}, &#x27;project&#x27;: {&#x27;anonymous&#x27;: (2, 0, 3600), &#x27;registered&#x27;: (None, 0, 3600), &#x27;trial&#x27;: (None, 5, 86400), &#x27;premium&#x27;: (None, None, 3600)}, &#x27;video&#x27;: {&#x27;anonymous&#x27;: (2, 0, 3600), &#x27;registered&#x27;: (2, 0, 3600), &#x27;trial&#x27;: (None, 5, 86400), &#x27;premium&#x27;: (None, None, 3600)}}, &#x27;cycle_limits&#x27;: {&#x27;time&#x27;: 10800, &#x27;projects&#x27;: 10}, &#x27;nonpro-resolutions&#x27;: (480, 720), &#x27;download-resolutions&#x27;: (480, 720, 1080), &#x27;url-templates&#x27;: {&#x27;fms.path&#x27;: &#x27;rtmp://{host}:1935/livecodingtv/&#x27;, &#x27;qualitytester.path&#x27;: &#x27;https://{host}/qualitytester?streamer={name}&#x27;, &#x27;live@1&#x27;: {&#x27;rtmp&#x27;: &#x27;rtmp://{host}/livecodingtv/{name}&#x27;, &#x27;hls&#x27;: &#x27;https://{host}/hls/{name}/index.m3u8&#x27;, &#x27;dash&#x27;: &#x27;https://{host}/dash/{name}/index.mpd&#x27;}, &#x27;live@2&#x27;: {&#x27;rtmp&#x27;: &#x27;rtmp://{host}/livecodingtv{region_mod1}/{name}&#x27;, &#x27;hls&#x27;: &#x27;https://{host}/livecodingtv{region_mod1}/{name}/playlist.m3u8&#x27;, &#x27;dash&#x27;: &#x27;https://{host}/livecodingtv{region_mod1}/{name}/manifest.mpd&#x27;}, &#x27;vod:1@1&#x27;: {&#x27;rtmp&#x27;: &#x27;rtmp://{host}/vod/{name}&#x27;, &#x27;http&#x27;: &#x27;https://{host}/vod/{name}&#x27;}, &#x27;vod:1@2&#x27;: {&#x27;rtmp&#x27;: &#x27;rtmp://{host}/vod/&amp;mp4:vod2{region_mod1}/{name}&#x27;, &#x27;hls&#x27;: &#x27;https://{host}/vod/_definst_/mp4:vod2{region_mod1}/{name}/playlist.m3u8&#x27;, &#x27;dash&#x27;: &#x27;https://{host}/vod/_definst_/mp4:vod2{region_mod1}/{name}/manifest.mpd&#x27;, &#x27;http&#x27;: &#x27;https://{host}/internal-record/{name}&#x27;}, &#x27;vod:2@2&#x27;: {&#x27;rtmp&#x27;: &#x27;rtmp://{host}/vod/&amp;mp4:vod{region_mod1}/{name}&#x27;, &#x27;hls&#x27;: &#x27;https://{host}/vod/_definst_/mp4:vod{region_mod1}/{name}/playlist.m3u8&#x27;, &#x27;dash&#x27;: &#x27;https://{host}/vod/_definst_/mp4:vod{region_mod1}/{name}/manifest.mpd&#x27;, &#x27;http&#x27;: &#x27;https://{host}/video/{name}&#x27;}, &#x27;balancer.app&#x27;: &#x27;redirect&#x27;}, &#x27;server-selection&#x27;: {&#x27;strategy&#x27;: &#x27;random&#x27;, &#x27;cache-ttl&#x27;: 10}}
+LIVESTREAM_BROADCASTER_NOTIFY_TIME = 1440
+LIVESTREAM_VIEWERS_NOTIFY_TIME = 60
+LOCALE_PATHS = []
+LOGGING = {&#x27;version&#x27;: 1, &#x27;disable_existing_loggers&#x27;: False, &#x27;filters&#x27;: {&#x27;require_debug_false&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugFalse&#x27;}, &#x27;require_debug_true&#x27;: {&#x27;()&#x27;: &#x27;django.utils.log.RequireDebugTrue&#x27;}}, &#x27;formatters&#x27;: {&#x27;plain&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f8476bc3978&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f8476bb4bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f8476bb1da0&gt;]}, &#x27;colored&#x27;: {&#x27;()&#x27;: &lt;class &#x27;structlog.stdlib.ProcessorFormatter&#x27;&gt;, &#x27;processor&#x27;: &lt;structlog.dev.ConsoleRenderer object at 0x7f8476bc39e8&gt;, &#x27;foreign_pre_chain&#x27;: [&lt;function add_log_level at 0x7f8476bb4bf8&gt;, &lt;structlog.processors.TimeStamper object at 0x7f8476bb1da0&gt;]}}, &#x27;handlers&#x27;: {&#x27;default&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;class&#x27;: &#x27;logging.StreamHandler&#x27;, &#x27;formatter&#x27;: &#x27;plain&#x27;}, &#x27;sentry&#x27;: {&#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;class&#x27;: &#x27;raven.contrib.django.raven_compat.handlers.SentryHandler&#x27;}}, &#x27;loggers&#x27;: {&#x27;django&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;}, &#x27;django.server&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;hawkrest&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;mohawk&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;, &#x27;propagate&#x27;: False}, &#x27;elasticsearch&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;ERROR&#x27;, &#x27;propagate&#x27;: False}, &#x27;celery&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: True}, &#x27;&#x27;: {&#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;propagate&#x27;: False}, &#x27;raven&#x27;: {&#x27;level&#x27;: &#x27;DEBUG&#x27;, &#x27;handlers&#x27;: [&#x27;default&#x27;], &#x27;propagate&#x27;: False}}}
+LOGGING_CONFIG = &#x27;logging.config.dictConfig&#x27;
+LOGIN_REDIRECT_URL = &#x27;/accounts/profile/&#x27;
+LOGIN_URL = &#x27;/accounts/login/&#x27;
+LOGOUT_REDIRECT_URL = None
+MANAGERS = []
+MASTER_USER_SLUG = &#x27;liveedu&#x27;
+MEDIA_ROOT = &#x27;&#x27;
+MEDIA_URL = &#x27;&#x27;
+MESSAGE_STORAGE = &#x27;django.contrib.messages.storage.fallback.FallbackStorage&#x27;
+MIDDLEWARE = [&#x27;raven.contrib.django.middleware.DjangoRestFrameworkCompatMiddleware&#x27;, &#x27;raven.contrib.django.middleware.SentryMiddleware&#x27;, &#x27;core.middleware.CloudFlareIPMiddleware&#x27;, &#x27;corsheaders.middleware.CorsMiddleware&#x27;, &#x27;django.middleware.security.SecurityMiddleware&#x27;, &#x27;whitenoise.middleware.WhiteNoiseMiddleware&#x27;, &#x27;debug_toolbar.middleware.DebugToolbarMiddleware&#x27;, &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;, &#x27;django.middleware.common.CommonMiddleware&#x27;, &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;, &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;, &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;, &#x27;core.middleware.XFrameOptionsMiddleware&#x27;, &#x27;core.middleware.HawkResponseMiddleware&#x27;, &#x27;core.middleware.GeoIPMiddleware&#x27;, &#x27;core.middleware.TimezoneMiddleware&#x27;, &#x27;api.v3.auth.middleware.RefreshTokenMiddleware&#x27;, &#x27;core.middleware.DailyLoginMiddleware&#x27;, &#x27;api.v3.auth.middleware.PlanInfoMiddleware&#x27;, &#x27;core.middleware.APIErrorFormatMiddleware&#x27;]
+MIDDLEWARE_CLASSES = [&#x27;django.middleware.common.CommonMiddleware&#x27;, &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;]
+MIGRATION_MODULES = {}
+MONTH_DAY_FORMAT = &#x27;F j&#x27;
+NEED_PRO_FOR_NORMAL_PROJECTS = False
+NOSE_ARGS = [&#x27;--cover-package=api,core,feedback,liveedu,schedule&#x27;, &#x27;--with-coverage&#x27;]
+NOTIFY_CATEGORY_SUB_MAX_DAILY_COUNT = 3
+NOTIFY_COUNTRY_SUB_MAX_DAILY_COUNT = 10
+NOTIFY_DEACTIVATION_ACTIVE = True
+NOTIFY_DEACTIVATION_CHECK_DAYS = 30
+NOTIFY_DEACTIVATION_THRESHOLD = 10
+NOTIFY_DELIVERY_FAILURE_MAX_COUNT = 2
+NOTIFY_INDIRECT_FRACTION = None
+NOTIFY_INDIRECT_FRACTION_MIN_SAMPLE_SIZE = 100
+NOTIFY_INDIRECT_FRACTION_ORDER = False
+NOTIFY_LIVESTREAM_SUB_MAX_DAILY_COUNT = 3
+NOTIFY_ON_APPROVE_REQUEST = False
+NOTIFY_STREAM_LIVE_MIN_INTERVAL = 60
+NOTIFY_STREAM_LIVE_MIN_TTL = 120
+NOTIFY_STREAM_MAX_DAILY_COUNT = 2
+NUMBER_GROUPING = 0
+OAUTH2_PROVIDER = {&#x27;SCOPES&#x27;: {&#x27;account:read&#x27;: &#x27;Read your profile information&#x27;, &#x27;account:write&#x27;: &#x27;Update your profile information&#x27;, &#x27;project:write&#x27;: &#x27;Manage your projects&#x27;, &#x27;chat&#x27;: &#x27;Participate in chatrooms with your account&#x27;, &#x27;account:read:email&#x27;: &quot;See your account&#x27;s email address&quot;}}
+OAUTH2_PROVIDER_APPLICATION_MODEL = &#x27;api.Application&#x27;
+ONESIGNAL_APP_ID = &#x27;253584cd-5041-4a3e-95a5-8affba40d76a&#x27;
+ONESIGNAL_APP_SECRET_KEY = &#x27;********************&#x27;
+ONESIGNAL_SUBDOMAIN_NAME = &#x27;development-livecodingtv&#x27;
+PASSWORD_HASHERS = &#x27;********************&#x27;
+PASSWORD_RESET_TIMEOUT_DAYS = &#x27;********************&#x27;
+PAYMENTS_API_AUTH = &#x27;********************&#x27;
+PAYMENTS_API_URL = &#x27;********************&#x27;
+PAYMENTS_IP_WHITELIST = [&#x27;52.173.73.5&#x27;]
+PREPEND_WWW = False
+PRIVATE_KEY = &#x27;********************&#x27;
+PROJECTS_USER_SLUG = &#x27;liveedu_projects&#x27;
+PROJECT_IS_UPCOMING_SCHEDULED_SECONDS = 86400
+PUBLIC_KEY = &#x27;********************&#x27;
+RAVEN_CONFIG = {&#x27;dsn&#x27;: &#x27;https://24ed3e71345b485fb3caea8eb93312a3:ec705ec132b342e8afd0157576159cb8@sentry.liveedu.tv/9&#x27;, &#x27;release&#x27;: &#x27;2017.1.6-797-g3be6089&#x27;, &#x27;environment&#x27;: &#x27;develop&#x27;, &#x27;include_paths&#x27;: [&#x27;core&#x27;, &#x27;schedule&#x27;, &#x27;api&#x27;, &#x27;vote&#x27;, &#x27;feedback&#x27;]}
+REDIS = {&#x27;host&#x27;: &#x27;redis&#x27;, &#x27;port&#x27;: 6379, &#x27;password&#x27;: &#x27;********************&#x27;, &#x27;db&#x27;: 0}
+REDIS_DSN = &#x27;redis://redis:6379/0&#x27;
+REDIS_LIVE_NS_PREFIX = &#x27;live:&#x27;
+REST_AUTH_SERIALIZERS = {&#x27;USER_DETAILS_SERIALIZER&#x27;: &#x27;api.v3.serializers.MeSerializer&#x27;}
+REST_FRAMEWORK = {&#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;: (&#x27;rest_framework_jwt.authentication.JSONWebTokenAuthentication&#x27;, &#x27;oauth2_provider.ext.rest_framework.OAuth2Authentication&#x27;), &#x27;DEFAULT_PERMISSION_CLASSES&#x27;: (&#x27;rest_framework.permissions.AllowAny&#x27;,), &#x27;DEFAULT_RENDERER_CLASSES&#x27;: (&#x27;rest_framework.renderers.JSONRenderer&#x27;, &#x27;rest_framework.renderers.BrowsableAPIRenderer&#x27;)}
+REST_USE_JWT = True
+ROOT_URLCONF = &#x27;liveedu.urls&#x27;
+SECRET_KEY = &#x27;********************&#x27;
+SECURE_BROWSER_XSS_FILTER = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_PRELOAD = False
+SECURE_HSTS_SECONDS = 0
+SECURE_PROXY_SSL_HEADER = &quot;(&#x27;HTTP_X_FORWARDED_PROTO&#x27;, &#x27;https&#x27;)&quot;
+SECURE_REDIRECT_EXEMPT = []
+SECURE_SSL_HOST = None
+SECURE_SSL_REDIRECT = False
+SELECTIVE_EMAIL_CONFIG = [{&#x27;china&#x27;: {&#x27;backend_class&#x27;: &#x27;django.core.mail.backends.smtp.EmailBackend&#x27;, &#x27;recipient_filters&#x27;: [&#x27;.*@.*\\.cn&#x27;, &#x27;.*@qq\\.com&#x27;, &#x27;.*@163\\.com&#x27;], &#x27;options&#x27;: {&#x27;EMAIL_USE_TLS&#x27;: False, &#x27;EMAIL_OVERRIDE_SENDER&#x27;: True, &#x27;EMAIL_FILE_PATH&#x27;: &#x27;&#x27;, &#x27;EMAIL_HOST_USER&#x27;: None, &#x27;EMAIL_HOST_PASSWORD&#x27;: None, &#x27;EMAIL_HOST&#x27;: None, &#x27;EMAIL_PORT&#x27;: None, &#x27;EMAIL_BACKEND&#x27;: &#x27;django.core.mail.backends.console.EmailBackend&#x27;}}}, {&#x27;default&#x27;: {&#x27;backend_class&#x27;: &#x27;django.core.mail.backends.smtp.EmailBackend&#x27;, &#x27;default&#x27;: True, &#x27;options&#x27;: {&#x27;EMAIL_FILE_PATH&#x27;: &#x27;&#x27;, &#x27;EMAIL_HOST_USER&#x27;: &#x27;sixact&#x27;, &#x27;EMAIL_HOST_PASSWORD&#x27;: &#x27;sixactmail&#x27;, &#x27;EMAIL_HOST&#x27;: &#x27;smtp.webfaction.com&#x27;, &#x27;EMAIL_PORT&#x27;: None, &#x27;EMAIL_BACKEND&#x27;: &#x27;django.core.mail.backends.smtp.EmailBackend&#x27;, &#x27;EMAIL_USE_TLS&#x27;: True}}}]
+SEND_EVENTS_TO_CHATBOT = False
+SENTINEL_USER = &#x27;test&#x27;
+SERVER_EMAIL = &#x27;root@localhost&#x27;
+SESSION_CACHE_ALIAS = &#x27;default&#x27;
+SESSION_COOKIE_AGE = 1209600
+SESSION_COOKIE_DOMAIN = None
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_NAME = &#x27;sessionid&#x27;
+SESSION_COOKIE_PATH = &#x27;/&#x27;
+SESSION_COOKIE_SECURE = False
+SESSION_ENGINE = &#x27;django.contrib.sessions.backends.cache&#x27;
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_FILE_PATH = None
+SESSION_SAVE_EVERY_REQUEST = False
+SESSION_SERIALIZER = &#x27;liveedu.serializers.PickleSerializer&#x27;
+SETTINGS_MODULE = &#x27;liveedu.settings&#x27;
+SHORT_DATETIME_FORMAT = &#x27;m/d/Y P&#x27;
+SHORT_DATE_FORMAT = &#x27;m/d/Y&#x27;
+SIGNING_BACKEND = &#x27;django.core.signing.TimestampSigner&#x27;
+SILENCED_SYSTEM_CHECKS = []
+SITE_BASE_HOSTNAME = &#x27;liveedu.tv&#x27;
+SITE_ID = 1
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_EMAIL_VERIFICATION = &#x27;none&#x27;
+SOCIAL_AUTH_CALLBACK_URL = &#x27;https://dev.liveedu.tv/login&#x27;
+SOCIAL_STREAM_LIVE_ENABLED = True
+SPARKPOST_API_KEY = &#x27;********************&#x27;
+SPARKPOST_STREAM_NOTIFY_TEMPLATE_ID = &#x27;stream-notification&#x27;
+STATICFILES_DIRS = &quot;(&#x27;/srv/web/static&#x27;,)&quot;
+STATICFILES_FINDERS = [&#x27;django.contrib.staticfiles.finders.FileSystemFinder&#x27;, &#x27;django.contrib.staticfiles.finders.AppDirectoriesFinder&#x27;]
+STATICFILES_STORAGE = &#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;
+STATIC_ROOT = &#x27;/srv/static&#x27;
+STATIC_URL = &#x27;/static/v2/&#x27;
+STATIC_URL_COMPAT = &#x27;/static/&#x27;
+STORAGE_QUOTA_DELETION_AWAIT_DAYS = 7
+STORAGE_QUOTA_HIDE_WITH_TASK = False
+STREAMING_ALLOWED_BITRATE = 1.5
+SUBSCRIPTION_URL = &#x27;/subscription&#x27;
+SUPPORT_EMAIL = &#x27;support@liveedu.tv&#x27;
+SUPPORT_USER_SLUG = &#x27;liveedu_support&#x27;
+TEMPLATES = [{&#x27;BACKEND&#x27;: &#x27;django.template.backends.django.DjangoTemplates&#x27;, &#x27;DIRS&#x27;: [&#x27;/srv/web/templates&#x27;], &#x27;APP_DIRS&#x27;: True, &#x27;OPTIONS&#x27;: {&#x27;context_processors&#x27;: [&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;]}}]
+TESTING = False
+TEST_NON_SERIALIZED_APPS = []
+TEST_RUNNER = &#x27;django_nose.NoseTestSuiteRunner&#x27;
+THOUSAND_SEPARATOR = &#x27;,&#x27;
+TIME_FORMAT = &#x27;P&#x27;
+TIME_INPUT_FORMATS = [&#x27;%H:%M:%S&#x27;, &#x27;%H:%M:%S.%f&#x27;, &#x27;%H:%M&#x27;]
+TIME_ZONE = &#x27;UTC&#x27;
+TOPIC_QUOTA = True
+TWITTER_STREAM_LIVE_ENABLED = False
+TWITTER_STREAM_LIVE_SECRET = &#x27;********************&#x27;
+TWITTER_STREAM_LIVE_TOKEN = &#x27;********************&#x27;
+TWITTER_TEXT_LIMIT = 135
+USERS_ALLOW_UNFOLLOWING = True
+USE_ETAGS = False
+USE_I18N = True
+USE_L10N = True
+USE_THOUSAND_SEPARATOR = False
+USE_THUMBNAIL_MICROSERVICE = False
+USE_TZ = True
+USE_X_FORWARDED_HOST = False
+USE_X_FORWARDED_PORT = False
+VIDEO_ALLOWED_DO_NOT_BLOCK = False
+VIDEO_ALLOWED_NOHOST = False
+VIDEO_ALLOW_OVERRIDE_REGION = True
+VIDEO_ANONYMOUS_ALLOW_NO_IP = True
+VIDEO_ANONYMOUS_CHECK_IP = False
+VIDEO_APP_LIVE = &#x27;livecodingtv&#x27;
+VIDEO_APP_VOD = &#x27;vod&#x27;
+VIDEO_CURRENT_GEN = 2
+VIDEO_INDEX_PAGE_MAX_TOKEN_AGE = &#x27;********************&#x27;
+VIDEO_MIN_DURATION_VISIBLE = 180
+VIDEO_OVERALL_VIEW_COUNTER_INCREMENT_MODE = &#x27;on_page_nav&#x27;
+VIDEO_PREFETCH_ENDPOINT_LIMIT = 5000
+VIDEO_RECORD_VIDEOS_ASYNC = False
+VIDEO_RESPOND_JSON = True
+VIDEO_VOD_PATH_ACCEPT_BARE = True
+VIEWING_STATS_SESSION_ID_TTL = 86400
+WEBDAV_LISTING_BACKEND = &#x27;django_webdav_storage.listing.nginx_autoindex&#x27;
+WEBDAV_PUBLIC_URL = &#x27;https://media-dev.liveedu.tv/&#x27;
+WEBDAV_URL = &#x27;http://webdav_dev:Qd2Tb9yfwtd3lmcr@mediaserver/&#x27;
+WEBPACK_LOADER = {&#x27;DEFAULT&#x27;: {&#x27;STATS_FILE&#x27;: &#x27;/srv/static/bundles/webpack-stats.json&#x27;}}
+WSGI_APPLICATION = &#x27;liveedu.wsgi.application&#x27;
+XMPP = {&#x27;domain&#x27;: &#x27;livecoding.tv&#x27;, &#x27;totp_format&#x27;: &#x27;hex-notrunc&#x27;, &#x27;totp_backward_drift&#x27;: 2, &#x27;totp_hash&#x27;: &#x27;sha256&#x27;, &#x27;url&#x27;: ParseResult(scheme=&#x27;xmpp&#x27;, netloc=&#x27;chat-admin%40livecoding.tv:testtest@localhost:5222&#x27;, path=&#x27;/&#x27;, params=&#x27;&#x27;, query=&#x27;&#x27;, fragment=&#x27;&#x27;), &#x27;http_bind_url&#x27;: &#x27;http://localhost:5280/http-bind/&#x27;, &#x27;http_websocket_url&#x27;: &#x27;ws://localhost:5280/websocket&#x27;, &#x27;allow_insecure_auth&#x27;: False, &#x27;host_name&#x27;: &#x27;livecoding.tv&#x27;, &#x27;public_host_name&#x27;: &#x27;public.livecoding.tv&#x27;, &#x27;muc_host_name&#x27;: &#x27;chat.livecoding.tv&#x27;, &#x27;join_muc_nick&#x27;: &#x27;(Chat admin)&#x27;, &#x27;join_muc_always&#x27;: False, &#x27;async_login&#x27;: True, &#x27;muc_persist_rooms&#x27;: True, &#x27;use_totp&#x27;: False, &#x27;use_websockets&#x27;: True, &#x27;ping_interval_ms&#x27;: 30000, &#x27;chat_on_edit_page&#x27;: False, &#x27;public_show_on&#x27;: [&#x27;embed&#x27;], &#x27;need_room_setup&#x27;: False, &#x27;basic_nick_colors&#x27;: [&#x27;#e35b5b&#x27;, &#x27;#e3a85b&#x27;, &#x27;#d1e35b&#x27;, &#x27;#8ee35b&#x27;, &#x27;#5be3a8&#x27;, &#x27;#5bbbe3&#x27;, &#x27;#5b74e3&#x27;, &#x27;#915be3&#x27;, &#x27;#e35bde&#x27;], &#x27;prohibited_nick_colors&#x27;: [&#x27;#ffffff&#x27;, &#x27;#16191e&#x27;], &#x27;prohibited_nick_colors_deltae&#x27;: 5.0, &#x27;everyone_is_premium&#x27;: False, &#x27;force_staff_affiliation&#x27;: &#x27;admin&#x27;, &#x27;prohibited_nick_colors_lab&#x27;: None, &#x27;host_address&#x27;: (&#x27;localhost&#x27;, 5222), &#x27;admin_credentials&#x27;: (&#x27;chat-admin@livecoding.tv&#x27;, &#x27;testtest&#x27;)}
+X_FRAME_OPTIONS = &#x27;SAMEORIGIN&#x27;
+X_FRAME_OPTIONS_WHITELIST = []
+YEAR_MONTH_FORMAT = &#x27;F Y&#x27;
+
+
+You&#x27;re seeing this error because you have DEBUG = True in your
+Django settings file. Change that to False, and Django will
+display a standard page generated by the handler for this status code.
+
+
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">17.67</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+201
+{&#x27;email&#x27;: &#x27;testliveedu_arsfcqtpudxxhvjiyjdw@bajwt.gl&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;pqrkznfojr&#x27;, &#x27;password1&#x27;: &#x27;cwvlqiiuayyanumza&#x27;, &#x27;password2&#x27;: &#x27;cwvlqiiuayyanumza&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">12.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+201
+{&#x27;email&#x27;: &#x27;testliveedu_cjdobyywzvonjwwfazdw@krosg.gy&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;xaprkzeioxurxumvl&#x27;, &#x27;password1&#x27;: &#x27;opzvqfuszxqwdhpeek&#x27;, &#x27;password2&#x27;: &#x27;opzvqfuszxqwdhpeek&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;vr-and-ar&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">9.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+201
+{&#x27;email&#x27;: &#x27;testliveedu_siebyhzugchuwskovomk@qnvmk.yx&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;jhgzmzrlsvysl&#x27;, &#x27;password1&#x27;: &#x27;acgayvkimdbals&#x27;, &#x27;password2&#x27;: &#x27;acgayvkimdbals&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;game-development&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;vr-and-ar&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (monthly) all topics]</td>
+          <td class="col-duration">14.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+201
+{&#x27;email&#x27;: &#x27;testliveedu_lmyhdazoqjqywgubhivs@mmcxj.mtc&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;bsyxkyovqeaihkgc&#x27;, &#x27;password1&#x27;: &#x27;rinbtaihexfepzsge&#x27;, &#x27;password2&#x27;: &#x27;rinbtaihexfepzsge&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;, &#x27;programming&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;cybersecurity&#x27;, &#x27;vr-and-ar&#x27;, &#x27;design&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (yearly) all topics]</td>
+          <td class="col-duration">11.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+201
+{&#x27;email&#x27;: &#x27;testliveedu_pczcdnxjipvigpefakhf@pefkj.aa&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;uvsblfmpkbbkskunwud&#x27;, &#x27;password1&#x27;: &#x27;xkgtfpdynkahxzb&#x27;, &#x27;password2&#x27;: &#x27;xkgtfpdynkahxzb&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;, &#x27;cybersecurity&#x27;, &#x27;programming&#x27;, &#x27;vr-and-ar&#x27;, &#x27;design&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_activity_EXPECTED_balance_is_increased_properly[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">12.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+201
+{&#x27;email&#x27;: &#x27;testliveedu_jfuehppphxenddxxclsi@ycste.qvi&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;qraiydmvvjkbgu&#x27;, &#x27;password1&#x27;: &#x27;fnxsarin&#x27;, &#x27;password2&#x27;: &#x27;fnxsarin&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;design&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;, &#x27;programming&#x27;, &#x27;cryptocurrency&#x27;, &#x27;vr-and-ar&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_correct_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_correct_EXPECTED_status_code_is_200</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect1_EXPECTED_status_code_is_400</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect1_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect2_EXPECTED_status_code_is_400</td>
+          <td class="col-duration">0.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect3_EXPECTED_status_code_is_400</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_incorrect4_EXPECTED_status_code_is_400</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_empty_EXPECTED_status_code_is_400</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckEmail::()::test_WHEN_check_email_request_AND_email_is_empty_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_correct_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_correct_EXPECTED_response_code_is_200</td>
+          <td class="col-duration">0.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_not_the_same_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">0.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_not_the_same_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.39</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_numeric_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">0.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_request_AND_passwords_are_short_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckPassword::()::test_WHEN_check_password_AND_passwords_are_thesame_but_lowandupcase_EXPECTED_response_code_is_400</td>
+          <td class="col-duration">0.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_correct_EXPECTED_response_code_200</td>
+          <td class="col-duration">0.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_short_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_long_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_check_email_pass_username.py::TestCheckUsername::()::test_WHEN_check_username_AND_value_empty_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_EXPECTED_status_code_200_TC90070</td>
-          <td class="col-duration">1.16</td>
+          <td class="col-duration">0.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_limit_is_added_EXPECTED_counter_of_el_proper_TC90071</td>
+          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -285,7 +1186,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_offset_is_added_EXPECTED_counter_of_el_proper_TC90072</td>
-          <td class="col-duration">0.72</td>
+          <td class="col-duration">0.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -294,7 +1195,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_search_is_added_EXPECTED_received_el_proper_TC90073</td>
-          <td class="col-duration">0.71</td>
+          <td class="col-duration">0.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -303,7 +1204,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_language_request_AND_order_is_added_EXPECTED_received_sorting_proper_TC90074</td>
-          <td class="col-duration">2.08</td>
+          <td class="col-duration">1.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -312,7 +1213,1479 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_lang.py::TestLanguage::()::test_WHEN_request_iso639_1_is_correct_EXPECTED_response_is_proper_TC90079</td>
-          <td class="col-duration">1.42</td>
+          <td class="col-duration">0.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_pass_is_incorrect_EXPECTED_status_code_400_TC90051</td>
+          <td class="col-duration">3.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_pass_is_incorrect_EXPECTED_response_text_is_ok_TC9052</td>
+          <td class="col-duration">3.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_username_is_incorrect_EXPECTED_response_code_400_TC9053</td>
+          <td class="col-duration">2.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_email_is_not_confirmed_EXPECTED_response_code_400_TC9054</td>
+          <td class="col-duration">2.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_email_is_not_confirmed_EXPECTED_response_code_400_TC9055</td>
+          <td class="col-duration">2.69</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_user_is_reg_AND_login_is_perform_EXPECTED_token_is_received_TC90056</td>
+          <td class="col-duration">4.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_email_is_proper_TC90057</td>
+          <td class="col-duration">4.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_username_is_proper_TC90058</td>
+          <td class="col-duration">3.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::()::test_WHEN_login_is_performed_EXPECTED_userrole_is_proper_TC90059</td>
+          <td class="col-duration">4.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_token_is_added_AND_me_EXPECTED_status_code_is_200_TC90300</td>
+          <td class="col-duration">4.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_new_topics_EXPECTED_status_code_is_200TC90301</td>
+          <td class="col-duration">4.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newtopic_EXPECTED_status_code_is_200TC90302</td>
+          <td class="col-duration">4.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newSeveraltopics_EXPECTED_list_of_topics_is_properTC90303</td>
+          <td class="col-duration">4.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_newtopic_AND_category_EXPECTED_list_of_cat_is_properTC90304</td>
+          <td class="col-duration">6.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_day_EXPECTED_value_is_savedTC90306</td>
+          <td class="col-duration">4.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_month_EXPECTED_value_is_savedTC90307</td>
+          <td class="col-duration">4.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMePositive::()::test_WHEN_put_birthday_year_EXPECTED_value_is_savedTC90308</td>
+          <td class="col-duration">4.59</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeDelete::()::test_WHEN_delete_EXPECTED_login_is_notTC90309</td>
+          <td class="col-duration">4.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeDelete::()::test_WHEN_delete_EXPECTED_signup_is_notTC90310</td>
+          <td class="col-duration">4.59</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_me_balanses_EXPECTED_response_code_is_200TC90311</td>
+          <td class="col-duration">4.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_user_is_registered_AND_me_balances_EXPECTED_balances_is_0TC90312</td>
+          <td class="col-duration">4.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBalanses::()::test_WHEN_buy_subscr_AND_me_balances_EXPECTED_balances_is_properTC90313</td>
+          <td class="col-duration">10.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_mexdnyvqmzezwaraltkp@pxxbs.dq&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;znyuqltpfxlunspn&#x27;, &#x27;password1&#x27;: &#x27;shdtxcrd&#x27;, &#x27;password2&#x27;: &#x27;shdtxcrd&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;design&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_me_billing_EXPECTED_response_code_is_200TC90314</td>
+          <td class="col-duration">4.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_user_is_registered_AND_me_billing_EXPECTED_list_is_emptyTC90315</td>
+          <td class="col-duration">4.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeChatCred::()::test_WHEN_chat_cred_EXPECTED_response_code_is_200TC90317</td>
+          <td class="col-duration">4.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followers_EXPECTED_response_code_is_200TC90318</td>
+          <td class="col-duration">4.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followimg_EXPECTED_response_code_is_200TC90319</td>
+          <td class="col-duration">4.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_get_pref_EXPECTED_response_code_is_200TC90320</td>
+          <td class="col-duration">4.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_activity_not_EXPECTED_value_saved_TC90321</td>
+          <td class="col-duration">4.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_email_not_update_EXPECTED_value_saved_TC90322</td>
+          <td class="col-duration">4.54</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_topic_notif_EXPECTED_value_saved_TC90323</td>
+          <td class="col-duration">4.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_category_notif_EXPECTED_value_saved_TC90324</td>
+          <td class="col-duration">4.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_folow_project_notif_EXPECTED_value_saved_TC90325</td>
+          <td class="col-duration">3.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_put_pref_notify_type_EXPECTED_value_saved_TC90326</td>
+          <td class="col-duration">4.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_get_prefsubscr_EXPECTED_response_code_is_200TC90327</td>
+          <td class="col-duration">4.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrectbroadcaster_EXPECTED_value_not_saved_TC90329</td>
+          <td class="col-duration">4.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_project_EXPECTED_value_is_saved_TC90330</td>
+          <td class="col-duration">5.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_project_EXPECTED_value_isnot_saved_TC90331</td>
+          <td class="col-duration">4.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_topics_EXPECTED_value_is_notsaved_TC90333</td>
+          <td class="col-duration">4.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_topics_is_already_EXPECTED_value_isnot_saved_TC90334</td>
+          <td class="col-duration">4.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_incorrect_category_EXPECTED_value_isnot_saved_TC90336</td>
+          <td class="col-duration">4.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePreferences::()::test_WHEN_post_notifsubscr_AND_category_is_already_EXPECTED_value_isnot_saved_TC90337</td>
+          <td class="col-duration">6.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_get_me_payment_methods_EXPECTED_response_code_is_200TC90340</td>
+          <td class="col-duration">4.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_get_me_payment_methods_after_registration_EXPECTED_list_is_emptyTC90341</td>
+          <td class="col-duration">4.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_methods_AND_servise_ledu_EXPECTED_is_savedTC90342</td>
+          <td class="col-duration">4.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_methods_AND_servise_stipe_token_EXPECTED_is_savedTC90343</td>
+          <td class="col-duration">5.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMePaymentMethods::()::test_WHEN_post_me_payment_method_AND_currency_EXPECTED_is_savedTC__</td>
+          <td class="col-duration">5.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_positive_EXPECTED_response_200TC90350</td>
+          <td class="col-duration">7.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_change_EXPECTED_login_using_newTC90351</td>
+          <td class="col-duration">6.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_password_change_EXPECTED_login_using_oldTC90352</td>
+          <td class="col-duration">7.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_not_the_same_passwordschange_EXPECTED_400TC90353</td>
+          <td class="col-duration">4.41</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_numeric_passwordschange_EXPECTED_400TC90354</td>
+          <td class="col-duration">4.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_short_passwordschange_EXPECTED_400TC90355</td>
+          <td class="col-duration">4.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_upperlowercase_passwordschange_EXPECTED_400TC90356</td>
+          <td class="col-duration">4.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_incorrectold_password_EXPECTED_400TC90357</td>
+          <td class="col-duration">4.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptyold_password_EXPECTED_400TC90358</td>
+          <td class="col-duration">4.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptynew_password_EXPECTED_400TC90359</td>
+          <td class="col-duration">4.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeChangePassword::()::test_WHEN_post_me_AND_emptyconf_password_EXPECTED_400TC90360</td>
+          <td class="col-duration">4.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_me_projects_EXPECTED_response_code_is_200TC__</td>
+          <td class="col-duration">7.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_me_social_acc_EXPECTED_response_code_is_200TC__</td>
+          <td class="col-duration">4.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_streaming_creadantials_EXPECTED_response_code_is_200TC__</td>
+          <td class="col-duration">4.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_get_streaming_creadantials_EXPECTED_key_and_link_is_not_emptyTC__</td>
+          <td class="col-duration">4.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_me.py::TestMeProjectsSocialStreaming::()::test_WHEN_put_streaming_creadantials_EXPECTED_token_is_changedTC__</td>
+          <td class="col-duration">4.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_EXPECTED_response_code_is_200_TC90110</td>
+          <td class="col-duration">0.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_AND_limit_EXPECTED_number_of_projects_are_correct_TC90111</td>
+          <td class="col-duration">1.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_AND_offset_EXPECTED_number_of_projects_are_correct_TC90112</td>
+          <td class="col-duration">2.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lprot3_EXPECTED_price_is_the_same_TC90250</td>
+          <td class="col-duration">5.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+6238.650000000001
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lprotall_EXPECTED_price_is_the_same_TC90251</td>
+          <td class="col-duration">5.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+7800.45
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12talll_EXPECTED_price_is_the_same_TC90252</td>
+          <td class="col-duration">5.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+27453.100000000002
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro_EXPECTED_price_is_the_same_TC90253</td>
+          <td class="col-duration">5.33</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+4676.849999999999
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12_EXPECTED_price_is_the_same_TC90254</td>
+          <td class="col-duration">59.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+16467.3
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_ledu.py::TestCheckPlan_vs_Subscription::()::test_WHEN_subscriptionLEDU_AND_get_plan_lpro12t3_EXPECTED_price_is_the_same_TC902550</td>
+          <td class="col-duration">13.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+21960.2
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_subscr_isnt_purchased_AND_get_subscr_EXPECTED_response_code_is_404_TC90200</td>
+          <td class="col-duration">4.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_response_code_is_201_TC90201</td>
+          <td class="col-duration">8.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_zcyvtrrdtelamnefitmq@apyof.krw&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;czmjthfwiyjfwi&#x27;, &#x27;password1&#x27;: &#x27;klscjtujjetsss&#x27;, &#x27;password2&#x27;: &#x27;klscjtujjetsss&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;vr-and-ar&#x27;, &#x27;cybersecurity&#x27;, &#x27;cryptocurrency&#x27;, &#x27;data-science&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_not_is_failing_TC90202</td>
+          <td class="col-duration">9.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">4.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">4.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">5.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) all topics]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) all topics]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">4.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_user_is_registered_AND_me_EXPECTED_package_is_free_TC90220</td>
+          <td class="col-duration">4.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_package_is_free_AND_me_EXPECTED_is_premium_is_false_TC90221</td>
+          <td class="col-duration">4.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">9.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_tticbpokgluiqsmduigi@jvzia.mb&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;hcpgivabbtafpoe&#x27;, &#x27;password1&#x27;: &#x27;ickfqpqdcluu&#x27;, &#x27;password2&#x27;: &#x27;ickfqpqdcluu&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;, &#x27;cryptocurrency&#x27;, &#x27;data-science&#x27;, &#x27;game-development&#x27;, &#x27;cybersecurity&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">9.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_pjsurmqtexwrhwbrppkj@ggajg.ulk&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;mhrtdporfdpknxdoc&#x27;, &#x27;password1&#x27;: &#x27;msqysccfkovq&#x27;, &#x27;password2&#x27;: &#x27;msqysccfkovq&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">35.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_xbswmnjcqagutgpelkdo@dcobw.xy&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;iycwhqbsiqluunnog&#x27;, &#x27;password1&#x27;: &#x27;kcvfynzzvb&#x27;, &#x27;password2&#x27;: &#x27;kcvfynzzvb&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;data-science&#x27;, &#x27;programming&#x27;, &#x27;cryptocurrency&#x27;, &#x27;design&#x27;, &#x27;vr-and-ar&#x27;, &#x27;cybersecurity&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) all topics]</td>
+          <td class="col-duration">9.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_sinpwkrirfhrweetadgr@icnqu.dh&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;flmiirxsaoledhzlvqkb&#x27;, &#x27;password1&#x27;: &#x27;nkesrawadjhi&#x27;, &#x27;password2&#x27;: &#x27;nkesrawadjhi&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) all topics]</td>
+          <td class="col-duration">9.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_kfdblvksjtyiazbgzxzi@wlotq.zh&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;lwrgmrjuiakue&#x27;, &#x27;password1&#x27;: &#x27;yierlafpq&#x27;, &#x27;password2&#x27;: &#x27;yierlafpq&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;vr-and-ar&#x27;, &#x27;programming&#x27;, &#x27;game-development&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;, &#x27;cybersecurity&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">9.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_rjunqvrftvcgzuovbuqk@dkmfw.dn&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;rbisharstdgznagltg&#x27;, &#x27;password1&#x27;: &#x27;mzxmwkgkrrgunypk&#x27;, &#x27;password2&#x27;: &#x27;mzxmwkgkrrgunypk&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;design&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">10.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_aunjpzyisxojuarlepmd@lsslx.jny&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;uqcvzlueqczprfzohe&#x27;, &#x27;password1&#x27;: &#x27;llyphntilfuvwdoxdjh&#x27;, &#x27;password2&#x27;: &#x27;llyphntilfuvwdoxdjh&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">10.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_msoovvtcxobwoubfcsrd@cbpug.nd&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;yhkhookxvn&#x27;, &#x27;password1&#x27;: &#x27;oiliilliwejyliugz&#x27;, &#x27;password2&#x27;: &#x27;oiliilliwejyliugz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;, &#x27;vr-and-ar&#x27;, &#x27;game-development&#x27;, &#x27;design&#x27;, &#x27;artificial-intelligence&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">10.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_pbufaklwzjuqjupwpmlk@luqft.kzs&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;spgbzisdikeffzebmpi&#x27;, &#x27;password1&#x27;: &#x27;lqmwevcwz&#x27;, &#x27;password2&#x27;: &#x27;lqmwevcwz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;data-science&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) all topics]</td>
+          <td class="col-duration">10.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_umnrtanhmbzooporvihk@hweko.ak&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;dugjpnsyhrwnc&#x27;, &#x27;password1&#x27;: &#x27;lypwgapw&#x27;, &#x27;password2&#x27;: &#x27;lypwgapw&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cybersecurity&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) all topics]</td>
+          <td class="col-duration">11.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_krzddfyueflsetingedv@dzmsi.ra&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ejwjxdgwnfrtxcfavzcy&#x27;, &#x27;password1&#x27;: &#x27;fnixlyoz&#x27;, &#x27;password2&#x27;: &#x27;fnixlyoz&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">11.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_ytzlkoufwbkpbvmxmbpd@plfdn.bdj&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;lptazjeyxtxj&#x27;, &#x27;password1&#x27;: &#x27;ukrahbnyfkmssusurvv&#x27;, &#x27;password2&#x27;: &#x27;ukrahbnyfkmssusurvv&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_usd_balance_is_properTC90241</td>
+          <td class="col-duration">10.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_txuaguoqdmqluetzgwmp@qemva.rv&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;cfliaoicilng&#x27;, &#x27;password1&#x27;: &#x27;efpqysxuwwatpakbqg&#x27;, &#x27;password2&#x27;: &#x27;efpqysxuwwatpakbqg&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;, &#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;game-development&#x27;, &#x27;programming&#x27;, &#x27;vr-and-ar&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;id&#x27;: &#x27;lpro12t3&#x27;, &#x27;description&#x27;: &#x27;Pro account (yearly) 3 topics&#x27;, &#x27;period&#x27;: &#x27;year&#x27;, &#x27;period_qty&#x27;: 1, &#x27;topic_qty&#x27;: 3, &#x27;limitation_description&#x27;: &#x27;Triple&#x27;, &#x27;price&#x27;: &#x27;211.09 USD&#x27;, &#x27;price_ledu&#x27;: &#x27;23118.000000000000000000&#x27;, &#x27;subscription_ledu_percent&#x27;: &#x27;60.00&#x27;, &#x27;extra_ledu_percent&#x27;: &#x27;100.00&#x27;, &#x27;subscription_ledu&#x27;: &#x27;13918.00&#x27;, &#x27;balance_ledu&#x27;: &#x27;9200.00&#x27;, &#x27;processing_fees&#x27;: {&#x27;paypal&#x27;: 1.0, &#x27;stripe&#x27;: 0, &#x27;paymentwall&#x27;: 10.55}, &#x27;minimal_period_crypto&#x27;: 1, &#x27;ledu_payment_discount_percent&#x27;: 5}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_all_values_ok_EXPECTED_response_text_is_correct</td>
+          <td class="col-duration">2.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_all_values_ok_EXPECTED_response_code_201</td>
+          <td class="col-duration">2.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_passwords_notthesame_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_email_incorrect_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_username_incorrect_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_userrole_incorrect_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_slug_EXPECTED_response_code_201</td>
+          <td class="col-duration">2.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_incorrect_slug_EXPECTED_response_code_400</td>
+          <td class="col-duration">0.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_request_AND_plus_skype_hangouts_EXPECTED_response_code_201</td>
+          <td class="col-duration">2.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_registration.py::TestRegistration::()::test_WHEN_registration_completed_AND_email_is_confirmed_EXPECTED_login_is_preformaed</td>
+          <td class="col-duration">21.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_EXPECTED_response_code_is_200_TC90080</td>
+          <td class="col-duration">0.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_limit_is_add_EXPECTED_number_of_el_proper_TC90081</td>
+          <td class="col-duration">0.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_offset_is_added_EXPECTED_number_of_el_proper_TC90082</td>
+          <td class="col-duration">0.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_search_is_added_EXPECTED_result_is_correct_TC90083</td>
+          <td class="col-duration">0.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_ordering_is_added_EXPECTED_sorting_is_proper_TC90084</td>
+          <td class="col-duration">0.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopic::()::test_WHEN_get_topic_AND_slug_is_added_EXPECTED_response_is_correct_TC90085</td>
+          <td class="col-duration">0.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_EXPECTED_status_code_is_200_TC90086</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_EXPECTED_all_categories_from_topic_TC90087</td>
+          <td class="col-duration">0.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_AND_limit_EXPECTED_count_is_correct_TC90088</td>
+          <td class="col-duration">0.69</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsCategories::()::test_WHEN_get_categories_by_topic_AND_search_EXPECTED_search_res_is_correct_TC90089</td>
+          <td class="col-duration">1.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_EXPECTED_status_code_200_TC90095</td>
+          <td class="col-duration">2.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_limit_EXPECTED_status_code_200_TC90096</td>
+          <td class="col-duration">0.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_random_offser_EXPECTED_results_are_correct_TC90097</td>
+          <td class="col-duration">3.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_random_search_EXPECTED_search_res_are_correct_TC90098</td>
+          <td class="col-duration">2.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hierarchy_AND_ordering_by_name_EXPECTED_sorting_is_correct_TC90099</td>
+          <td class="col-duration">3.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_topic_categories.py::TestTopicsHieracly::()::test_WHEN_get_topic_hieracly_by_slug_EXPECTED_received_topic_is_correct_TC90100</td>
+          <td class="col-duration">0.65</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

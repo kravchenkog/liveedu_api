@@ -18,7 +18,7 @@ class TestCheckPlan_vs_Subscription:
         price = float(plan['price_ledu'])*float(plan['minimal_period_crypto'])\
                /100*(100-float(plan['ledu_payment_discount_percent']))
         print(price)
-        assert subscr['amount'] == round(price)
+        assert subscr['amount'] in [round(price), round(price)+1, round(price)-1]
 
     def test_WHEN_subscriptionLEDU_AND_get_plan_lpro12talll_EXPECTED_price_is_the_same_TC90252(self, app):
         app.user_data = app.api_helper.get_registered_and_logged_user(app)

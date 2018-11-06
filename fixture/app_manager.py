@@ -5,6 +5,7 @@ from fixture.property_user_factory import UserParseFactory
 from fixture.string_generator_helper import StringGeneratoHelper
 from fixture.property_user_factory import UserData
 from fixture.property_user_factory import RealUserData
+from fixture.data.activity_data import ActivityCosts
 
 
 
@@ -19,6 +20,7 @@ class AppManager:
         self.user_data = UserData()
         self.string_generator = StringGeneratoHelper()
         self.real_user_data = RealUserData()
+        self.act_price = ActivityCosts()
 
 
 

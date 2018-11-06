@@ -28,7 +28,7 @@ class APIHelper:
         if app.env.headers:
             data = json.dumps(data)
 
-        responce = requests.request("POST", url, data=data, headers=app.env.headers, cookies = app.env.cookies)
+        responce = requests.request("POST", url, data=data, headers=app.env.headers, cookies=app.env.cookies)
         try:
             print(responce.status_code)
             responce_j = json.loads(responce.text)
@@ -38,6 +38,8 @@ class APIHelper:
         except:
             print("_____________________________ERROR_JSON_LOADS_______________________________")
             print(responce.text)
+
+            return responce
 
     def general_put(self, app, route, data):
         url = str(app.env.base_url) + str(route)
@@ -197,3 +199,13 @@ class APIHelper:
             app, plan=my_plan['id'], no_topics=my_plan['topic_qty'])
 
         return my_plan, puerchasing
+
+    def get_random_category_url(self, app):
+        random_topic = self.get_random_slug_topic(app)
+        app.route.topics = app.route.topics + random_topic + '/categories'
+        random_category = random.choice(self.general_get(app, route=app.route.topics)['results'])['url']
+        return random_category
+
+    def get_random_language_url(self, app):
+        language = random.choice(app.api_helper.general_get(app, app.route.languages)['results'])['url']
+        return language

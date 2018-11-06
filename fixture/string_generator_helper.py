@@ -3,6 +3,10 @@ import string
 
 class StringGeneratoHelper:
 
+    def get_random_string(self, num):
+        string_rand = ''.join(random.choice(string.ascii_lowercase) for i in range(num))
+        return string_rand
+
     def get_random_email(self):
         first_part = ''.join(random.choice(string.ascii_lowercase) for i in range(20))
         secondpart = ''.join(random.choice(string.ascii_lowercase) for i in range(5))

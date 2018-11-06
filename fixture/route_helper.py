@@ -28,6 +28,7 @@ class Route:
         self.languages_iso = '/api/v3/languages/'
         self.topic_hierarchy = '/api/v3/topics-hierarchy/'
         self.projects = '/api/v3/projects/' #GET/POST
+        self.projects_suggestions = '/api/v3/projects-suggestions/'
         self.subscription = '/api/v3/me/subscription/'
         self.plans = '/api/v3/plans/'
         self.transaction_ledu = "/api/v3/me/balances/subscription/transactions/"

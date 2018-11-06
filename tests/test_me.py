@@ -1,5 +1,7 @@
 from random import randint
 from random import choice
+from time import sleep
+
 
 class TestCheckMePositive:
 
@@ -163,10 +165,12 @@ class TestCheckMeBalanses:
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         app.api_helper.purchase_package(app, plan, 3)
         plan = app.api_helper.get_plan(app, plan)
+        sleep(1)
         resp = app.api_helper.general_get(app, app.route.me_balanses)
         value1 = round(float(plan['balance_ledu']), 0)
         value2 = round(float(resp['data'][0]['amount']), 0)
-        assert value1 == value2
+        print(app.user_data.__dict__)
+        assert value1 in [value2, value2+1, value2-1]
 
 class TestCheckMeBillingHistory:
     def test_WHEN_me_billing_EXPECTED_response_code_is_200TC90314(self, app):
@@ -184,6 +188,7 @@ class TestCheckMeBillingHistory:
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         app.api_helper.purchase_package(app, plan, 3)
         plan_resp = app.api_helper.get_plan(app, plan)
+        sleep(1)
         resp = app.api_helper.general_get(app, app.route.me_billing_history)
         assert plan_resp['price'] == resp['data'][-1]['amount']
 
@@ -271,7 +276,7 @@ class TestMePreferences:
         assert resp['status_code'] == 200
 
     def test_WHEN_post_prefsubscr_broadcaster_EXPECTED_value_saved_TC90328(self, app, app_streamer):
-        broadcaster = app_streamer.username
+        broadcaster = app_streamer.user_data.username
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
             "broadcaster": broadcaster
@@ -289,7 +294,7 @@ class TestMePreferences:
         assert resp['status_code'] == 400
 
     def test_WHEN_post_notifsubscr_AND_project_EXPECTED_value_is_saved_TC90330(self, app):
-        project = choice(app.api_helper.general_get(app, app.route.projects)['results'])['slug']
+        project = choice(app.api_helper.general_get(app, app.route.projects)['results'])['url']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
             "project": project

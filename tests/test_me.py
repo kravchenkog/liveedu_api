@@ -183,14 +183,14 @@ class TestCheckMeBillingHistory:
         resp = app.api_helper.general_get(app, app.route.me_billing_history)
         assert resp['data'] == []
 
-    def test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316(self, app):
-        plan = 'lprot3'
+    def test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316(self, app, plan):
+
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
-        app.api_helper.purchase_package(app, plan, 3)
-        plan_resp = app.api_helper.get_plan(app, plan)
-        sleep(1)
+        app.api_helper.purchase_package(app, plan['id'], 3)
+
+        sleep(2)
         resp = app.api_helper.general_get(app, app.route.me_billing_history)
-        assert plan_resp['price'] == resp['data'][-1]['amount']
+        assert plan['price'] == resp['data'][-1]['amount']
 
 class TestCheckMeChatCred:
     def test_WHEN_chat_cred_EXPECTED_response_code_is_200TC90317(self, app):

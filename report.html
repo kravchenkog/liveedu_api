@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 07-Nov-2018 at 12:06:11 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 07-Nov-2018 at 13:50:24 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,8 +251,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>Summary</h2>
-    <p>9 tests ran in 74.99 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">9 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>24 tests ran in 216.53 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">23 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -263,52 +263,37 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">9.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_purchase_subscription_stripe.TestTRansactionAfterPurchase object at 0x7f3753fb0a58&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f3753fb0390&gt;<br/>plan = {&#x27;balance_ledu&#x27;: &#x27;700.00&#x27;, &#x27;description&#x27;: &#x27;Pro account (monthly) 1 topic&#x27;, &#x27;extra_ledu_percent&#x27;: &#x27;100.00&#x27;, &#x27;id&#x27;: &#x27;lpro&#x27;, ...}<br/><br/>    def test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper(self, app, plan):<br/>        #TC[90240, 90242, 90243, 90244, 90245, 90246]<br/>        my_plan, purchase = app.api_helper.register_user_and_purchaqse_subs(app=app, plan_name=plan[&#x27;id&#x27;])<br/>        current_time = datetime.datetime.now()<br/>        retry_count = 0<br/>        all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)<br/>        while len(all_transaction[&#x27;data&#x27;]) == 0 and retry_count &lt; 5:<br/>            all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)<br/>            sleep(1)<br/>            retry_count += 1<br/>        duration = datetime.datetime.now() - current_time<br/>        print(&quot;data updete during: &quot; + str(duration.total_seconds()))<br/>        last_transaction = all_transaction[&#x27;data&#x27;].pop()<br/>        my_plan_after = app.api_helper.get_plan(app=app, plan=plan[&#x27;id&#x27;])<br/>        print(app.user_data.__dict__)<br/>    <br/>        assert purchase[&#x27;status_code&#x27;] == 201<br/>&gt;       assert last_transaction[&#x27;amount&#x27;] == my_plan[&#x27;price_ledu&#x27;] or\<br/>               last_transaction[&#x27;amount&#x27;] == my_plan_after[&#x27;price_ledu&#x27;]<br/><span class="error">E       AssertionError: assert (&#x27;1624.000000000000000000&#x27; == &#x27;1620.000000000000000000&#x27;</span><br/><span class="error">E         - 1624.000000000000000000</span><br/><span class="error">E         ?    ^</span><br/><span class="error">E         + 1620.000000000000000000</span><br/><span class="error">E         ?    ^ or &#x27;1624.000000000000000000&#x27; == &#x27;1620.000000000000000000&#x27;</span><br/><span class="error">E         - 1624.000000000000000000</span><br/><span class="error">E         ?    ^</span><br/><span class="error">E         + 1620.000000000000000000</span><br/><span class="error">E         ?    ^)</span><br/><br/>tests/test_purchase_subscription_stripe.py:85: AssertionError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 0.789548
+{&#x27;email&#x27;: &#x27;testliveedu_wsvzpsxdtlcyoegktevg@tfurx.kn&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;zkvbvbazgwp&#x27;, &#x27;password1&#x27;: &#x27;dbzvxaalijurx&#x27;, &#x27;password2&#x27;: &#x27;dbzvxaalijurx&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (yearly) 1 topic]</td>
-          <td class="col-duration">9.70</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_subscr_isnt_purchased_AND_get_subscr_EXPECTED_response_code_is_404_TC90200</td>
+          <td class="col-duration">5.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
-201
-data updete during:1.12023 seconds
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (monthly) 3 topics]</td>
-          <td class="col-duration">9.84</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
-201
-data updete during:0.886128 seconds
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (yearly) 3 topics]</td>
-          <td class="col-duration">9.22</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
-400
-200
-201
-data updete during:0.654484 seconds
-</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (monthly) all topics]</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_response_code_is_201_TC90201</td>
           <td class="col-duration">10.12</td>
           <td class="col-links"></td></tr>
         <tr>
@@ -317,13 +302,13 @@ data updete during:0.654484 seconds
 400
 200
 201
-data updete during:0.606132 seconds
+{&#x27;email&#x27;: &#x27;testliveedu_devfedgxdsiioywvitbk@zubgi.uj&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;rwvjpkqjznhjtnhwhl&#x27;, &#x27;password1&#x27;: &#x27;jqftranvduwhbkbki&#x27;, &#x27;password2&#x27;: &#x27;jqftranvduwhbkbki&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;vr-and-ar&#x27;, &#x27;design&#x27;, &#x27;programming&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (yearly) all topics]</td>
-          <td class="col-duration">9.94</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_stripe_plus_lpro_EXPECTED_not_is_failing_TC90202</td>
+          <td class="col-duration">10.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -331,13 +316,106 @@ data updete during:0.606132 seconds
 400
 200
 201
-data updete during:0.636841 seconds
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeBillingHistory::()::test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316[Pro account (monthly) 1 topic]</td>
-          <td class="col-duration">9.64</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">5.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">5.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">5.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) all topics]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (yearly) all topics]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestPostSubscription::()::test_WHEN_post_subscr_AND_topics_more_than_possible_EXPECTED_is_not[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">4.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+400
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_user_is_registered_AND_me_EXPECTED_package_is_free_TC90220</td>
+          <td class="col-duration">4.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_package_is_free_AND_me_EXPECTED_is_premium_is_false_TC90221</td>
+          <td class="col-duration">5.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">37.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -345,41 +423,165 @@ data updete during:0.636841 seconds
 400
 200
 201
-data updete during:0.635334 seconds
+{&#x27;email&#x27;: &#x27;testliveedu_xqxvfcootvuykfaxpwtc@yskol.row&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;puycvhkmuqcod&#x27;, &#x27;password1&#x27;: &#x27;txnweqtqdzncbxwouqd&#x27;, &#x27;password2&#x27;: &#x27;txnweqtqdzncbxwouqd&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;programming&#x27;, &#x27;data-science&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeChatCred::()::test_WHEN_chat_cred_EXPECTED_response_code_is_200TC90317</td>
-          <td class="col-duration">4.68</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">10.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_jrezvmfmqthpsmakynct@haume.yrt&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;xuxizosnvqtusdfzgo&#x27;, &#x27;password1&#x27;: &#x27;ekozddzvrzslqkjlmcp&#x27;, &#x27;password2&#x27;: &#x27;ekozddzvrzslqkjlmcp&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;vr-and-ar&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followers_EXPECTED_response_code_is_200TC90318</td>
-          <td class="col-duration">4.73</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">9.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_lzurcfkxdwrarefzpsnq@ogddw.jem&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ucewtvutabjkqua&#x27;, &#x27;password1&#x27;: &#x27;dpfjmniqwkc&#x27;, &#x27;password2&#x27;: &#x27;dpfjmniqwkc&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;vr-and-ar&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
 </div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_me.py::TestCheckMeFollowers::()::test_WHEN_me_followimg_EXPECTED_response_code_is_200TC90319</td>
-          <td class="col-duration">4.64</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) all topics]</td>
+          <td class="col-duration">10.54</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
 400
 200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_rorbowwsxgqaxuysslnr@hiege.eo&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;bzytktagwo&#x27;, &#x27;password1&#x27;: &#x27;wbzwxxtmqc&#x27;, &#x27;password2&#x27;: &#x27;wbzwxxtmqc&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;programming&#x27;, &#x27;cryptocurrency&#x27;, &#x27;artificial-intelligence&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (yearly) all topics]</td>
+          <td class="col-duration">9.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_mfangsmdhkaqbephvqzz@ngzqe.qx&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;mcfwktqoopwidahjb&#x27;, &#x27;password1&#x27;: &#x27;upnuexorretcx&#x27;, &#x27;password2&#x27;: &#x27;upnuexorretcx&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;cybersecurity&#x27;, &#x27;data-science&#x27;, &#x27;design&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestMeAfterPurchase::()::test_WHEN_subscr_is_purchased_EXPECTED_me_package_id_is_proper[Pro account (monthly) 1 topic]</td>
+          <td class="col-duration">9.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_cbzmwguswtxdtsiwypwj@adikw.zcd&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ykwoogfeqwkz&#x27;, &#x27;password1&#x27;: &#x27;qrobjfjm&#x27;, &#x27;password2&#x27;: &#x27;qrobjfjm&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) 1 topic]</td>
+          <td class="col-duration">9.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 0.652906
+{&#x27;email&#x27;: &#x27;testliveedu_jfulcfivtevouywmwopi@ygvok.mt&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;kxqlefibscvqjl&#x27;, &#x27;password1&#x27;: &#x27;rvrqawygubfnitaxkce&#x27;, &#x27;password2&#x27;: &#x27;rvrqawygubfnitaxkce&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;design&#x27;, &#x27;cryptocurrency&#x27;, &#x27;cybersecurity&#x27;, &#x27;programming&#x27;, &#x27;vr-and-ar&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) 3 topics]</td>
+          <td class="col-duration">10.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 0.733442
+{&#x27;email&#x27;: &#x27;testliveedu_iijavdwcwdxumixepoyf@fbljc.sj&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;oieehobsbqzqbyhc&#x27;, &#x27;password1&#x27;: &#x27;afdqcbyk&#x27;, &#x27;password2&#x27;: &#x27;afdqcbyk&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;design&#x27;, &#x27;data-science&#x27;, &#x27;vr-and-ar&#x27;, &#x27;programming&#x27;, &#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) 3 topics]</td>
+          <td class="col-duration">12.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 3.280911
+{&#x27;email&#x27;: &#x27;testliveedu_ujukctsgflkqrjuwjklh@otjol.rt&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;nnouirekjunjwtc&#x27;, &#x27;password1&#x27;: &#x27;beacowaqmwgf&#x27;, &#x27;password2&#x27;: &#x27;beacowaqmwgf&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;programming&#x27;, &#x27;data-science&#x27;, &#x27;vr-and-ar&#x27;, &#x27;artificial-intelligence&#x27;, &#x27;design&#x27;, &#x27;cryptocurrency&#x27;, &#x27;game-development&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (monthly) all topics]</td>
+          <td class="col-duration">12.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 3.493267
+{&#x27;email&#x27;: &#x27;testliveedu_jhqaicqypnwtjzgvceew@qfvkr.fh&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;hakykndpajnkr&#x27;, &#x27;password1&#x27;: &#x27;kzgewepsxuti&#x27;, &#x27;password2&#x27;: &#x27;kzgewepsxuti&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;artificial-intelligence&#x27;, &#x27;programming&#x27;, &#x27;vr-and-ar&#x27;, &#x27;data-science&#x27;, &#x27;cryptocurrency&#x27;, &#x27;design&#x27;, &#x27;cybersecurity&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper[Pro account (yearly) all topics]</td>
+          <td class="col-duration">9.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+data updete during: 0.62273
+{&#x27;email&#x27;: &#x27;testliveedu_lpkhyebmggjihvjdwenl@svymk.nex&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;ibgthxpiadyn&#x27;, &#x27;password1&#x27;: &#x27;najwsozy&#x27;, &#x27;password2&#x27;: &#x27;najwsozy&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_purchase_subscription_stripe.py::TestTRansactionAfterPurchase::()::test_WHEN_subsc_is_purchased_EXPECTED_usd_balance_is_properTC90241</td>
+          <td class="col-duration">10.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+{&#x27;email&#x27;: &#x27;testliveedu_whmhbrhhmojfivzlpqvb@llwai.bo&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;czzieicbsz&#x27;, &#x27;password1&#x27;: &#x27;rmcuatoyijmiuclm&#x27;, &#x27;password2&#x27;: &#x27;rmcuatoyijmiuclm&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;cryptocurrency&#x27;, &#x27;vr-and-ar&#x27;, &#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+{&#x27;id&#x27;: &#x27;lpro12t3&#x27;, &#x27;description&#x27;: &#x27;Pro account (yearly) 3 topics&#x27;, &#x27;period&#x27;: &#x27;year&#x27;, &#x27;period_qty&#x27;: 1, &#x27;topic_qty&#x27;: 3, &#x27;limitation_description&#x27;: &#x27;Triple&#x27;, &#x27;price&#x27;: &#x27;211.09 USD&#x27;, &#x27;price_ledu&#x27;: &#x27;22809.000000000000000000&#x27;, &#x27;subscription_ledu_percent&#x27;: &#x27;60.00&#x27;, &#x27;extra_ledu_percent&#x27;: &#x27;100.00&#x27;, &#x27;subscription_ledu&#x27;: &#x27;13709.00&#x27;, &#x27;balance_ledu&#x27;: &#x27;9100.00&#x27;, &#x27;processing_fees&#x27;: {&#x27;paypal&#x27;: 1.0, &#x27;stripe&#x27;: 0, &#x27;paymentwall&#x27;: 10.55}, &#x27;minimal_period_crypto&#x27;: 1, &#x27;ledu_payment_discount_percent&#x27;: 5}
 </div></td></tr></tbody></table></body></html>

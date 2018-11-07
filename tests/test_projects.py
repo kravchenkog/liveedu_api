@@ -36,7 +36,7 @@ class TestCreateProject:
         }
         resp = app.api_helper.general_post(app, app.route.projects, data)
 
-        assert resp['status_code'] == 200, "test failed"
+        assert resp['status_code'] == 201, "test failed"
 
 
 

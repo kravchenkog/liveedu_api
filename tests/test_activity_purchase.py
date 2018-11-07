@@ -1,6 +1,6 @@
-import pytest
 import random
 from time import sleep
+import datetime
 
 class TestActivityPurchase:
 
@@ -13,8 +13,14 @@ class TestActivityPurchase:
             app=app,
             plan=plan['id'],
             no_topics=random.randint(1, plan['topic_qty']))
-        #sleep(1)
+        current_time = datetime.datetime.now()
         amount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)['amount'])
+        retry_count = 0
+        while not amount and retry_count < 5:
+            amount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)['amount'])
+            sleep(1)
+            retry_count += 1
+        duration = datetime.datetime.now() - current_time
         price = amount/100*app.act_price.project_request
         data= {
             'category': app.api_helper.get_random_category_url(app),
@@ -25,5 +31,6 @@ class TestActivityPurchase:
         request = app.api_helper.general_post(app, app.route.projects_suggestions, data)
         newamount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)['amount'])
         print(app.user_data.__dict__)
+        print("data updete during: " + str(duration.total_seconds()))
         assert newamount == amount - price
 

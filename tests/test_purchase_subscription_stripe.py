@@ -1,3 +1,4 @@
+import datetime
 from random import randint
 from time import sleep
 
@@ -67,10 +68,19 @@ class TestTRansactionAfterPurchase():
     def test_WHEN_subsc_is_purchased_EXPECTED_ledu_balance_is_proper(self, app, plan):
         #TC[90240, 90242, 90243, 90244, 90245, 90246]
         my_plan, purchase = app.api_helper.register_user_and_purchaqse_subs(app=app, plan_name=plan['id'])
-        sleep(1.5)
-        last_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)['data'].pop()
+        current_time = datetime.datetime.now()
+        retry_count = 0
+        all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)
+        while len(all_transaction['data']) == 0 and retry_count < 5:
+            all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)
+            sleep(1)
+            retry_count += 1
+        duration = datetime.datetime.now() - current_time
+        print("data updete during: " + str(duration.total_seconds()))
+        last_transaction = all_transaction['data'].pop()
         my_plan_after = app.api_helper.get_plan(app=app, plan=plan['id'])
         print(app.user_data.__dict__)
+
         assert purchase['status_code'] == 201
         assert last_transaction['amount'] == my_plan['price_ledu'] or\
                last_transaction['amount'] == my_plan_after['price_ledu']

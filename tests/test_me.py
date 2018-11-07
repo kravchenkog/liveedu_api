@@ -1,6 +1,7 @@
 from random import randint
 from random import choice
 from time import sleep
+import datetime
 
 
 class TestCheckMePositive:
@@ -186,10 +187,20 @@ class TestCheckMeBillingHistory:
     def test_WHEN_buy_subcr_AND_me_billing_EXPECTED_amount_is_properTC90316(self, app, plan):
 
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
-        app.api_helper.purchase_package(app, plan['id'], 3)
+        qty = plan['topic_qty']
+        if qty > 10:
+            qty = 3
+        purchase = app.api_helper.purchase_package(app, plan['id'], qty)
+        start_time = datetime.datetime.now()
 
-        sleep(2)
-        resp = app.api_helper.general_get(app, app.route.me_billing_history)
+        for count in range(1000):
+            resp = app.api_helper.general_get(app, app.route.me_billing_history)
+            if len(resp['data']) == 0:
+                sleep(0.1)
+            else:
+                break
+        duration = datetime.datetime.now() - start_time
+        print("data updete during:" + str(duration.total_seconds()) + " seconds")
         assert plan['price'] == resp['data'][-1]['amount']
 
 class TestCheckMeChatCred:

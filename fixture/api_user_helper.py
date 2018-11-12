@@ -5,8 +5,12 @@ import json
 
 class APIHelper:
 
-    def general_get(self, app, route):
-        url = str(app.env.base_url) + str(route)
+    def general_get(self, app, route=None, url=None):
+        if url == None:
+            url = str(app.env.base_url) + str(route)
+        else:
+            url=url
+
 
         response = requests.request("GET", url, headers=app.env.headers, params=app.env.params, cookies = app.env.cookies)
         try:
@@ -115,6 +119,7 @@ class APIHelper:
 
     def get_registered_user(self, app, user_data=None):
         if user_data == None:
+
             app.user_data.email = app.string_generator.get_random_email()
             app.user_data.username = app.string_generator.get_random_username()
         else:
@@ -202,8 +207,8 @@ class APIHelper:
 
     def get_random_category_url(self, app):
         random_topic = self.get_random_slug_topic(app)
-        app.route.topics = app.route.topics + random_topic + '/categories'
-        random_category = random.choice(self.general_get(app, route=app.route.topics)['results'])['url']
+
+        random_category = random.choice(self.general_get(app, route=app.route.topics + random_topic + '/categories')['results'])['url']
         return random_category
 
     def get_random_language_url(self, app):

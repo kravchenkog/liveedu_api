@@ -161,8 +161,8 @@ class TestCheckMeBalanses:
         assert float(resp['data'][1]['amount']) == 0
         assert float(resp['data'][1]['amount_usd']) == 0
 
-    def test_WHEN_buy_subscr_AND_me_balances_EXPECTED_balances_is_properTC90313(self, app):
-        plan = 'lprot3'
+    def test_WHEN_buy_subscr_AND_me_balances_EXPECTED_balances_is_properTC90313(self, app, plan):
+        plan = plan['id']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         app.api_helper.purchase_package(app, plan, 3)
         plan = app.api_helper.get_plan(app, plan)
@@ -193,7 +193,7 @@ class TestCheckMeBillingHistory:
         purchase = app.api_helper.purchase_package(app, plan['id'], qty)
         start_time = datetime.datetime.now()
 
-        for count in range(1000):
+        for count in range(10):
             resp = app.api_helper.general_get(app, app.route.me_billing_history)
             if len(resp['data']) == 0:
                 sleep(0.1)
@@ -201,7 +201,11 @@ class TestCheckMeBillingHistory:
                 break
         duration = datetime.datetime.now() - start_time
         print("data updete during:" + str(duration.total_seconds()) + " seconds")
-        assert plan['price'] == resp['data'][-1]['amount']
+        try:
+            value = resp['data'][-1]['amount']
+        except IndexError:
+            value = False
+        assert plan['price'] == value
 
 class TestCheckMeChatCred:
     def test_WHEN_chat_cred_EXPECTED_response_code_is_200TC90317(self, app):
@@ -354,7 +358,9 @@ class TestMePreferences:
         category = choice(app.api_helper.general_get(app, app.route.categories)['results'])['slug']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
-            "category": category
+            "category": category,
+            "coding_category_difficulty": 1
+
         }
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         assert resp['category'] == category
@@ -363,7 +369,8 @@ class TestMePreferences:
         category = "qwert"
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
-            "category": category
+            "category": category,
+            "coding_category_difficulty": 1
         }
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         assert resp['status_code'] == 400
@@ -372,7 +379,8 @@ class TestMePreferences:
         category = choice(app.api_helper.general_get(app, app.route.categories)['results'])['slug']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
-            "category": category
+            "category": category,
+            "coding_category_difficulty": 1
         }
         app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
@@ -382,7 +390,8 @@ class TestMePreferences:
         category = choice(app.api_helper.general_get(app, app.route.categories)['results'])['slug']
         app.user_data = app.api_helper.get_registered_and_logged_user(app)
         data = {
-            "category": category
+            "category": category,
+            "coding_category_difficulty": 1
         }
         resp = app.api_helper.general_post(app=app, route=app.route.me_subscr_notif, data=data)
         assert resp['category'] == category
@@ -419,7 +428,11 @@ class TestMePaymentMethods:
             "token": token
         }
         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['service'] == service
+        try:
+            a = resp['service']
+        except KeyError:
+            a = False
+        assert service == a
 
 
     def test_WHEN_post_me_payment_method_AND_currency_EXPECTED_is_savedTC__(self, app):
@@ -432,7 +445,11 @@ class TestMePaymentMethods:
             'token': 'tok_visa',
         }
         resp = app.api_helper.general_post(app, app.route.me_payment_methods, data)
-        assert resp['service'] == service
+        try:
+            a = resp['service']
+        except KeyError:
+            a = False
+        assert a == service
 
 class TestMeChangePassword:
     def test_WHEN_post_me_AND_password_positive_EXPECTED_response_200TC90350(self, app):

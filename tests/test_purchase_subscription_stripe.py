@@ -71,13 +71,14 @@ class TestTRansactionAfterPurchase():
         current_time = datetime.datetime.now()
         retry_count = 0
         all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)
-        while len(all_transaction['data']) == 0 and retry_count < 5:
+        while len(all_transaction['data']) == 0 and retry_count < 10:
             all_transaction = app.api_helper.general_get(app=app, route=app.route.transaction_ledu)
             sleep(1)
             retry_count += 1
         duration = datetime.datetime.now() - current_time
         print("data updete during: " + str(duration.total_seconds()))
-        last_transaction = all_transaction['data'].pop()
+      #  last_transaction = all_transaction['data'].pop()
+        last_transaction = all_transaction['data'][0]
         my_plan_after = app.api_helper.get_plan(app=app, plan=plan['id'])
         print(app.user_data.__dict__)
 

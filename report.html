@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 21-Nov-2018 at 16:07:08 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 21-Nov-2018 at 18:33:49 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,8 +251,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.6</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 2.01 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 273.00 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -263,12 +263,439 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_projects.py::TestTopic::()::test_WHEN_get_projects_EXPECTED_response_code_is_200_TC90110</td>
-          <td class="col-duration">1.14</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_activity_purchase.py::TestActivityPurchase::()::test_WHEN_ledu_ended_EXPECTED_10persent_is_added_tobalance[Pro account (monthly) all topics]</td>
+          <td class="col-duration">264.38</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;test_activity_purchase.TestActivityPurchase object at 0x7f89cbbb4eb8&gt;<br/>app = &lt;fixture.app_manager.AppManager object at 0x7f89cbbb4ac8&gt;<br/>plan = {&#x27;balance_ledu&#x27;: &#x27;1100.00&#x27;, &#x27;description&#x27;: &#x27;Pro account (monthly) all topics&#x27;, &#x27;extra_ledu_percent&#x27;: &#x27;100.00&#x27;, &#x27;id&#x27;: &#x27;lprotall&#x27;, ...}<br/><br/>    def test_WHEN_ledu_ended_EXPECTED_10persent_is_added_tobalance(self,app, plan):<br/>    <br/>        app.user_data = app.api_helper.get_registered_and_logged_user(app)<br/>        purchase = app.api_helper.purchase_package(<br/>            app=app,<br/>            plan=plan[&#x27;id&#x27;],<br/>            no_topics=random.randint(1, plan[&#x27;topic_qty&#x27;]))<br/>        current_time = datetime.datetime.now()<br/>        amount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)[&#x27;amount&#x27;])<br/>        retry_count = 0<br/>        while not amount and retry_count &lt; 20:<br/>    <br/>            amount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)[&#x27;amount&#x27;])<br/>            sleep(1)<br/>            retry_count += 1<br/>        duration = datetime.datetime.now() - current_time<br/>        price = amount/100*app.act_price.project_request<br/>        data= {<br/>            &#x27;category&#x27;: app.api_helper.get_random_category_url(app),<br/>            &#x27;title&#x27;: app.string_generator.get_random_string(num=random.randint(20, 100)),<br/>            &#x27;difficulty&#x27;: random.choice([1,2,3]),<br/>            &#x27;language&#x27;: app.api_helper.get_random_language_url(app)<br/>        }<br/>    <br/>        if amount:<br/>            request = app.api_helper.general_post(app, app.route.projects_suggestions, data)<br/>            newamount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)[&#x27;amount&#x27;])<br/>            count = 0<br/>            while count &lt; 210:<br/>                count+=1<br/>                print(&quot;newamount = &quot; + str(newamount))<br/>                request = app.api_helper.general_post(app, app.route.projects_suggestions, data)<br/>                newamount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)[&#x27;amount&#x27;])<br/>            lastamount = float(app.api_helper.general_get(app=app, route=app.route.me_balanses_s)[&#x27;amount&#x27;])<br/>            print(app.user_data.__dict__)<br/>            print(&quot;data updete during: &quot; + str(duration.total_seconds()))<br/>&gt;           assert newamount == amount - price and newamount != 0<br/><span class="error">E           assert (0.0 == (2000.0 - 20.0))</span><br/><br/>tests/test_activity_purchase.py:74: AssertionError<br/>----------------------------- Captured stdout call -----------------------------<br/>201
+400
+200
+201
+201
+newamount = 1980.0
+201
+newamount = 1960.0
+201
+newamount = 1940.0
+201
+newamount = 1920.0
+201
+newamount = 1900.0
+201
+newamount = 1880.0
+201
+newamount = 1860.0
+201
+newamount = 1840.0
+201
+newamount = 1820.0
+201
+newamount = 1800.0
+201
+newamount = 1780.0
+201
+newamount = 1760.0
+201
+newamount = 1740.0
+201
+newamount = 1720.0
+201
+newamount = 1700.0
+201
+newamount = 1680.0
+201
+newamount = 1660.0
+201
+newamount = 1640.0
+201
+newamount = 1620.0
+201
+newamount = 1600.0
+201
+newamount = 1580.0
+201
+newamount = 1560.0
+201
+newamount = 1540.0
+201
+newamount = 1520.0
+201
+newamount = 1500.0
+201
+newamount = 1480.0
+201
+newamount = 1460.0
+201
+newamount = 1440.0
+201
+newamount = 1420.0
+201
+newamount = 1400.0
+201
+newamount = 1380.0
+201
+newamount = 1360.0
+201
+newamount = 1340.0
+201
+newamount = 1320.0
+201
+newamount = 1300.0
+201
+newamount = 1280.0
+201
+newamount = 1260.0
+201
+newamount = 1240.0
+201
+newamount = 1220.0
+201
+newamount = 1200.0
+201
+newamount = 1180.0
+201
+newamount = 1160.0
+201
+newamount = 1140.0
+201
+newamount = 1120.0
+201
+newamount = 1100.0
+201
+newamount = 1080.0
+201
+newamount = 1060.0
+201
+newamount = 1040.0
+201
+newamount = 1020.0
+201
+newamount = 1000.0
+201
+newamount = 980.0
+201
+newamount = 960.0
+201
+newamount = 940.0
+201
+newamount = 920.0
+201
+newamount = 900.0
+201
+newamount = 880.0
+201
+newamount = 860.0
+201
+newamount = 840.0
+201
+newamount = 820.0
+201
+newamount = 800.0
+201
+newamount = 780.0
+201
+newamount = 760.0
+201
+newamount = 740.0
+201
+newamount = 720.0
+201
+newamount = 700.0
+201
+newamount = 680.0
+201
+newamount = 660.0
+201
+newamount = 640.0
+201
+newamount = 620.0
+201
+newamount = 600.0
+201
+newamount = 580.0
+201
+newamount = 560.0
+201
+newamount = 540.0
+201
+newamount = 520.0
+201
+newamount = 500.0
+201
+newamount = 480.0
+201
+newamount = 460.0
+201
+newamount = 440.0
+201
+newamount = 420.0
+201
+newamount = 400.0
+201
+newamount = 380.0
+201
+newamount = 360.0
+201
+newamount = 340.0
+201
+newamount = 320.0
+201
+newamount = 300.0
+201
+newamount = 280.0
+201
+newamount = 260.0
+201
+newamount = 240.0
+201
+newamount = 220.0
+201
+newamount = 200.0
+201
+newamount = 180.0
+201
+newamount = 160.0
+201
+newamount = 140.0
+201
+newamount = 120.0
+201
+newamount = 100.0
+201
+newamount = 80.0
+201
+newamount = 60.0
+201
+newamount = 40.0
+201
+newamount = 20.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+newamount = 0.0
+201
+{&#x27;email&#x27;: &#x27;testliveedu_jufwlazltsuqhojwqnep@afngm.gq&#x27;, &#x27;password&#x27;: None, &#x27;username&#x27;: &#x27;jrjzwxeyvhurg&#x27;, &#x27;password1&#x27;: &#x27;ixdvvjvzwhsvprbk&#x27;, &#x27;password2&#x27;: &#x27;ixdvvjvzwhsvprbk&#x27;, &#x27;userrole&#x27;: &#x27;streamer&#x27;, &#x27;slug&#x27;: [&#x27;game-development&#x27;, &#x27;programming&#x27;, &#x27;cybersecurity&#x27;, &#x27;cryptocurrency&#x27;, &#x27;vr-and-ar&#x27;, &#x27;design&#x27;, &#x27;data-science&#x27;], &#x27;response_reg&#x27;: {&#x27;detail&#x27;: &#x27;Verification e-mail sent.&#x27;, &#x27;status_code&#x27;: 201}}
+data updete during: 2.121456
+</div></td></tr></tbody></table></body></html>

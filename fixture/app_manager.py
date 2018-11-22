@@ -13,7 +13,7 @@ from fixture.data.activity_data import ActivityCosts
 class AppManager:
 
     def __init__(self):
-        self.env = Environment(3)
+        self.env = Environment(1)
         self.route = Route()
         self.api_helper = APIHelper()
         self.user_parse = UserParseFactory()
